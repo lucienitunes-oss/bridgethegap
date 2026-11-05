@@ -1,0 +1,5 @@
+Error: HTTP error 408 with body: {"id":0,"jsonrpc":"2.0","error":{"message":"Request timeout on the free plan, please upgrade to paid plan","code":30}}
+
+HTTP diagnostics:
+cf-ray: a3ae2c39cf03f7ab-LAX
+server: cloudflare
