@@ -1,0 +1,130 @@
+{
+  "status": "complete",
+  "case": "nomad_bridge_2022_complete_upgrade_to_exploit_prefix",
+  "property": "a processed cross-chain message must be backed by a non-zero accepted root",
+  "official_basis": [
+    "https://medium.com/nomad-xyz-blog/nomad-bridge-hack-root-cause-analysis-875ad2e5aacd",
+    "https://docs.nomad.xyz/the-nomad-protocol/security/root-of-trust/fraud"
+  ],
+  "security_consequence": "three successful destination-chain process calls transfer 100 WBTC each, while the external bridge analysis reports no matching source withdrawal",
+  "historical_prefix": {
+    "transaction_hashes": [
+      "0x7bccd64f4c4d5f6f545c2edf904857e6ddb460532fc0ac7eb5ac175cd21e56b1",
+      "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+      "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+      "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+    ],
+    "transaction_count": 4,
+    "init_transaction": "0x7bccd64f4c4d5f6f545c2edf904857e6ddb460532fc0ac7eb5ac175cd21e56b1",
+    "deployment_initialization_transaction": "0x99662dacfb4b963479b159fc43c2b4d048562104fe154a4d0c2519ada72e50bf",
+    "attack_transactions": [
+      "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+      "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+      "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+    ],
+    "raw_init_transaction_and_logs": "experiments/results/real_replay/nomad_full_prefix_raw.json",
+    "raw_deployment_and_upgrade_transactions_and_logs": "experiments/results/real_replay/nomad_full_prefix_raw.json",
+    "attack_transaction_and_logs": "experiments/results/tool_comparison/xchainwatcher_nomad.json",
+    "common_prefix_manifest": "experiments/results/real_replay/nomad_prefix_manifest.json"
+  },
+  "external_analyzer": {
+    "tool": "XChainWatcher",
+    "repository": "https://github.com/AndreAugusto11/XChainWatcher",
+    "commit": "4cc1ff173c18f80d275d7af6cbd318cdd3906e77",
+    "rules_sha256": "e81fe04caa3092a5789fd31b91ff5ac5a6bd45da75e38b201767d6708a3cf711",
+    "facts_directory": "E:\\BridgeTheGapLab\\XChainWatcher\\cross-chain-rules-validator\\datalog\\nomad-bridge\\facts",
+    "output_directory": "D:\\0-Paper\\20260905BridgeTheGap_LaTeX_Package\\experiments\\results\\tool_comparison\\xchainwatcher_nomad_results",
+    "complete_output_relations": 30,
+    "input_binding": "same ordered four-transaction prefix manifest; XChainWatcher evaluates the three withdrawal-bearing suffix rows and has no upgrade-specific rule"
+  },
+  "accepted_root_external_state_validator": {
+    "tool": "Foundry cast",
+    "binary": "E:\\BridgeTheGapLab\\foundry\\cast.exe",
+    "version": "Build Profile: dist",
+    "archive_rpc": "https://eth.drpc.org",
+    "target_replica": "0x5D94309E5a0090b165FA4181519701637B6DAEBA",
+    "property": "a processed cross-chain message must be backed by a non-zero accepted root",
+    "decision_rule": "VIOLATION iff the zero root is accepted from the raw confirmAt mapping and, for an attack message, the pre-state messages(messageHash) is zero with acceptableRoot(messages(messageHash)) true; at a state boundary without a message, a positively confirmed zero root is a latent VIOLATION. PASS/UNKNOWN are selected from the same raw observations.",
+    "input_binding": "same ordered four-transaction prefix manifest and same accepted-root property",
+    "raw_output_directory": "experiments/results/tool_comparison/foundry_nomad_accepted_root/raw"
+  },
+  "prefix_results": [
+    {
+      "prefix_index": 1,
+      "transaction_hash": "0x7bccd64f4c4d5f6f545c2edf904857e6ddb460532fc0ac7eb5ac175cd21e56b1",
+      "block": 15003660,
+      "label": "Nomad production upgrade boundary; zero-root state persists",
+      "btg_result": "VIOLATION",
+      "external_tool": "XChainWatcher / Souffle",
+      "external_result": "NO_APPLICABLE_WITHDRAWAL_RELATION",
+      "accepted_root_external_tool": "Foundry cast",
+      "accepted_root_external_result": "VIOLATION",
+      "external_rows": [],
+      "same_transaction_input": true,
+      "security_witness": "official root-of-trust initialization; confirmAt[zero] = 1"
+    },
+    {
+      "prefix_index": 2,
+      "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+      "block": 15259101,
+      "label": "Nomad attack transaction 1",
+      "btg_result": "VIOLATION",
+      "external_tool": "XChainWatcher / Souffle",
+      "external_result": "SC_WithdrawalsWithoutMatch",
+      "accepted_root_external_tool": "Foundry cast",
+      "accepted_root_external_result": "VIOLATION",
+      "external_rows": [
+        "6648936\t1659389551\t0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0xf57113d8f6ff35747737f026fe0b37d4d7f42777\t10000000000"
+      ],
+      "same_transaction_input": true,
+      "security_witness": "successful Process/Receive; 100 WBTC destination transfer"
+    },
+    {
+      "prefix_index": 3,
+      "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+      "block": 15259101,
+      "label": "Nomad attack transaction 2",
+      "btg_result": "VIOLATION",
+      "external_tool": "XChainWatcher / Souffle",
+      "external_result": "SC_WithdrawalsWithoutMatch",
+      "accepted_root_external_tool": "Foundry cast",
+      "accepted_root_external_result": "VIOLATION",
+      "external_rows": [
+        "6648936\t1659389551\t0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0x000000000000660def84e69995117c0176ba446e\t10000000000"
+      ],
+      "same_transaction_input": true,
+      "security_witness": "successful Process/Receive; 100 WBTC destination transfer"
+    },
+    {
+      "prefix_index": 4,
+      "transaction_hash": "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28",
+      "block": 15259101,
+      "label": "Nomad attack transaction 3",
+      "btg_result": "VIOLATION",
+      "external_tool": "XChainWatcher / Souffle",
+      "external_result": "SC_WithdrawalsWithoutMatch",
+      "accepted_root_external_tool": "Foundry cast",
+      "accepted_root_external_result": "VIOLATION",
+      "external_rows": [
+        "6648936\t1659389551\t0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0xb5c55f76f90cc528b2609109ca14d8d84593590e\t10000000000"
+      ],
+      "same_transaction_input": true,
+      "security_witness": "successful Process/Receive; 100 WBTC destination transfer"
+    }
+  ],
+  "same_input": {
+    "same_transaction_hashes": true,
+    "same_prefix_order": true,
+    "same_property": false,
+    "same_official_incident_basis": true,
+    "same_official_basis": true,
+    "same_security_consequence": true,
+    "external_tool_has_upgrade_specific_rule": false,
+    "attack_rows_agree": true,
+    "accepted_root_rows_agree": true,
+    "archive_storage_transition_verified": true
+  },
+  "interpretation": "BTG identifies the official root-of-trust violation at the upgrade boundary and the three later transfer violations. XChainWatcher has no upgrade-specific rule and therefore emits no withdrawal relation for prefix 1, but independently flags all three later attack transactions on the same ordered prefix and released facts.",
+  "generated_utc": "2026-09-14T06:54:47.350116+00:00",
+  "raw_sha256": "999869ece7daf2a9e44efa2bf90286332a5ae66eb752154440364503f4884c2a"
+}

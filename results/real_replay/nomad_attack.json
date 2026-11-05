@@ -1,0 +1,922 @@
+{
+  "status": "complete",
+  "case": "nomad_bridge_2022_zero_root_exploit",
+  "oracle": "BTG",
+  "property": "a processed cross-chain message must be backed by a non-zero accepted root",
+  "historical_input": {
+    "facts_directory": "E:\\BridgeTheGapLab\\XChainWatcher\\cross-chain-rules-validator\\datalog\\nomad-bridge\\facts",
+    "xchainwatcher_tool_commit": "4cc1ff173c18f80d275d7af6cbd318cdd3906e77",
+    "selected_attack_hashes": [
+      "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+      "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+      "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+    ],
+    "dataset_result": "SC_WithdrawalsWithoutMatch.csv"
+  },
+  "prefix": [
+    {
+      "prefix_index": 1,
+      "label": "upgrade initializes the accepted root to zero",
+      "status": "VIOLATION",
+      "reason": "official Nomad root-cause analysis documents confirmAt[0x00..00] = 1 after initialize",
+      "evidence": {
+        "committed_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "confirm_at_zero_root": 1,
+        "source": "https://medium.com/nomad-xyz-blog/nomad-bridge-hack-root-cause-analysis-875ad2e5aacd",
+        "semantic_effect": "zero root is treated as an accepted root; an unproven message therefore reaches process"
+      }
+    },
+    {
+      "prefix_index": 2,
+      "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+      "block": 15259101,
+      "timestamp": "2022-08-01T21:32:31.000000Z",
+      "status": "VIOLATION",
+      "reason": "successful Process/Receive transfers 100 WBTC while the official accepted-root witness is the zero root",
+      "evidence": {
+        "from": "0x56D8B635A7C88Fd1104D23d632AF40c1C3Aac4e3",
+        "to": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777",
+        "method": "0x37c8f01a",
+        "raw_input": "0x37c8f01a01f57113d8f6ff35747737f026fe0b37d4d7f42777000100055d94309e5a0090b165fa4181519701637b6daeba00012444928bc4b2c1201f45d16265616dd4d3dfd3ede74e0dcebc1aa685e151332857efce2d024613d6006574680c5888a69b4e698a4b090df6cf5bd7b2d47325ad30a3006574680c552260fac5e5542a773aa44fbcfedf7c193bc2c59903d4f57113d8f6ff35747737f026fe0b37d4d7f427771b6502540be400e6e85ded018819209cfb948d074cb65de145734b5b0852e4a5db25cac2b8c39a0f2260fac5e5542a773aa44fbcfedf7c193bc2c59900004444a9059cbbd4bb2b8038a1640196fbe3e38816f3e67cba72d940c502540be400bb2b8038a1640196fbe3e38816f3e67cba72d9400000a444022c0d9f37493ac523a3550f516311d4f57113d8f6ff35747737f026fe0b37d4d7f42777c18020c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000024442e1a7d4dc93ac523a3550f516311b5c55f76f90cc528b2609109ca14d8d84593590e093ac523a3550f5163110000",
+        "receipt_status": "ok",
+        "gas_used": "263706",
+        "process_logs": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x5D94309E5a0090b165FA4181519701637B6DAEBA",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x",
+            "decoded": {
+              "method_call": "Process(bytes32 indexed messageHash, bool indexed success, bytes indexed returnData)",
+              "method_id": "d42de95a",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "messageHash",
+                  "type": "bytes32",
+                  "value": "0xd5e9f245ec07f00ab709d28aa7506f8f0989bf2c86cad9c2b22ab86119dacef8"
+                },
+                {
+                  "indexed": true,
+                  "name": "success",
+                  "type": "bool",
+                  "value": "true"
+                },
+                {
+                  "indexed": true,
+                  "name": "returnData",
+                  "type": "bytes",
+                  "value": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+                }
+              ]
+            },
+            "index": 2,
+            "smart_contract": null,
+            "topics": [
+              "0xd42de95a9b26f1be134c8ecce389dc4fcfa18753d01661b7b361233569e8fe48",
+              "0xd5e9f245ec07f00ab709d28aa7506f8f0989bf2c86cad9c2b22ab86119dacef8",
+              "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          }
+        ],
+        "receive_logs": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Receive(uint64 indexed originAndNonce, address indexed token, address indexed recipient, address liquidityProvider, uint256 amount)",
+              "method_id": "9f9a97db",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "originAndNonce",
+                  "type": "uint64",
+                  "value": "7090180309144048598"
+                },
+                {
+                  "indexed": true,
+                  "name": "token",
+                  "type": "address",
+                  "value": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+                },
+                {
+                  "indexed": true,
+                  "name": "recipient",
+                  "type": "address",
+                  "value": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777"
+                },
+                {
+                  "indexed": false,
+                  "name": "liquidityProvider",
+                  "type": "address",
+                  "value": "0x0000000000000000000000000000000000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 1,
+            "smart_contract": null,
+            "topics": [
+              "0x9f9a97db84f39202ca3b409b63f7ccf7d3fd810e176573c7483088b6f181bbbb",
+              "0x0000000000000000000000000000000000000000000000006265616d000013d6",
+              "0x0000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "0x000000000000000000000000f57113d8f6ff35747737f026fe0b37d4d7f42777"
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          }
+        ],
+        "wbtc_receive_logs": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Receive(uint64 indexed originAndNonce, address indexed token, address indexed recipient, address liquidityProvider, uint256 amount)",
+              "method_id": "9f9a97db",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "originAndNonce",
+                  "type": "uint64",
+                  "value": "7090180309144048598"
+                },
+                {
+                  "indexed": true,
+                  "name": "token",
+                  "type": "address",
+                  "value": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+                },
+                {
+                  "indexed": true,
+                  "name": "recipient",
+                  "type": "address",
+                  "value": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777"
+                },
+                {
+                  "indexed": false,
+                  "name": "liquidityProvider",
+                  "type": "address",
+                  "value": "0x0000000000000000000000000000000000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 1,
+            "smart_contract": null,
+            "topics": [
+              "0x9f9a97db84f39202ca3b409b63f7ccf7d3fd810e176573c7483088b6f181bbbb",
+              "0x0000000000000000000000000000000000000000000000006265616d000013d6",
+              "0x0000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "0x000000000000000000000000f57113d8f6ff35747737f026fe0b37d4d7f42777"
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          }
+        ],
+        "btg_independent_basis": {
+          "accepted_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "confirm_at_zero_root": 1,
+          "uses_xchainwatcher_rows": false
+        },
+        "xchainwatcher_unmatched_rows": [
+          "6648936\t1659389551\t0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0xf57113d8f6ff35747737f026fe0b37d4d7f42777\t10000000000"
+        ]
+      }
+    },
+    {
+      "prefix_index": 3,
+      "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+      "block": 15259101,
+      "timestamp": "2022-08-01T21:32:31.000000Z",
+      "status": "VIOLATION",
+      "reason": "successful Process/Receive transfers 100 WBTC while the official accepted-root witness is the zero root",
+      "evidence": {
+        "from": "0x847E74d8CD0d4Bc2716a6382736Ae2870Db94148",
+        "to": "0x000000000000660deF84E69995117c0176bA446E",
+        "method": "0xb875322d",
+        "raw_input": "0xb875322d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000360000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000003e80000000000000000000000000000000000000000000000008ac7230489e80000000000000000000000000000000000000000000000000000000f6b6b38252de400000000000000000000000000000000000000000000000000000000000004400000000000000000000000000000000000000000000000000000000000000240000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000000007000000000000000000000000a8c83b1b30291a3a1a118058b5445cc83041cd9d0000000000000000000000004dc9e781fef18fa4dc5217a5ee1156f668b5af55000000000000000000000000a06c3c08a19e51b33309eddfb356c33ead8517a3000000000000000000000000524cfae2daab901234c842f3a17235902b0f01f90000000000000000000000000f9f18d18c8227a276375940b39ca086fbde160400000000000000000000000006ac16ff8caa7c7a4d66f506a4c74d4da9e8569e0000000000000000000000005d94309e5a0090b165fa4181519701637b6daeba00000000000000000000000000000000000000000000000000000000000000070000000000000000000000000000000000000000000000001d0e1adf3f1b6be100000000000000000000000000000000000000000000000015a387302873523d0000000000000000000000000000000000000000000000000cf810056cddfead00000000000000000000000000000000000000000000000028941193ace06e710000000000000000000000000000000000000000000000001060046b1f3141990000000000000000000000000000000000000000000000054f8663c9b3196fe300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c5990000000000000000000000000000000000000000000000000000000000000280000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000000010000000000000000000000005d94309e5a0090b165fa4181519701637b6daeba00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000124928bc4b2000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000d16265616d000000000000000000000000d3dfd3ede74e0dcebc1aa685e151332857efce2d000013d60065746800000000000000000000000088a69b4e698a4b090df6cf5bd7b2d47325ad30a3006574680000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59903000000000000000000000000000000000000660def84e69995117c0176ba446e00000000000000000000000000000000000000000000000000000002540be400e6e85ded018819209cfb948d074cb65de145734b5b0852e4a5db25cac2b8c39a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "receipt_status": "ok",
+        "gas_used": "256400",
+        "process_logs": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x5D94309E5a0090b165FA4181519701637B6DAEBA",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x",
+            "decoded": {
+              "method_call": "Process(bytes32 indexed messageHash, bool indexed success, bytes indexed returnData)",
+              "method_id": "d42de95a",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "messageHash",
+                  "type": "bytes32",
+                  "value": "0x72ff4b84a6512abe5f0d0088f7ed625a1c83b6b16945fa14585991d9854669ab"
+                },
+                {
+                  "indexed": true,
+                  "name": "success",
+                  "type": "bool",
+                  "value": "true"
+                },
+                {
+                  "indexed": true,
+                  "name": "returnData",
+                  "type": "bytes",
+                  "value": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+                }
+              ]
+            },
+            "index": 10,
+            "smart_contract": null,
+            "topics": [
+              "0xd42de95a9b26f1be134c8ecce389dc4fcfa18753d01661b7b361233569e8fe48",
+              "0x72ff4b84a6512abe5f0d0088f7ed625a1c83b6b16945fa14585991d9854669ab",
+              "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          }
+        ],
+        "receive_logs": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Receive(uint64 indexed originAndNonce, address indexed token, address indexed recipient, address liquidityProvider, uint256 amount)",
+              "method_id": "9f9a97db",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "originAndNonce",
+                  "type": "uint64",
+                  "value": "7090180309144048598"
+                },
+                {
+                  "indexed": true,
+                  "name": "token",
+                  "type": "address",
+                  "value": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+                },
+                {
+                  "indexed": true,
+                  "name": "recipient",
+                  "type": "address",
+                  "value": "0x000000000000660deF84E69995117c0176bA446E"
+                },
+                {
+                  "indexed": false,
+                  "name": "liquidityProvider",
+                  "type": "address",
+                  "value": "0x0000000000000000000000000000000000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 9,
+            "smart_contract": null,
+            "topics": [
+              "0x9f9a97db84f39202ca3b409b63f7ccf7d3fd810e176573c7483088b6f181bbbb",
+              "0x0000000000000000000000000000000000000000000000006265616d000013d6",
+              "0x0000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "0x000000000000000000000000000000000000660def84e69995117c0176ba446e"
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          }
+        ],
+        "wbtc_receive_logs": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Receive(uint64 indexed originAndNonce, address indexed token, address indexed recipient, address liquidityProvider, uint256 amount)",
+              "method_id": "9f9a97db",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "originAndNonce",
+                  "type": "uint64",
+                  "value": "7090180309144048598"
+                },
+                {
+                  "indexed": true,
+                  "name": "token",
+                  "type": "address",
+                  "value": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+                },
+                {
+                  "indexed": true,
+                  "name": "recipient",
+                  "type": "address",
+                  "value": "0x000000000000660deF84E69995117c0176bA446E"
+                },
+                {
+                  "indexed": false,
+                  "name": "liquidityProvider",
+                  "type": "address",
+                  "value": "0x0000000000000000000000000000000000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 9,
+            "smart_contract": null,
+            "topics": [
+              "0x9f9a97db84f39202ca3b409b63f7ccf7d3fd810e176573c7483088b6f181bbbb",
+              "0x0000000000000000000000000000000000000000000000006265616d000013d6",
+              "0x0000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "0x000000000000000000000000000000000000660def84e69995117c0176ba446e"
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          }
+        ],
+        "btg_independent_basis": {
+          "accepted_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "confirm_at_zero_root": 1,
+          "uses_xchainwatcher_rows": false
+        },
+        "xchainwatcher_unmatched_rows": [
+          "6648936\t1659389551\t0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0x000000000000660def84e69995117c0176ba446e\t10000000000"
+        ]
+      }
+    },
+    {
+      "prefix_index": 4,
+      "transaction_hash": "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28",
+      "block": 15259101,
+      "timestamp": "2022-08-01T21:32:31.000000Z",
+      "status": "VIOLATION",
+      "reason": "successful Process/Receive transfers 100 WBTC while the official accepted-root witness is the zero root",
+      "evidence": {
+        "from": "0xB5C55f76f90Cc528B2609109Ca14d8d84593590E",
+        "to": "0x5D94309E5a0090b165FA4181519701637B6DAEBA",
+        "method": "process",
+        "raw_input": "0x928bc4b2000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000d16265616d000000000000000000000000d3dfd3ede74e0dcebc1aa685e151332857efce2d000013d60065746800000000000000000000000088a69b4e698a4b090df6cf5bd7b2d47325ad30a3006574680000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59903000000000000000000000000b5c55f76f90cc528b2609109ca14d8d84593590e00000000000000000000000000000000000000000000000000000002540be400e6e85ded018819209cfb948d074cb65de145734b5b0852e4a5db25cac2b8c39a000000000000000000000000000000",
+        "receipt_status": "ok",
+        "gas_used": "170294",
+        "process_logs": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x5D94309E5a0090b165FA4181519701637B6DAEBA",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x",
+            "decoded": {
+              "method_call": "Process(bytes32 indexed messageHash, bool indexed success, bytes indexed returnData)",
+              "method_id": "d42de95a",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "messageHash",
+                  "type": "bytes32",
+                  "value": "0x9ee4369a65075ed05b6a5df3713e3eb9c465db710c42ce5a836cfaa217e1e24b"
+                },
+                {
+                  "indexed": true,
+                  "name": "success",
+                  "type": "bool",
+                  "value": "true"
+                },
+                {
+                  "indexed": true,
+                  "name": "returnData",
+                  "type": "bytes",
+                  "value": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+                }
+              ]
+            },
+            "index": 25,
+            "smart_contract": null,
+            "topics": [
+              "0xd42de95a9b26f1be134c8ecce389dc4fcfa18753d01661b7b361233569e8fe48",
+              "0x9ee4369a65075ed05b6a5df3713e3eb9c465db710c42ce5a836cfaa217e1e24b",
+              "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+            ],
+            "transaction_hash": "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+          }
+        ],
+        "receive_logs": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Receive(uint64 indexed originAndNonce, address indexed token, address indexed recipient, address liquidityProvider, uint256 amount)",
+              "method_id": "9f9a97db",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "originAndNonce",
+                  "type": "uint64",
+                  "value": "7090180309144048598"
+                },
+                {
+                  "indexed": true,
+                  "name": "token",
+                  "type": "address",
+                  "value": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+                },
+                {
+                  "indexed": true,
+                  "name": "recipient",
+                  "type": "address",
+                  "value": "0xB5C55f76f90Cc528B2609109Ca14d8d84593590E"
+                },
+                {
+                  "indexed": false,
+                  "name": "liquidityProvider",
+                  "type": "address",
+                  "value": "0x0000000000000000000000000000000000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 24,
+            "smart_contract": null,
+            "topics": [
+              "0x9f9a97db84f39202ca3b409b63f7ccf7d3fd810e176573c7483088b6f181bbbb",
+              "0x0000000000000000000000000000000000000000000000006265616d000013d6",
+              "0x0000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "0x000000000000000000000000b5c55f76f90cc528b2609109ca14d8d84593590e"
+            ],
+            "transaction_hash": "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+          }
+        ],
+        "wbtc_receive_logs": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Receive(uint64 indexed originAndNonce, address indexed token, address indexed recipient, address liquidityProvider, uint256 amount)",
+              "method_id": "9f9a97db",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "originAndNonce",
+                  "type": "uint64",
+                  "value": "7090180309144048598"
+                },
+                {
+                  "indexed": true,
+                  "name": "token",
+                  "type": "address",
+                  "value": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+                },
+                {
+                  "indexed": true,
+                  "name": "recipient",
+                  "type": "address",
+                  "value": "0xB5C55f76f90Cc528B2609109Ca14d8d84593590E"
+                },
+                {
+                  "indexed": false,
+                  "name": "liquidityProvider",
+                  "type": "address",
+                  "value": "0x0000000000000000000000000000000000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 24,
+            "smart_contract": null,
+            "topics": [
+              "0x9f9a97db84f39202ca3b409b63f7ccf7d3fd810e176573c7483088b6f181bbbb",
+              "0x0000000000000000000000000000000000000000000000006265616d000013d6",
+              "0x0000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "0x000000000000000000000000b5c55f76f90cc528b2609109ca14d8d84593590e"
+            ],
+            "transaction_hash": "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+          }
+        ],
+        "btg_independent_basis": {
+          "accepted_root": "0x0000000000000000000000000000000000000000000000000000000000000000",
+          "confirm_at_zero_root": 1,
+          "uses_xchainwatcher_rows": false
+        },
+        "xchainwatcher_unmatched_rows": [
+          "6648936\t1659389551\t0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0xb5c55f76f90cc528b2609109ca14d8d84593590e\t10000000000"
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "pass": 0,
+    "violation": 4,
+    "unknown": 0
+  },
+  "independent_comparison": {
+    "tool": "XChainWatcher/Souffle",
+    "same_historical_fact_directory": true,
+    "same_selected_transaction_hashes": true,
+    "btg_attack_decisions": [
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION"
+    ],
+    "external_unmatched_withdrawal_decisions": [
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION"
+    ],
+    "same_attack_prefix_signal": true,
+    "complete_external_output": "experiments/results/tool_comparison/xchainwatcher_nomad_results",
+    "metadata": "experiments/results/tool_comparison/xchainwatcher_nomad.json"
+  },
+  "official_basis": [
+    "https://medium.com/nomad-xyz-blog/nomad-bridge-hack-root-cause-analysis-875ad2e5aacd",
+    "https://docs.nomad.xyz/the-nomad-protocol/security/root-of-trust/fraud"
+  ],
+  "security_consequence": "three successful destination-chain process calls transfer 100 WBTC each, while the external bridge analysis reports no matching source withdrawal"
+}

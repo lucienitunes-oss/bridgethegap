@@ -1,0 +1,837 @@
+{
+  "status": "complete",
+  "case": "Audius governance takeover, July 23 2022",
+  "rpc": "https://eth.drpc.org",
+  "read_only": true,
+  "official_sources": [
+    "https://blog.audius.co/posts/audius-governance-takeover-post-mortem-7-23-22",
+    "https://docs.audius.co/reference/eth-contracts/",
+    "https://docs.openzeppelin.com/contracts/4.x/api/proxy"
+  ],
+  "normative_property": {
+    "name": "initializer_replay_protection",
+    "statement": "After proxy initialization, an unauthorized caller must not successfully invoke initialize again or alter security-sensitive governance state.",
+    "basis": "OpenZeppelin proxy documentation requires initializer functions to be protected so they can be called only once and warns that an uninitialized contract can be taken over.",
+    "not_researcher_defined": true
+  },
+  "official_incident_claims": {
+    "repeated_initialize": true,
+    "malicious_proposal": 85,
+    "reported_transfer_audio": 18564497
+  },
+  "contracts": {
+    "governance_proxy": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+    "audio_token": "0x18aAA7115705e8be94bfFEBDE57Af9BFc265B998",
+    "attacker": "0xa0c7BD318D69424603CBf91e9969870F21B8ab4c"
+  },
+  "transactions": [
+    {
+      "label": "attacker_initialize",
+      "transaction_hash": "0x3bbb15f9852c389e8d77399fe88b49b042d0f22aad4a33c979fbabc60a34b24f",
+      "block": 15201736,
+      "timestamp": 1658616877,
+      "timestamp_utc": "2022-07-23T22:54:37+00:00",
+      "transaction_index": 61,
+      "status": 1,
+      "from": "0xa0c7BD318D69424603CBf91e9969870F21B8ab4c",
+      "to": "0xA62c3ced6906B188A4d4A3c981B79f2AABf2107F",
+      "nonce": 1,
+      "input_selector": "169e8a8e",
+      "input_hex": "169e8a8e000000000000000000000000000000000000000000000000000000000000005200000000000000000000000000000000000000000000000000000000000000530000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000004",
+      "gas_used": 760783,
+      "log_count": 6,
+      "audio_transfers": [],
+      "governance_events": [
+        {
+          "type": "proposal_state",
+          "proposal_id": 82,
+          "state_code": 7,
+          "log_index": 197
+        },
+        {
+          "type": "proposal_state",
+          "proposal_id": 83,
+          "state_code": 7,
+          "log_index": 198
+        },
+        {
+          "type": "proposal_created",
+          "proposal_id": 84,
+          "proposer": "0xA62c3ced6906B188A4d4A3c981B79f2AABf2107F",
+          "log_index": 199
+        }
+      ],
+      "logs": [
+        {
+          "address": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "topics": [
+            "b5c05f2b4df457fb2a62ca282c87338fa901f0b7de530321f507d59859cc11cf",
+            "0000000000000000000000000000000000000000000000000000000000000052",
+            "0000000000000000000000000000000000000000000000000000000000000007"
+          ],
+          "data": "00000000000000000000000000000000000000000017e17360e36d86d195c7a400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006",
+          "log_index": 197
+        },
+        {
+          "address": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "topics": [
+            "b5c05f2b4df457fb2a62ca282c87338fa901f0b7de530321f507d59859cc11cf",
+            "0000000000000000000000000000000000000000000000000000000000000053",
+            "0000000000000000000000000000000000000000000000000000000000000007"
+          ],
+          "data": "00000000000000000000000000000000000000000017e17360e36d86d195c7a400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000006",
+          "log_index": 198
+        },
+        {
+          "address": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "topics": [
+            "7edc618964f595eb3f96e87d2c01643484aa8490797eb47bd46680d0ad4c7f72",
+            "0000000000000000000000000000000000000000000000000000000000000054",
+            "000000000000000000000000a62c3ced6906b188a4d4a3c981b79f2aabf2107f"
+          ],
+          "data": "00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000548656c6c6f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005576f726c64000000000000000000000000000000000000000000000000000000",
+          "log_index": 199
+        },
+        {
+          "address": "0x4d7968ebfD390D5E7926Cb3587C39eFf2F9FB225",
+          "topics": [
+            "373f84f0177a6c2e019f2e0e73c988359e56e111629a261c9bba5c968c383ed1",
+            "000000000000000000000000a62c3ced6906b188a4d4a3c981b79f2aabf2107f"
+          ],
+          "data": "",
+          "log_index": 200
+        },
+        {
+          "address": "0xe6D97B2099F142513be7A2a068bE040656Ae4591",
+          "topics": [
+            "1449c6dd7851abc30abf37f57715f492010519147cc2652fbc38202c18a6ee90",
+            "000000000000000000000000a62c3ced6906b188a4d4a3c981b79f2aabf2107f"
+          ],
+          "data": "000000000000000000000000000000000000007e37be2022c0914b2680000000000000000000000000000000000000000000007e37be2022c0914b2680000000",
+          "log_index": 201
+        },
+        {
+          "address": "0x4d7968ebfD390D5E7926Cb3587C39eFf2F9FB225",
+          "topics": [
+            "82d701855f3ac4a098fc0249261c5e06d1050d23c8aa351fae8abefc2a464fda",
+            "000000000000000000000000a62c3ced6906b188a4d4a3c981b79f2aabf2107f",
+            "000000000000000000000000a62c3ced6906b188a4d4a3c981b79f2aabf2107f",
+            "000000000000000000000000000000000000007e37be2022c0914b2680000000"
+          ],
+          "data": "",
+          "log_index": 202
+        }
+      ]
+    },
+    {
+      "label": "malicious_proposal",
+      "transaction_hash": "0xfefd829e246002a8fd061eede7501bccb6e244a9aacea0ebceaecef5d877a984",
+      "block": 15201794,
+      "timestamp": 1658617812,
+      "timestamp_utc": "2022-07-23T23:10:12+00:00",
+      "transaction_index": 11,
+      "status": 1,
+      "from": "0xa0c7BD318D69424603CBf91e9969870F21B8ab4c",
+      "to": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+      "nonce": 3,
+      "input_selector": "5bc7c6ac",
+      "input_hex": "5bc7c6ac00000000000000000000000000000000000000000000000000000000000000540000000000000000000000000000000000000000000000000000000000000003000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000004",
+      "gas_used": 730454,
+      "log_count": 5,
+      "audio_transfers": [],
+      "governance_events": [
+        {
+          "type": "proposal_state",
+          "proposal_id": 84,
+          "state_code": 3,
+          "log_index": 56
+        },
+        {
+          "type": "proposal_created",
+          "proposal_id": 85,
+          "proposer": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+          "log_index": 57
+        }
+      ],
+      "logs": [
+        {
+          "address": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "topics": [
+            "b5c05f2b4df457fb2a62ca282c87338fa901f0b7de530321f507d59859cc11cf",
+            "0000000000000000000000000000000000000000000000000000000000000054",
+            "0000000000000000000000000000000000000000000000000000000000000003"
+          ],
+          "data": "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "log_index": 56
+        },
+        {
+          "address": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "topics": [
+            "7edc618964f595eb3f96e87d2c01643484aa8490797eb47bd46680d0ad4c7f72",
+            "0000000000000000000000000000000000000000000000000000000000000055",
+            "000000000000000000000000bdbb5945f252bc3466a319cdcc3ee8056bf2e569"
+          ],
+          "data": "00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000000548656c6c6f0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000005576f726c64000000000000000000000000000000000000000000000000000000",
+          "log_index": 57
+        },
+        {
+          "address": "0x4d7968ebfD390D5E7926Cb3587C39eFf2F9FB225",
+          "topics": [
+            "373f84f0177a6c2e019f2e0e73c988359e56e111629a261c9bba5c968c383ed1",
+            "000000000000000000000000bdbb5945f252bc3466a319cdcc3ee8056bf2e569"
+          ],
+          "data": "",
+          "log_index": 58
+        },
+        {
+          "address": "0xe6D97B2099F142513be7A2a068bE040656Ae4591",
+          "topics": [
+            "1449c6dd7851abc30abf37f57715f492010519147cc2652fbc38202c18a6ee90",
+            "000000000000000000000000bdbb5945f252bc3466a319cdcc3ee8056bf2e569"
+          ],
+          "data": "000000000000000000000000000000000000007e37be2022c0914b2680000000000000000000000000000000000000000000007e37be2022c0914b2680000000",
+          "log_index": 59
+        },
+        {
+          "address": "0x4d7968ebfD390D5E7926Cb3587C39eFf2F9FB225",
+          "topics": [
+            "82d701855f3ac4a098fc0249261c5e06d1050d23c8aa351fae8abefc2a464fda",
+            "000000000000000000000000bdbb5945f252bc3466a319cdcc3ee8056bf2e569",
+            "000000000000000000000000bdbb5945f252bc3466a319cdcc3ee8056bf2e569",
+            "000000000000000000000000000000000000007e37be2022c0914b2680000000"
+          ],
+          "data": "",
+          "log_index": 60
+        }
+      ]
+    },
+    {
+      "label": "vote_proposal_85",
+      "transaction_hash": "0x3c09c6306b67737227edc24c663462d870e7c2bf39e9ab66877a980c900dd5d5",
+      "block": 15201796,
+      "timestamp": 1658617848,
+      "timestamp_utc": "2022-07-23T23:10:48+00:00",
+      "transaction_index": 2,
+      "status": 1,
+      "from": "0xa0c7BD318D69424603CBf91e9969870F21B8ab4c",
+      "to": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+      "nonce": 4,
+      "input_selector": "cc66ce79",
+      "input_hex": "cc66ce790000000000000000000000000000000000000000000000000000000000000055",
+      "gas_used": 190317,
+      "log_count": 1,
+      "audio_transfers": [],
+      "governance_events": [
+        {
+          "type": "vote_cast",
+          "proposal_id": 85,
+          "voter": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+          "support": 2,
+          "log_index": 2
+        }
+      ],
+      "logs": [
+        {
+          "address": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "topics": [
+            "f3f11b6b0f2367aeeec3a6b96f9528d1b57165334563e1d7083be608cdb64a54",
+            "0000000000000000000000000000000000000000000000000000000000000055",
+            "000000000000000000000000bdbb5945f252bc3466a319cdcc3ee8056bf2e569",
+            "0000000000000000000000000000000000000000000000000000000000000002"
+          ],
+          "data": "000000000000000000000000000000000000007e37be2022c0914b2680000000",
+          "log_index": 2
+        }
+      ]
+    },
+    {
+      "label": "execute_proposal_85",
+      "transaction_hash": "0x4227bca8ed4b8915c7eec0e14ad3748a88c4371d4176e716e8007249b9980dc9",
+      "block": 15201799,
+      "timestamp": 1658617896,
+      "timestamp_utc": "2022-07-23T23:11:36+00:00",
+      "transaction_index": 8,
+      "status": 1,
+      "from": "0xa0c7BD318D69424603CBf91e9969870F21B8ab4c",
+      "to": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+      "nonce": 5,
+      "input_selector": "543db4c4",
+      "input_hex": "543db4c40000000000000000000000000000000000000000000000000000000000000055",
+      "gas_used": 170218,
+      "log_count": 3,
+      "audio_transfers": [
+        {
+          "from": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "to": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+          "amount_wei": 18564497819999999999735541,
+          "amount_audio": 18564497.82,
+          "log_index": 43
+        }
+      ],
+      "governance_events": [
+        {
+          "type": "proposal_executed",
+          "proposal_id": 85,
+          "result_code": 1,
+          "log_index": 44
+        },
+        {
+          "type": "proposal_state",
+          "proposal_id": 85,
+          "state_code": 2,
+          "log_index": 45
+        }
+      ],
+      "logs": [
+        {
+          "address": "0x18aAA7115705e8be94bfFEBDE57Af9BFc265B998",
+          "topics": [
+            "ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0000000000000000000000004deca517d6817b6510798b7328f2314d3003abac",
+            "000000000000000000000000bdbb5945f252bc3466a319cdcc3ee8056bf2e569"
+          ],
+          "data": "0000000000000000000000000000000000000000000f5b2f71812d138f71f6f5",
+          "log_index": 43
+        },
+        {
+          "address": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "topics": [
+            "a85727613e00cfd4688ad13995391ed4b4cd9e493bcb978393d8fddeec804dbd",
+            "0000000000000000000000000000000000000000000000000000000000000055",
+            "0000000000000000000000000000000000000000000000000000000000000001"
+          ],
+          "data": "000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000001",
+          "log_index": 44
+        },
+        {
+          "address": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "topics": [
+            "b5c05f2b4df457fb2a62ca282c87338fa901f0b7de530321f507d59859cc11cf",
+            "0000000000000000000000000000000000000000000000000000000000000055",
+            "0000000000000000000000000000000000000000000000000000000000000002"
+          ],
+          "data": "000000000000000000000000000000000000007e37be2022c0914b268000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001",
+          "log_index": 45
+        }
+      ]
+    },
+    {
+      "label": "treasury_token_transfer",
+      "transaction_hash": "0x82fc23992c7433fffad0e28a1b8d11211dc4377de83e88088d79f24f4a3f28b3",
+      "block": 15201800,
+      "timestamp": 1658617923,
+      "timestamp_utc": "2022-07-23T23:12:03+00:00",
+      "transaction_index": 0,
+      "status": 1,
+      "from": "0xa0c7BD318D69424603CBf91e9969870F21B8ab4c",
+      "to": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+      "nonce": 6,
+      "input_selector": "3d183017",
+      "input_hex": "3d18301700000000000000000000000018aaa7115705e8be94bffebde57af9bfc265b9980000000000000000000000000000000000000000000f5b2f71812d138f71f6f5000000000000000000000000000000000000000000000024dce54d34a1a00000",
+      "gas_used": 147158,
+      "log_count": 7,
+      "audio_transfers": [
+        {
+          "from": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+          "to": "0xC730EF0f4973DA9cC0aB8Ab291890D3e77f58F79",
+          "amount_wei": 18564497819999999999735541,
+          "amount_audio": 18564497.82,
+          "log_index": 1
+        }
+      ],
+      "governance_events": [],
+      "logs": [
+        {
+          "address": "0x18aAA7115705e8be94bfFEBDE57Af9BFc265B998",
+          "topics": [
+            "8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+            "000000000000000000000000bdbb5945f252bc3466a319cdcc3ee8056bf2e569",
+            "0000000000000000000000007a250d5630b4cf539739df2c5dacb4c659f2488d"
+          ],
+          "data": "0000000000000000000000000000001d6329f1c35ca4bfabb9f5610000000000",
+          "log_index": 0
+        },
+        {
+          "address": "0x18aAA7115705e8be94bfFEBDE57Af9BFc265B998",
+          "topics": [
+            "ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "000000000000000000000000bdbb5945f252bc3466a319cdcc3ee8056bf2e569",
+            "000000000000000000000000c730ef0f4973da9cc0ab8ab291890d3e77f58f79"
+          ],
+          "data": "0000000000000000000000000000000000000000000f5b2f71812d138f71f6f5",
+          "log_index": 1
+        },
+        {
+          "address": "0x18aAA7115705e8be94bfFEBDE57Af9BFc265B998",
+          "topics": [
+            "8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+            "000000000000000000000000bdbb5945f252bc3466a319cdcc3ee8056bf2e569",
+            "0000000000000000000000007a250d5630b4cf539739df2c5dacb4c659f2488d"
+          ],
+          "data": "0000000000000000000000000000001d6329f1c35c95647c487433ec708e090b",
+          "log_index": 2
+        },
+        {
+          "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+          "topics": [
+            "ddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "000000000000000000000000c730ef0f4973da9cc0ab8ab291890d3e77f58f79",
+            "0000000000000000000000007a250d5630b4cf539739df2c5dacb4c659f2488d"
+          ],
+          "data": "0000000000000000000000000000000000000000000000262c6d313fd07d5732",
+          "log_index": 3
+        },
+        {
+          "address": "0xC730EF0f4973DA9cC0aB8Ab291890D3e77f58F79",
+          "topics": [
+            "1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1"
+          ],
+          "data": "000000000000000000000000000000000000000000124f8822cf28c6465d69dd0000000000000000000000000000000000000000000000075dd6ac8182bbed62",
+          "log_index": 4
+        },
+        {
+          "address": "0xC730EF0f4973DA9cC0aB8Ab291890D3e77f58F79",
+          "topics": [
+            "d78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822",
+            "0000000000000000000000007a250d5630b4cf539739df2c5dacb4c659f2488d",
+            "0000000000000000000000007a250d5630b4cf539739df2c5dacb4c659f2488d"
+          ],
+          "data": "0000000000000000000000000000000000000000000f5b2f71812d138f71f6f5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000262c6d313fd07d5732",
+          "log_index": 5
+        },
+        {
+          "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+          "topics": [
+            "7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65",
+            "0000000000000000000000007a250d5630b4cf539739df2c5dacb4c659f2488d"
+          ],
+          "data": "0000000000000000000000000000000000000000000000262c6d313fd07d5732",
+          "log_index": 6
+        }
+      ]
+    }
+  ],
+  "state_witnesses": [
+    {
+      "label": "attacker_initialize",
+      "transaction_hash": "0x3bbb15f9852c389e8d77399fe88b49b042d0f22aad4a33c979fbabc60a34b24f",
+      "before_block": 15201735,
+      "after_block": 15201736,
+      "treasury_audio_before": {
+        "block": 15201735,
+        "wei": 18752017999999999999732870,
+        "audio": 18752018.0
+      },
+      "treasury_audio_after": {
+        "block": 15201736,
+        "wei": 18752017999999999999732870,
+        "audio": 18752018.0
+      },
+      "attacker_audio_before": {
+        "block": 15201735,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "attacker_audio_after": {
+        "block": 15201736,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "malicious_target": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+      "malicious_target_audio_before": {
+        "block": 15201735,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "malicious_target_audio_after": {
+        "block": 15201736,
+        "wei": 0,
+        "audio": 0.0
+      }
+    },
+    {
+      "label": "malicious_proposal",
+      "transaction_hash": "0xfefd829e246002a8fd061eede7501bccb6e244a9aacea0ebceaecef5d877a984",
+      "before_block": 15201793,
+      "after_block": 15201794,
+      "treasury_audio_before": {
+        "block": 15201793,
+        "wei": 18752017999999999999732870,
+        "audio": 18752018.0
+      },
+      "treasury_audio_after": {
+        "block": 15201794,
+        "wei": 18752017999999999999732870,
+        "audio": 18752018.0
+      },
+      "attacker_audio_before": {
+        "block": 15201793,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "attacker_audio_after": {
+        "block": 15201794,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "malicious_target": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+      "malicious_target_audio_before": {
+        "block": 15201793,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "malicious_target_audio_after": {
+        "block": 15201794,
+        "wei": 0,
+        "audio": 0.0
+      }
+    },
+    {
+      "label": "vote_proposal_85",
+      "transaction_hash": "0x3c09c6306b67737227edc24c663462d870e7c2bf39e9ab66877a980c900dd5d5",
+      "before_block": 15201795,
+      "after_block": 15201796,
+      "treasury_audio_before": {
+        "block": 15201795,
+        "wei": 18752017999999999999732870,
+        "audio": 18752018.0
+      },
+      "treasury_audio_after": {
+        "block": 15201796,
+        "wei": 18752017999999999999732870,
+        "audio": 18752018.0
+      },
+      "attacker_audio_before": {
+        "block": 15201795,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "attacker_audio_after": {
+        "block": 15201796,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "malicious_target": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+      "malicious_target_audio_before": {
+        "block": 15201795,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "malicious_target_audio_after": {
+        "block": 15201796,
+        "wei": 0,
+        "audio": 0.0
+      }
+    },
+    {
+      "label": "execute_proposal_85",
+      "transaction_hash": "0x4227bca8ed4b8915c7eec0e14ad3748a88c4371d4176e716e8007249b9980dc9",
+      "before_block": 15201798,
+      "after_block": 15201799,
+      "treasury_audio_before": {
+        "block": 15201798,
+        "wei": 18752017999999999999732870,
+        "audio": 18752018.0
+      },
+      "treasury_audio_after": {
+        "block": 15201799,
+        "wei": 187520179999999999997329,
+        "audio": 187520.18
+      },
+      "attacker_audio_before": {
+        "block": 15201798,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "attacker_audio_after": {
+        "block": 15201799,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "malicious_target": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+      "malicious_target_audio_before": {
+        "block": 15201798,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "malicious_target_audio_after": {
+        "block": 15201799,
+        "wei": 18564497819999999999735541,
+        "audio": 18564497.82
+      }
+    },
+    {
+      "label": "treasury_token_transfer",
+      "transaction_hash": "0x82fc23992c7433fffad0e28a1b8d11211dc4377de83e88088d79f24f4a3f28b3",
+      "before_block": 15201799,
+      "after_block": 15201800,
+      "treasury_audio_before": {
+        "block": 15201799,
+        "wei": 187520179999999999997329,
+        "audio": 187520.18
+      },
+      "treasury_audio_after": {
+        "block": 15201800,
+        "wei": 187520179999999999997329,
+        "audio": 187520.18
+      },
+      "attacker_audio_before": {
+        "block": 15201799,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "attacker_audio_after": {
+        "block": 15201800,
+        "wei": 0,
+        "audio": 0.0
+      },
+      "malicious_target": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+      "malicious_target_audio_before": {
+        "block": 15201799,
+        "wei": 18564497819999999999735541,
+        "audio": 18564497.82
+      },
+      "malicious_target_audio_after": {
+        "block": 15201800,
+        "wei": 0,
+        "audio": 0.0
+      }
+    }
+  ],
+  "permission_state_diff": {
+    "transaction_hash": "0x3bbb15f9852c389e8d77399fe88b49b042d0f22aad4a33c979fbabc60a34b24f",
+    "before_block": 15201735,
+    "after_block": 15201736,
+    "fields": [
+      {
+        "name": "governance.guardian",
+        "before": {
+          "contract": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "function": "getGuardianAddress()",
+          "block": 15201735,
+          "value": "0x7eE3c2091471474c9c4831A550f1a79DaBA0CcEf",
+          "raw": "0000000000000000000000007ee3c2091471474c9c4831a550f1a79daba0ccef"
+        },
+        "after": {
+          "contract": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "function": "getGuardianAddress()",
+          "block": 15201736,
+          "value": "0xA62c3ced6906B188A4d4A3c981B79f2AABf2107F",
+          "raw": "000000000000000000000000a62c3ced6906b188a4d4a3c981b79f2aabf2107f"
+        },
+        "changed": true
+      },
+      {
+        "name": "governance.registry",
+        "before": {
+          "contract": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "function": "getRegistryAddress()",
+          "block": 15201735,
+          "value": "0xd976d3b4f4e22a238c1A736b6612D22f17b6f64C",
+          "raw": "000000000000000000000000d976d3b4f4e22a238c1a736b6612d22f17b6f64c"
+        },
+        "after": {
+          "contract": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "function": "getRegistryAddress()",
+          "block": 15201736,
+          "value": "0xA62c3ced6906B188A4d4A3c981B79f2AABf2107F",
+          "raw": "000000000000000000000000a62c3ced6906b188a4d4a3c981b79f2aabf2107f"
+        },
+        "changed": true
+      },
+      {
+        "name": "staking.governance",
+        "before": {
+          "contract": "0xe6D97B2099F142513be7A2a068bE040656Ae4591",
+          "function": "getGovernanceAddress()",
+          "block": 15201735,
+          "value": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "raw": "0000000000000000000000004deca517d6817b6510798b7328f2314d3003abac"
+        },
+        "after": {
+          "contract": "0xe6D97B2099F142513be7A2a068bE040656Ae4591",
+          "function": "getGovernanceAddress()",
+          "block": 15201736,
+          "value": "0xA62c3ced6906B188A4d4A3c981B79f2AABf2107F",
+          "raw": "000000000000000000000000a62c3ced6906b188a4d4a3c981b79f2aabf2107f"
+        },
+        "changed": true
+      },
+      {
+        "name": "delegate_manager.governance",
+        "before": {
+          "contract": "0x4d7968ebfD390D5E7926Cb3587C39eFf2F9FB225",
+          "function": "getGovernanceAddress()",
+          "block": 15201735,
+          "value": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+          "raw": "0000000000000000000000004deca517d6817b6510798b7328f2314d3003abac"
+        },
+        "after": {
+          "contract": "0x4d7968ebfD390D5E7926Cb3587C39eFf2F9FB225",
+          "function": "getGovernanceAddress()",
+          "block": 15201736,
+          "value": "0xA62c3ced6906B188A4d4A3c981B79f2AABf2107F",
+          "raw": "000000000000000000000000a62c3ced6906b188a4d4a3c981b79f2aabf2107f"
+        },
+        "changed": true
+      }
+    ],
+    "changed_field_count": 4,
+    "slot_0_proxy_admin": {
+      "before": {
+        "contract": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+        "slot": 0,
+        "block": 15201735,
+        "raw": "0000000000000000000000004deca517d6817b6510798b7328f2314d3003abac"
+      },
+      "after": {
+        "contract": "0x4DEcA517D6817B6510798b7328F2314d3003AbAC",
+        "slot": 0,
+        "block": 15201736,
+        "raw": "0000000000000000000000004deca517d6817b6510798b7328f2314d3003abac"
+      },
+      "expected_unchanged": true
+    }
+  },
+  "proposal_paths": [
+    {
+      "proposal_ids": [
+        82,
+        83
+      ],
+      "path": "initialization_corruption_then_target_rejection",
+      "transaction_hash": "0x3bbb15f9852c389e8d77399fe88b49b042d0f22aad4a33c979fbabc60a34b24f",
+      "block": 15201736,
+      "state_events": [
+        {
+          "type": "proposal_state",
+          "proposal_id": 82,
+          "state_code": 7,
+          "log_index": 197
+        },
+        {
+          "type": "proposal_state",
+          "proposal_id": 83,
+          "state_code": 7,
+          "log_index": 198
+        }
+      ],
+      "observed_result": "state changes occurred after repeatable initialization; proposals 82/83 were marked executed in the same transaction",
+      "official_result": "execution path failed with TargetContractAddressChanged; no AUDIO transfer",
+      "prefix_result": "VIOLATION"
+    },
+    {
+      "proposal_ids": [
+        84
+      ],
+      "path": "proposal_84_quorum_failure",
+      "transaction_hash": "0xfefd829e246002a8fd061eede7501bccb6e244a9aacea0ebceaecef5d877a984",
+      "block": 15201794,
+      "state_events": [
+        {
+          "type": "proposal_state",
+          "proposal_id": 84,
+          "state_code": 3,
+          "log_index": 56
+        }
+      ],
+      "vote_events": [],
+      "observed_result": "proposal 84 reached the defeated state and has no vote event in the replayed prefix",
+      "official_result": "proposal 84 did not pass quorum and failed during execution",
+      "prefix_result": "PASS"
+    },
+    {
+      "proposal_ids": [
+        85
+      ],
+      "path": "proposal_85_successful_treasury_transfer",
+      "transaction_hash": "0x4227bca8ed4b8915c7eec0e14ad3748a88c4371d4176e716e8007249b9980dc9",
+      "block": 15201799,
+      "state_events": [
+        {
+          "type": "proposal_state",
+          "proposal_id": 85,
+          "state_code": 2,
+          "log_index": 45
+        }
+      ],
+      "vote_events": [
+        {
+          "type": "vote_cast",
+          "proposal_id": 85,
+          "voter": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+          "support": 2,
+          "log_index": 2
+        }
+      ],
+      "execution_events": [
+        {
+          "type": "proposal_executed",
+          "proposal_id": 85,
+          "result_code": 1,
+          "log_index": 44
+        }
+      ],
+      "observed_result": "proposal 85 was voted and executed; 18564497.82 AUDIO left the governance treasury",
+      "official_result": "proposal 85 executed successfully and transferred the community pool",
+      "prefix_result": "VIOLATION"
+    }
+  ],
+  "prefix_results": {
+    "initialization_then_target_rejection": "VIOLATION",
+    "proposal_84_no_quorum": "PASS",
+    "proposal_85_funds_transfer": "VIOLATION"
+  },
+  "prefixes": [
+    {
+      "after_label": "attacker_initialize",
+      "status": "VIOLATION",
+      "reason": "successful initialize call from the historical attacker address"
+    },
+    {
+      "after_label": "malicious_proposal",
+      "status": "VIOLATION",
+      "reason": "the same caller successfully created the malicious proposal later identified as proposal 85"
+    },
+    {
+      "after_label": "execute_proposal_85",
+      "status": "VIOLATION",
+      "reason": "receipt and AUDIO Transfer event show treasury-controlled tokens moved to the malicious proposal target"
+    },
+    {
+      "after_label": "treasury_token_transfer",
+      "status": "VIOLATION",
+      "reason": "receipt contains a subsequent AUDIO transfer from the governance treasury to the malicious proposal target"
+    }
+  ],
+  "derived_checks": {
+    "transaction_count": 5,
+    "all_receipts_successful": true,
+    "first_call_unauthorized": true,
+    "first_call_succeeded": true,
+    "initializer_prefix_violation": true,
+    "permission_state_changed_after_initializer": true,
+    "permission_changed_field_count": 4,
+    "proxy_admin_slot_unchanged": true,
+    "treasury_transfer_count": 1,
+    "treasury_transfer_target": "0xbdbB5945f252bc3466A319CDcC3EE8056bf2e569",
+    "treasury_audio_outflow": 18564497.82,
+    "reported_transfer_audio": 18564497,
+    "proposal_ids_replayed": [
+      82,
+      83,
+      84,
+      85
+    ],
+    "proposal_82_83_state_events": 2,
+    "proposal_84_defeated_state_events": 1,
+    "proposal_84_vote_events": 0,
+    "proposal_85_vote_events": 1,
+    "proposal_85_execution_events": 1
+  },
+  "limitations": [
+    "This is a transaction-level historical replay with exact calldata, receipts, logs, and ERC-20 balance witnesses; it is not a full storage-diff reconstruction.",
+    "The artifact establishes a normative initializer violation and a realized treasury-transfer consequence; it does not claim that BTG discovered the incident before the official postmortem.",
+    "No live transaction is submitted and no current contract state is modified."
+  ]
+}

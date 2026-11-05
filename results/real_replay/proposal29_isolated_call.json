@@ -1,0 +1,70 @@
+{
+  "status": "complete",
+  "read_only": true,
+  "rpc": "https://arb1.arbitrum.io/rpc",
+  "bytecode": {
+    "block": "latest",
+    "address": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+    "sha256": "fd5e0ec0633afeb92b2f6b6cac36e13a9732bd1914f8158a78f127d51d54a572",
+    "length": 24535
+  },
+  "case": "uniswap_proposal_29_isolated_authorization_replay",
+  "property": "the aliased owner must be able to execute the same governance calldata",
+  "input": {
+    "factory": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+    "caller": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+    "calldata": "0x13af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b0699",
+    "calldata_source_transaction": "0xa8ea0989bed051b6eb26a9409929294ee14305ed20dd005229cfcf567e39e186",
+    "method": "V3Factory.setOwner(address)",
+    "pre_repair_block": 48972826,
+    "post_repair_block": 48972827,
+    "state_source": "saved committed owner witnesses; injected into eth_call state override",
+    "owner_storage_slot": 3
+  },
+  "state": {
+    "owner_before_repair": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+    "owner_after_repair": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+    "expected_owner_before": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+    "expected_owner_after": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD"
+  },
+  "calls": {
+    "before_repair": {
+      "status": "REVERT",
+      "label": "before_repair",
+      "attempt": 4,
+      "request": {
+        "from": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+        "to": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+        "data": "0x13af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b0699"
+      },
+      "state_override": {
+        "owner_slot": 3,
+        "owner_value": "0x0000000000000000000000001a9c8182c09f50c8318d769245bea52c32be35bc"
+      },
+      "error": "{'code': 3, 'message': 'execution reverted', 'data': '0x'}"
+    },
+    "after_repair": {
+      "status": "PASS",
+      "label": "after_repair",
+      "attempt": 1,
+      "request": {
+        "from": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+        "to": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+        "data": "0x13af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b0699"
+      },
+      "state_override": {
+        "owner_slot": 3,
+        "owner_value": "0x0000000000000000000000002bad8182c09f50c8318d769245bea52c32be46cd"
+      },
+      "return_data": "0x"
+    }
+  },
+  "conclusion": {
+    "same_calldata": true,
+    "same_caller": true,
+    "before_repair_reverts": true,
+    "after_repair_succeeds": true,
+    "isolated_replay_passed": true,
+    "reproduction_mode": "real deployed target bytecode with saved historical owner states overridden at latest call context"
+  }
+}

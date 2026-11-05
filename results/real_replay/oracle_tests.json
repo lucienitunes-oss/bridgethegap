@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "cases": [
+    {
+      "name": "complete_local_pair",
+      "expected": "PASS",
+      "observed": {
+        "status": "PASS",
+        "reason": "both target fields match"
+      }
+    },
+    {
+      "name": "normal_async_pending_allowed",
+      "expected": "PASS",
+      "observed": {
+        "status": "PASS",
+        "reason": "completed domains pass; unobserved domains remain pending"
+      }
+    },
+    {
+      "name": "partial_global_policy_violation",
+      "expected": "VIOLATION",
+      "observed": {
+        "status": "VIOLATION",
+        "reason": "partial activation under the explicit all-domains policy",
+        "active": 1,
+        "expected": 3
+      }
+    },
+    {
+      "name": "missing_attribute_is_unknown",
+      "expected": "UNKNOWN",
+      "observed": {
+        "status": "UNKNOWN",
+        "reason": "missing evidence: v2_fee_to"
+      }
+    },
+    {
+      "name": "missing_final_domain_is_unknown",
+      "expected": "UNKNOWN",
+      "observed": {
+        "status": "UNKNOWN",
+        "reason": "final state is missing one or more domains"
+      }
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "status": "complete",
+  "protocol": "Uniswap cross-chain governance",
+  "runner_sha256": "d21334bae7e4dfb833bb1a2f316a00bf1f441a147ecc010394faa3b48829e3c3",
+  "source": "experiments/results/real_replay/additional_crosschain_cases.json",
+  "source_sha256": "7f85477312d230639580b35c8e6758aa0e4c0333b81f5bbe1b6960454846629e",
+  "input_sha256": "e6ad6bc844de7f5ef9b267b92c82015e87fb12faed47aed14672d7b7f01e9195",
+  "cases": [
+    {
+      "proposal_id": 69,
+      "kind": "normal_async_safe",
+      "property": "Base V3 fee tiers 200, 300, and 400 are enabled after the corresponding cross-chain calls; pending delivery is safe under the normal-asynchronous policy.",
+      "source": {
+        "path": "experiments/results/real_replay/additional_crosschain_cases.json",
+        "sha256": "7f85477312d230639580b35c8e6758aa0e4c0333b81f5bbe1b6960454846629e"
+      },
+      "action": {
+        "transaction_hash": "0xc9246c12f4f78f74be3cb2fba49cc1386b07b9484a4c39e28833b75fc44de441",
+        "block": 20758180,
+        "calldata": "fe0d94c10000000000000000000000000000000000000000000000000000000000000045",
+        "selector": "0xfe0d94c1",
+        "receipt_status": 1,
+        "log_count": 13,
+        "event_effects": [
+          {
+            "kind": "event",
+            "address": "0x49048044D57e1C92A77f79988d21Fa8fAF74E97e",
+            "topic0": "b3813568d9991fc951961fcb4c784893574240a28925604d09fc577c55bb7c32",
+            "log_index": 250
+          },
+          {
+            "kind": "event",
+            "address": "0x866E82a600A1414e583f7F13623F1aC5d58b0Afa",
+            "topic0": "cb0f7ffd78f9aee47a248fae8db181db6eee833039123e026dcbff529522e52a",
+            "log_index": 251
+          },
+          {
+            "kind": "event",
+            "address": "0x866E82a600A1414e583f7F13623F1aC5d58b0Afa",
+            "topic0": "8ebb2ec2465bdb2a06a66fc37a0963af8a2a6a1479d81d56fdb8cbb98096d546",
+            "log_index": 252
+          },
+          {
+            "kind": "event",
+            "address": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+            "topic0": "a560e3198060a2f10670c1ec5b403077ea6ae93ca8de1c32b451dc1a943cd6e7",
+            "log_index": 253
+          },
+          {
+            "kind": "event",
+            "address": "0x49048044D57e1C92A77f79988d21Fa8fAF74E97e",
+            "topic0": "b3813568d9991fc951961fcb4c784893574240a28925604d09fc577c55bb7c32",
+            "log_index": 254
+          },
+          {
+            "kind": "event",
+            "address": "0x866E82a600A1414e583f7F13623F1aC5d58b0Afa",
+            "topic0": "cb0f7ffd78f9aee47a248fae8db181db6eee833039123e026dcbff529522e52a",
+            "log_index": 255
+          },
+          {
+            "kind": "event",
+            "address": "0x866E82a600A1414e583f7F13623F1aC5d58b0Afa",
+            "topic0": "8ebb2ec2465bdb2a06a66fc37a0963af8a2a6a1479d81d56fdb8cbb98096d546",
+            "log_index": 256
+          },
+          {
+            "kind": "event",
+            "address": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+            "topic0": "a560e3198060a2f10670c1ec5b403077ea6ae93ca8de1c32b451dc1a943cd6e7",
+            "log_index": 257
+          },
+          {
+            "kind": "event",
+            "address": "0x49048044D57e1C92A77f79988d21Fa8fAF74E97e",
+            "topic0": "b3813568d9991fc951961fcb4c784893574240a28925604d09fc577c55bb7c32",
+            "log_index": 258
+          },
+          {
+            "kind": "event",
+            "address": "0x866E82a600A1414e583f7F13623F1aC5d58b0Afa",
+            "topic0": "cb0f7ffd78f9aee47a248fae8db181db6eee833039123e026dcbff529522e52a",
+            "log_index": 259
+          },
+          {
+            "kind": "event",
+            "address": "0x866E82a600A1414e583f7F13623F1aC5d58b0Afa",
+            "topic0": "8ebb2ec2465bdb2a06a66fc37a0963af8a2a6a1479d81d56fdb8cbb98096d546",
+            "log_index": 260
+          },
+          {
+            "kind": "event",
+            "address": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+            "topic0": "a560e3198060a2f10670c1ec5b403077ea6ae93ca8de1c32b451dc1a943cd6e7",
+            "log_index": 261
+          },
+          {
+            "kind": "event",
+            "address": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+            "topic0": "712ae1383f79ac853f8d882153778e0260ef8f03b504e2866e0593e04d2b291f",
+            "log_index": 262
+          }
+        ]
+      },
+      "state_observations": [
+        "BaseV3Factory.feeAmountTickSpacing[200]=0",
+        "BaseV3Factory.feeAmountTickSpacing[200]=4",
+        "BaseV3Factory.feeAmountTickSpacing[300]=0",
+        "BaseV3Factory.feeAmountTickSpacing[300]=6",
+        "BaseV3Factory.feeAmountTickSpacing[400]=0",
+        "BaseV3Factory.feeAmountTickSpacing[400]=8"
+      ],
+      "reads": [
+        "BaseV3Factory.feeAmountTickSpacing[200]",
+        "BaseV3Factory.feeAmountTickSpacing[300]",
+        "BaseV3Factory.feeAmountTickSpacing[400]"
+      ],
+      "writes": [
+        "BaseV3Factory.feeAmountTickSpacing[200]",
+        "BaseV3Factory.feeAmountTickSpacing[300]",
+        "BaseV3Factory.feeAmountTickSpacing[400]"
+      ],
+      "property_dependencies": [
+        "BaseV3Factory.feeAmountTickSpacing[200]",
+        "BaseV3Factory.feeAmountTickSpacing[300]",
+        "BaseV3Factory.feeAmountTickSpacing[400]"
+      ],
+      "btg_result": "PASS",
+      "boundary_results": [
+        {
+          "step": "l1_execution_and_dispatch",
+          "status": "PASS"
+        },
+        {
+          "step": "base_pending_prefix",
+          "status": "PASS"
+        },
+        {
+          "step": "base_all_messages_delivered",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "proposal_id": 29,
+      "kind": "cross_transaction_owner_repair_and_use",
+      "property": "The Arbitrum bridge factory owner must be the aliased cross-chain owner required by the published bridge repair at every committed destination boundary.",
+      "source": {
+        "path": "experiments/results/real_replay/additional_crosschain_cases.json",
+        "sha256": "7f85477312d230639580b35c8e6758aa0e4c0333b81f5bbe1b6960454846629e"
+      },
+      "action": {
+        "transaction_hash": "0x990f88c0558b8a37ec784c6d6d70a650bbc3df817ff42272c4e296ff80523cd2",
+        "block": 16268414,
+        "calldata": "fe0d94c1000000000000000000000000000000000000000000000000000000000000001d",
+        "selector": "0xfe0d94c1",
+        "receipt_status": 1,
+        "log_count": 4,
+        "event_effects": [
+          {
+            "kind": "event",
+            "address": "0x8315177aB297bA92A06054cE80a67Ed4DBd7ed3a",
+            "topic0": "5e3c1311ea442664e8b1611bfabef659120ea7a0a2cfc0667700bebc69cbffe1",
+            "log_index": 240
+          },
+          {
+            "kind": "event",
+            "address": "0x4Dbd4fc535Ac27206064B68FfCf827b0A60BAB3f",
+            "topic0": "ff64905f73a67fb594e0f940a8075a860db489ad991e032f48c81123eb52d60b",
+            "log_index": 241
+          },
+          {
+            "kind": "event",
+            "address": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+            "topic0": "a560e3198060a2f10670c1ec5b403077ea6ae93ca8de1c32b451dc1a943cd6e7",
+            "log_index": 242
+          },
+          {
+            "kind": "event",
+            "address": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+            "topic0": "712ae1383f79ac853f8d882153778e0260ef8f03b504e2866e0593e04d2b291f",
+            "log_index": 243
+          }
+        ]
+      },
+      "state_observations": [
+        "ArbitrumV3Factory.owner:0x1a9C8182C09F50C8318d769245beA52c32BE35BC->0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+        "ArbitrumV3Factory.owner:0x2BAD8182C09F50c8318d769245beA52C32Be46CD->0xFF7aD5dA31fECdC678796c88B05926dB896b0699"
+      ],
+      "reads": [
+        "ArbitrumV3Factory.owner"
+      ],
+      "writes": [
+        "ArbitrumV3Factory.owner"
+      ],
+      "property_dependencies": [
+        "ArbitrumV3Factory.owner"
+      ],
+      "btg_result": "VIOLATION",
+      "boundary_results": [
+        {
+          "step": "l1_security_repair_dispatch",
+          "status": "PASS"
+        },
+        {
+          "step": "arbitrum_pre_repair_owner_state",
+          "status": "VIOLATION"
+        },
+        {
+          "step": "arbitrum_post_repair_owner_state",
+          "status": "PASS"
+        },
+        {
+          "step": "later_proposal_94_governance_use",
+          "status": "PASS"
+        }
+      ]
+    },
+    {
+      "proposal_id": 43,
+      "kind": "normative_bridge_authority_migration",
+      "property": "After the approved Celo bridge migration, the V3Factory owner must be the Wormhole receiver; the retired Optics receiver must not retain authorization to change the factory.",
+      "source": {
+        "path": "experiments/results/real_replay/additional_crosschain_cases.json",
+        "sha256": "7f85477312d230639580b35c8e6758aa0e4c0333b81f5bbe1b6960454846629e"
+      },
+      "action": {
+        "transaction_hash": "0xd348519fac24c98ca7173dac83a611330713ccc9c20be5ebba8a3266b2b04d28",
+        "block": 18035233,
+        "calldata": "fe0d94c1000000000000000000000000000000000000000000000000000000000000002b",
+        "selector": "0xfe0d94c1",
+        "receipt_status": 1,
+        "log_count": 5,
+        "event_effects": [
+          {
+            "kind": "event",
+            "address": "0xa73a3a74C7044B5411bD61E1990618A1400DA379",
+            "topic0": "9d4c83d2e57d7d381feb264b44a5015e7f9ef26340f4fc46b558a6dc16dd811a",
+            "log_index": 215
+          },
+          {
+            "kind": "event",
+            "address": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+            "topic0": "a560e3198060a2f10670c1ec5b403077ea6ae93ca8de1c32b451dc1a943cd6e7",
+            "log_index": 216
+          },
+          {
+            "kind": "event",
+            "address": "0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41",
+            "topic0": "d8c9334b1a9c2f9da342a0a2b32629c1a229b6445dad78947f674b44444a7550",
+            "log_index": 217
+          },
+          {
+            "kind": "event",
+            "address": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+            "topic0": "a560e3198060a2f10670c1ec5b403077ea6ae93ca8de1c32b451dc1a943cd6e7",
+            "log_index": 218
+          },
+          {
+            "kind": "event",
+            "address": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+            "topic0": "712ae1383f79ac853f8d882153778e0260ef8f03b504e2866e0593e04d2b291f",
+            "log_index": 219
+          }
+        ]
+      },
+      "state_observations": [
+        "ArbitrumV3Factory.owner:0x5EE2BA07742D9276b2F51Ee4AD949016b7F164c1->0x0Eb863541278308c3A64F8E908BC646e27BFD071",
+        "CeloV3Factory.authorization[OpticsReceiver]=PASS",
+        "CeloV3Factory.authorization[WormholeReceiver]=REVERT",
+        "CeloV3Factory.owner:0x5EE2BA07742D9276b2F51Ee4AD949016b7F164c1->0x0Eb863541278308c3A64F8E908BC646e27BFD071"
+      ],
+      "reads": [
+        "ArbitrumV3Factory.owner",
+        "CeloV3Factory.authorization[OpticsReceiver]",
+        "CeloV3Factory.authorization[WormholeReceiver]",
+        "CeloV3Factory.owner"
+      ],
+      "writes": [
+        "ArbitrumV3Factory.owner",
+        "CeloV3Factory.owner"
+      ],
+      "property_dependencies": [
+        "ArbitrumV3Factory.owner",
+        "CeloV3Factory.authorization[OpticsReceiver]",
+        "CeloV3Factory.authorization[WormholeReceiver]",
+        "CeloV3Factory.owner"
+      ],
+      "btg_result": "PASS",
+      "boundary_results": [
+        {
+          "step": "l1_bridge_authority_migration_dispatch",
+          "status": "PASS"
+        },
+        {
+          "step": "celo_pre_migration_authority",
+          "status": "PASS"
+        },
+        {
+          "step": "celo_post_migration_authority",
+          "status": "PASS"
+        },
+        {
+          "step": "celo_retired_route_revoked",
+          "status": "PASS"
+        },
+        {
+          "step": "celo_new_route_authorized",
+          "status": "PASS"
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "cases": 3,
+    "calldata_cases": 3,
+    "receipt_log_cases": 3,
+    "dependency_cases": 3
+  },
+  "generated_utc": "2026-09-15T09:55:24.867302+00:00"
+}
