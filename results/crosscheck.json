@@ -1,0 +1,61 @@
+{
+  "scope": "complete bounded enumeration; 0-4 labeled binary overwrites of three slots; all binary initial states; predicates x>=y and y>=z",
+  "comparison": "set of (terminal state, violated-predicate bitmask) outcomes",
+  "runner_sha256": "d07b3646bd9bba87bd49f28bf77c6152231c101ea2213cfe84fb1265c7d677ee",
+  "schedule_runner_sha256": "8227bca5b1f0ab8275a0294539c3a87c4dcb28777b6df709a1859455214107bc",
+  "summary": {
+    "models": 12440,
+    "unsafe_models": 10636,
+    "reference_orders": 259832,
+    "reduced_orders": 177592,
+    "property_mismatches": 0,
+    "storage_mismatches": 2836
+  },
+  "by_action_count": [
+    {
+      "actions": 0,
+      "models": 8,
+      "unsafe_models": 4,
+      "reference_orders": 8,
+      "reduced_orders": 8,
+      "property_mismatches": 0,
+      "storage_mismatches": 0
+    },
+    {
+      "actions": 1,
+      "models": 48,
+      "unsafe_models": 30,
+      "reference_orders": 48,
+      "reduced_orders": 48,
+      "property_mismatches": 0,
+      "storage_mismatches": 0
+    },
+    {
+      "actions": 2,
+      "models": 288,
+      "unsafe_models": 210,
+      "reference_orders": 576,
+      "reduced_orders": 512,
+      "property_mismatches": 0,
+      "storage_mismatches": 16
+    },
+    {
+      "actions": 3,
+      "models": 1728,
+      "unsafe_models": 1398,
+      "reference_orders": 10368,
+      "reduced_orders": 8064,
+      "property_mismatches": 0,
+      "storage_mismatches": 260
+    },
+    {
+      "actions": 4,
+      "models": 10368,
+      "unsafe_models": 8994,
+      "reference_orders": 248832,
+      "reduced_orders": 168960,
+      "property_mismatches": 0,
+      "storage_mismatches": 2560
+    }
+  ]
+}

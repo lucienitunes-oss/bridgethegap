@@ -1,0 +1,62 @@
+{
+  "status": "complete",
+  "scope": "Role-separated comparison: same abstract scale corpus; Nomad evidence metrics",
+  "protocol": {
+    "timing_repetitions": 7,
+    "abstract_runtime": "192-model scale_ablation wall_seconds",
+    "graph_runtime": "median materialized dependency-graph construction; BTG uses five real Nomad rows, POR uses 192 abstract fixtures",
+    "state_reads": "archive validator raw cast calls for BTG; abstract predicate-slot reads for persistent POR",
+    "evidence_completeness": "real transaction rows require calldata/receipt/trace/effects/pre/post state; abstract POR has no chain evidence"
+  },
+  "methods": {
+    "BTG": {
+      "abstract_models": 192,
+      "abstract_runtime_seconds": 0.657416,
+      "abstract_orders": 35874,
+      "abstract_missed_models": 0,
+      "nomad_decision_runtime_ms": 0.7925,
+      "dependency_graph_build_median_ms": 0.0108,
+      "dependency_graph_scope": "five-row Nomad adapter",
+      "archive_state_reads": 57,
+      "real_evidence_complete": "5/5",
+      "real_evidence_components": {
+        "transaction": 5,
+        "receipt": 5,
+        "trace": 5,
+        "effects": 5,
+        "pre_state": 5,
+        "post_state": 5
+      },
+      "decisions": [
+        "VIOLATION",
+        "VIOLATION",
+        "VIOLATION",
+        "VIOLATION",
+        "VIOLATION"
+      ],
+      "state_input_sha256": "572644455ea2e55f8d932c3c7bf56751e4fa5ea41270993fea10fa3cf6a2c9c5"
+    },
+    "Persistent-set POR": {
+      "abstract_models": 192,
+      "abstract_runtime_seconds": 0.397154,
+      "abstract_orders": 35874,
+      "abstract_missed_models": 0,
+      "dependency_graph_build_median_ms": 0.0066,
+      "dependency_graph_scope": "192 abstract fixtures",
+      "archive_state_reads": 0,
+      "abstract_predicate_slot_reads": 603124,
+      "real_evidence_complete": "0/5",
+      "real_evidence_components": {},
+      "decisions": []
+    }
+  },
+  "same_abstract_corpus": true,
+  "same_abstract_outcomes": true,
+  "cast_archive_reads_verified": true,
+  "cast_same_input": true,
+  "source_hashes": {
+    "run_por_evidence_comparison.py": "b300ce3aed0cee697cbaa38b3badae637948b81c9b9044d543213d7f9f3299ee",
+    "run_schedules.py": "8227bca5b1f0ab8275a0294539c3a87c4dcb28777b6df709a1859455214107bc",
+    "run_nomad_transaction_sequence.py": "31894747acb16933b74d138500cf9a4d2d17c67aea2964ec33a51b1a1d25c170"
+  }
+}

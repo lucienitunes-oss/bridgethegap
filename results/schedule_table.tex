@@ -1,0 +1,13 @@
+% Generated from raw results by experiments/build_evidence.py.
+\begin{table}[t]\centering\small
+\caption{Constructed schedule models. Misses count models with a violation found by exhaustive prefix checking but absent from the indicated method.}
+\label{tab:schedule}
+\begin{tabular}{@{}lrr@{}}\toprule
+Method & Orders & Misses / 120 \\ \midrule
+Exhaustive prefixes & 27,840 & 0 \\
+Exhaustive final state & 27,840 & 79 \\
+Fixed order & 128 & 82 \\
+Storage-only POR & 1,460 & 45 \\
+Property-aware POR & 4,472 & 0 \\
+Persistent-set POR & 4,472 & 0 \\
+\bottomrule\end{tabular}\end{table}

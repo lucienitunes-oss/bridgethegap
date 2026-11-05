@@ -1,0 +1,27 @@
+{
+  "checks": {
+    "decimal_mismatch_factor": 10000000000,
+    "decimal_normalization_18_to_6": 7500,
+    "eip2930_access_list_changes_success_semantics": false,
+    "f1_from_reported_precision_recall": 0.959662,
+    "false_discovery_rate_from_precision": 0.058,
+    "outside_configured_expiration": false,
+    "por_disjoint_effects": true,
+    "por_enabling_dependency": false,
+    "por_shared_effects": false,
+    "within_configured_expiration": true
+  },
+  "environment": {
+    "execution": "native host Python; no WSL distribution was available",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.10.8"
+  },
+  "not_validated": [
+    "analyzer completeness",
+    "4,560-proposal labels and metrics",
+    "chain snapshots and baseline implementations",
+    "the four investigated findings"
+  ],
+  "scope": "arithmetic, EVM access-list semantics, schedule bounds, and POR preconditions",
+  "status": "passed"
+}

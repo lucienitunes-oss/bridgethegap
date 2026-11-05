@@ -1,0 +1,31 @@
+\begin{table}[t]\centering\scriptsize\setlength{\tabcolsep}{2pt}
+\caption{Dependency-graph construction on declared overwrite models. Each time is the median of three seed-level medians (seven runs each); peak is the median Python allocation peak from separate untimed runs, in KiB. $e$ counts distinct undirected edges; $d=e/\binom{n}{2}$. Rows with $m=0,e>0$ are same-slot storage cliques.}
+\label{tab:dependency-construction}
+\begin{tabular}{@{}rrrrrr@{}}\toprule
+$n$ & $m$ & $e$ & $d$ (\%) & Build (ms) & Peak (KiB) \\
+\midrule
+32 & 0 & 0 & 0.00 & 0.02 & 16.7 \\
+32 & 32 & 32 & 6.45 & 0.06 & 26.4 \\
+32 & 128 & 128 & 25.81 & 0.17 & 66.7 \\
+32 & 0 & 496 & 100.00 & 0.23 & 75.6 \\
+\midrule
+128 & 0 & 0 & 0.00 & 0.07 & 65.0 \\
+128 & 128 & 128 & 1.57 & 0.22 & 102.9 \\
+128 & 512 & 512 & 6.30 & 0.63 & 264.1 \\
+128 & 0 & 8,128 & 100.00 & 3.63 & 1,067.5 \\
+\midrule
+512 & 0 & 0 & 0.00 & 0.26 & 257.3 \\
+512 & 512 & 512 & 0.39 & 1.31 & 410.8 \\
+512 & 2048 & 2,048 & 1.57 & 4.13 & 1,048.6 \\
+512 & 0 & 130,816 & 100.00 & 101.73 & 16,555.0 \\
+\bottomrule\end{tabular}\end{table}
+\begin{table}[t]\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Matched end-to-end exploration at eight actions (40,320 exhaustive orders per fixture). Times include DFS, prefix evaluation, and outcome aggregation; cached time also includes graph construction. Each value is a median across two seed-level medians, with three timings per seed. Raw per-seed results for 4, 6, and 8 actions are retained.}
+\label{tab:dependency-exploration}
+\begin{tabular}{@{}rrrrr@{}}\toprule
+$m$ & $d$ (\%) & Retained orders & Online (ms) & Cached (ms) \\ \midrule
+0 & 0.00 & 1 & 1.42 & 1.25 \\
+4 & 14.29 & 16 & 4.40 & 3.05 \\
+8 & 28.57 & 168 & 13.54 & 11.40 \\
+28 & 100.00 & 40,320 & 1361.94 & 1256.73 \\
+\bottomrule\end{tabular}\end{table}

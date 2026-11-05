@@ -1,0 +1,15 @@
+% Generated from trace-derived Nomad transaction sequence and hash-verified Souffle output relations.
+\begin{table*}[t]\centering\scriptsize\setlength{\tabcolsep}{3pt}
+\caption{Nomad transaction-level comparison. V = VIOLATION. The adapter obtains calldata, receipts, logs, and pre/post storage diffs from the archive RPC for the deployment, upgrade, and three attack transactions. BTG, the independent archive-state validator, the separate accepted-root rule executed by Souffl\'e, and the terminal projection use the same five-transaction state-input hash and executable-state invariant. The deployment row is a code-absent pre-state boundary whose post-state is the first executable Replica observation; the attack rows have independent pre=0/post=2 message states within the shared block.}
+\label{tab:nomad-attack}
+\begin{tabular}{@{}p{0.13\linewidth}p{0.24\linewidth}p{0.16\linewidth}cccc@{}}\toprule
+Row / transaction & Extracted effect & Pre $\rightarrow$ post state & BTG & Souffl\'e & Archive validator & Terminal \\ \midrule
+1 / \texttt{0x99662dac...} & selector 0x60a06040; 7 target slots changed & root witness; 14,629,757 $\rightarrow$ 14,629,758 & V & V & V & -- \\
+2 / \texttt{0x7bccd64f...} & selector 0x6a761202; 0 target slots changed & root witness; 15,003,659 $\rightarrow$ 15,003,660 & V & V & V & -- \\
+3 / \texttt{0x61497a1a...} & Process + Receive; 100 WBTC & message 0 $\rightarrow$ 2; pre 15,259,100 & V & V & V & -- \\
+4 / \texttt{0x40163166...} & Process + Receive; 100 WBTC & message 0 $\rightarrow$ 2; pre 15,259,100 & V & V & V & -- \\
+5 / \texttt{0xb1fe26cc...} & Process + Receive; 100 WBTC & message 0 $\rightarrow$ 2; pre 15,259,100 & V & V & V & V (final) \\
+\bottomrule
+\end{tabular}
+\par\smallskip\parbox{0.97\linewidth}{\textit{Provenance.} The five transaction hashes, complete raw JSON responses, trace pre/post accounts, storage-diff keys, decoded Process/Receive effects, independent archive calls, rule SHA-256, state-input hash, and all Souffl\'e relations are retained. The deployment boundary is not treated as a missing row: its absent pre-state is explicit. The terminal cell is a final-post-state projection over this same state-input bundle.}
+\end{table*}

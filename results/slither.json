@@ -1,0 +1,2198 @@
+{
+  "success": true,
+  "error": null,
+  "results": {
+    "detectors": [
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "delegate",
+            "source_mapping": {
+              "start": 571,
+              "length": 148,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                13,
+                14,
+                15
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Effects",
+                "source_mapping": {
+                  "start": 132,
+                  "length": 843,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "delegate(address,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(ok,None) = implementation.delegatecall(data)",
+            "source_mapping": {
+              "start": 653,
+              "length": 46,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                14
+              ],
+              "starting_column": 9,
+              "ending_column": 55
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "delegate",
+                "source_mapping": {
+                  "start": 571,
+                  "length": 148,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Effects",
+                    "source_mapping": {
+                      "start": 132,
+                      "length": 843,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "delegate(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Effects.delegate(address,bytes) (experiments/Fixtures.sol#13-15) uses delegatecall to a input-controlled function id\n\t- (ok,None) = implementation.delegatecall(data) (experiments/Fixtures.sol#14)\n",
+        "markdown": "[Effects.delegate(address,bytes)](experiments/Fixtures.sol#L13-L15) uses delegatecall to a input-controlled function id\n\t- [(ok,None) = implementation.delegatecall(data)](experiments/Fixtures.sol#L14)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L13-L15",
+        "id": "f9347c72e5c6c14cb6fdc7c908e1584fc5453172a2c7f773a0338db14e9d6a51",
+        "check": "controlled-delegatecall",
+        "impact": "High",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 1764,
+              "length": 300,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "CallbackVault",
+                "source_mapping": {
+                  "start": 1505,
+                  "length": 561,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50,
+                    51
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(ok,None) = msg.sender.call(abi.encodeWithSignature(onPay()))",
+            "source_mapping": {
+              "start": 1907,
+              "length": 64,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                47
+              ],
+              "starting_column": 9,
+              "ending_column": 73
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 1764,
+                  "length": 300,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "CallbackVault",
+                    "source_mapping": {
+                      "start": 1505,
+                      "length": 561,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "credit[msg.sender] = 0",
+            "source_mapping": {
+              "start": 2035,
+              "length": 22,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                49
+              ],
+              "starting_column": 26,
+              "ending_column": 48
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 1764,
+                  "length": 300,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "CallbackVault",
+                    "source_mapping": {
+                      "start": 1505,
+                      "length": 561,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "credit"
+            }
+          }
+        ],
+        "description": "Reentrancy in CallbackVault.withdraw() (experiments/Fixtures.sol#44-50):\n\tExternal calls:\n\t- (ok,None) = msg.sender.call(abi.encodeWithSignature(onPay())) (experiments/Fixtures.sol#47)\n\tState variables written after the call(s):\n\t- credit[msg.sender] = 0 (experiments/Fixtures.sol#49)\n\tCallbackVault.credit (experiments/Fixtures.sol#39) can be used in cross function reentrancies:\n\t- CallbackVault.credit (experiments/Fixtures.sol#39)\n\t- CallbackVault.seed(address) (experiments/Fixtures.sol#43)\n\t- CallbackVault.withdraw() (experiments/Fixtures.sol#44-50)\n",
+        "markdown": "Reentrancy in [CallbackVault.withdraw()](experiments/Fixtures.sol#L44-L50):\n\tExternal calls:\n\t- [(ok,None) = msg.sender.call(abi.encodeWithSignature(onPay()))](experiments/Fixtures.sol#L47)\n\tState variables written after the call(s):\n\t- [credit[msg.sender] = 0](experiments/Fixtures.sol#L49)\n\t[CallbackVault.credit](experiments/Fixtures.sol#L39) can be used in cross function reentrancies:\n\t- [CallbackVault.credit](experiments/Fixtures.sol#L39)\n\t- [CallbackVault.seed(address)](experiments/Fixtures.sol#L43)\n\t- [CallbackVault.withdraw()](experiments/Fixtures.sol#L44-L50)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L44-L50",
+        "id": "b7303786e4839d4a30ba3d3930c10aa511a758634d19ec972ec5b263172ed0bd",
+        "check": "reentrancy-no-eth",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "onPay",
+            "source_mapping": {
+              "start": 2265,
+              "length": 297,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "CallbackClient",
+                "source_mapping": {
+                  "start": 2068,
+                  "length": 496,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "onPay()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(vault).call(abi.encodeWithSignature(withdraw()))",
+            "source_mapping": {
+              "start": 2487,
+              "length": 58,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                63
+              ],
+              "starting_column": 13,
+              "ending_column": 71
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "onPay",
+                "source_mapping": {
+                  "start": 2265,
+                  "length": 297,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "CallbackClient",
+                    "source_mapping": {
+                      "start": 2068,
+                      "length": 496,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58,
+                        59,
+                        60,
+                        61,
+                        62,
+                        63,
+                        64,
+                        65,
+                        66
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "onPay()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "CallbackClient.onPay() (experiments/Fixtures.sol#58-65) ignores return value by address(vault).call(abi.encodeWithSignature(withdraw())) (experiments/Fixtures.sol#63)\n",
+        "markdown": "[CallbackClient.onPay()](experiments/Fixtures.sol#L58-L65) ignores return value by [address(vault).call(abi.encodeWithSignature(withdraw()))](experiments/Fixtures.sol#L63)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L58-L65",
+        "id": "aedf765940069f8b1da23df41dcf64a0c42d21c73acd4ace0f82cb95b0f60b7d",
+        "check": "unchecked-lowlevel",
+        "impact": "Medium",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "target",
+            "source_mapping": {
+              "start": 1157,
+              "length": 14,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                28
+              ],
+              "starting_column": 34,
+              "ending_column": 48
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 1128,
+                  "length": 373,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Relay",
+                    "source_mapping": {
+                      "start": 977,
+                      "length": 526,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "deliver(bytes32,address,bytes,uint256)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "(ok,None) = target.call(data)",
+            "source_mapping": {
+              "start": 1421,
+              "length": 30,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                33
+              ],
+              "starting_column": 9,
+              "ending_column": 39
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 1128,
+                  "length": 373,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Relay",
+                    "source_mapping": {
+                      "start": 977,
+                      "length": 526,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "deliver(bytes32,address,bytes,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Relay.deliver(bytes32,address,bytes,uint256).target (experiments/Fixtures.sol#28) lacks a zero-check on :\n\t\t- (ok,None) = target.call(data) (experiments/Fixtures.sol#33)\n",
+        "markdown": "[Relay.deliver(bytes32,address,bytes,uint256).target](experiments/Fixtures.sol#L28) lacks a zero-check on :\n\t\t- [(ok,None) = target.call(data)](experiments/Fixtures.sol#L33)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L28",
+        "id": "15b0f08704c8be7b55f88372c645ea80abc1ed9df49ff2b6abbe371ee5363921",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "implementation",
+            "source_mapping": {
+              "start": 589,
+              "length": 22,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                13
+              ],
+              "starting_column": 23,
+              "ending_column": 45
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "delegate",
+                "source_mapping": {
+                  "start": 571,
+                  "length": 148,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Effects",
+                    "source_mapping": {
+                      "start": 132,
+                      "length": 843,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "delegate(address,bytes)"
+                }
+              }
+            }
+          },
+          {
+            "type": "node",
+            "name": "(ok,None) = implementation.delegatecall(data)",
+            "source_mapping": {
+              "start": 653,
+              "length": 46,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                14
+              ],
+              "starting_column": 9,
+              "ending_column": 55
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "delegate",
+                "source_mapping": {
+                  "start": 571,
+                  "length": 148,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Effects",
+                    "source_mapping": {
+                      "start": 132,
+                      "length": 843,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "delegate(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Effects.delegate(address,bytes).implementation (experiments/Fixtures.sol#13) lacks a zero-check on :\n\t\t- (ok,None) = implementation.delegatecall(data) (experiments/Fixtures.sol#14)\n",
+        "markdown": "[Effects.delegate(address,bytes).implementation](experiments/Fixtures.sol#L13) lacks a zero-check on :\n\t\t- [(ok,None) = implementation.delegatecall(data)](experiments/Fixtures.sol#L14)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L13",
+        "id": "49fbb3459d49a462aa426416caeeca20b77a7e6cacf120f37ff6de5b719053d5",
+        "check": "missing-zero-check",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 1764,
+              "length": 300,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "CallbackVault",
+                "source_mapping": {
+                  "start": 1505,
+                  "length": 561,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50,
+                    51
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(ok,None) = msg.sender.call(abi.encodeWithSignature(onPay()))",
+            "source_mapping": {
+              "start": 1907,
+              "length": 64,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                47
+              ],
+              "starting_column": 9,
+              "ending_column": 73
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 1764,
+                  "length": 300,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "CallbackVault",
+                    "source_mapping": {
+                      "start": 1505,
+                      "length": 561,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(ok,None) = msg.sender.call(abi.encodeWithSignature(onPay()))",
+            "source_mapping": {
+              "start": 1907,
+              "length": 64,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                47
+              ],
+              "starting_column": 9,
+              "ending_column": 73
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 1764,
+                  "length": 300,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "CallbackVault",
+                    "source_mapping": {
+                      "start": 1505,
+                      "length": 561,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "external_calls_sending_eth"
+            }
+          },
+          {
+            "type": "node",
+            "name": "totalPaid += n",
+            "source_mapping": {
+              "start": 1994,
+              "length": 14,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                48
+              ],
+              "starting_column": 22,
+              "ending_column": 36
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 1764,
+                  "length": 300,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "CallbackVault",
+                    "source_mapping": {
+                      "start": 1505,
+                      "length": 561,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            },
+            "additional_fields": {
+              "underlying_type": "variables_written",
+              "variable_name": "totalPaid"
+            }
+          }
+        ],
+        "description": "Reentrancy in CallbackVault.withdraw() (experiments/Fixtures.sol#44-50):\n\tExternal calls:\n\t- (ok,None) = msg.sender.call(abi.encodeWithSignature(onPay())) (experiments/Fixtures.sol#47)\n\tState variables written after the call(s):\n\t- totalPaid += n (experiments/Fixtures.sol#48)\n",
+        "markdown": "Reentrancy in [CallbackVault.withdraw()](experiments/Fixtures.sol#L44-L50):\n\tExternal calls:\n\t- [(ok,None) = msg.sender.call(abi.encodeWithSignature(onPay()))](experiments/Fixtures.sol#L47)\n\tState variables written after the call(s):\n\t- [totalPaid += n](experiments/Fixtures.sol#L48)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L44-L50",
+        "id": "03f0776adafa74ba872103b257c82967459ecbb2037bc0d2d690ef96a50f22ac",
+        "check": "reentrancy-benign",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 1128,
+              "length": 373,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Relay",
+                "source_mapping": {
+                  "start": 977,
+                  "length": 526,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "deliver(bytes32,address,bytes,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "require(bool,string)(block.timestamp <= deadline,expired)",
+            "source_mapping": {
+              "start": 1290,
+              "length": 47,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                30
+              ],
+              "starting_column": 9,
+              "ending_column": 56
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 1128,
+                  "length": 373,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Relay",
+                    "source_mapping": {
+                      "start": 977,
+                      "length": 526,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "deliver(bytes32,address,bytes,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Relay.deliver(bytes32,address,bytes,uint256) (experiments/Fixtures.sol#28-35) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- require(bool,string)(block.timestamp <= deadline,expired) (experiments/Fixtures.sol#30)\n",
+        "markdown": "[Relay.deliver(bytes32,address,bytes,uint256)](experiments/Fixtures.sol#L28-L35) uses timestamp for comparisons\n\tDangerous comparisons:\n\t- [require(bool,string)(block.timestamp <= deadline,expired)](experiments/Fixtures.sol#L30)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L28-L35",
+        "id": "0d393999c25a30aba0f8b7f92e74a55681dff71153593705f16ab31349a333c0",
+        "check": "timestamp",
+        "impact": "Low",
+        "confidence": "Medium"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transientRead",
+            "source_mapping": {
+              "start": 862,
+              "length": 111,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                19,
+                20,
+                21
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Effects",
+                "source_mapping": {
+                  "start": 132,
+                  "length": 843,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "transientRead()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 936,
+              "length": 31,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                20
+              ],
+              "starting_column": 9,
+              "ending_column": 40
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transientRead",
+                "source_mapping": {
+                  "start": 862,
+                  "length": 111,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    19,
+                    20,
+                    21
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Effects",
+                    "source_mapping": {
+                      "start": 132,
+                      "length": 843,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "transientRead()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Effects.transientRead() (experiments/Fixtures.sol#19-21) uses assembly\n\t- INLINE ASM (experiments/Fixtures.sol#20)\n",
+        "markdown": "[Effects.transientRead()](experiments/Fixtures.sol#L19-L21) uses assembly\n\t- [INLINE ASM](experiments/Fixtures.sol#L20)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L19-L21",
+        "id": "85f9b8b638fbc981f910d431040803e533a295c5bf5e28b6148004e86477e545",
+        "check": "assembly",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "transientRoundTrip",
+            "source_mapping": {
+              "start": 724,
+              "length": 133,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                16,
+                17,
+                18
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Effects",
+                "source_mapping": {
+                  "start": 132,
+                  "length": 843,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "transientRoundTrip(uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "",
+            "source_mapping": {
+              "start": 807,
+              "length": 44,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                17
+              ],
+              "starting_column": 9,
+              "ending_column": 53
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "transientRoundTrip",
+                "source_mapping": {
+                  "start": 724,
+                  "length": 133,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    16,
+                    17,
+                    18
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Effects",
+                    "source_mapping": {
+                      "start": 132,
+                      "length": 843,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "transientRoundTrip(uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Effects.transientRoundTrip(uint256) (experiments/Fixtures.sol#16-18) uses assembly\n\t- INLINE ASM (experiments/Fixtures.sol#17)\n",
+        "markdown": "[Effects.transientRoundTrip(uint256)](experiments/Fixtures.sol#L16-L18) uses assembly\n\t- [INLINE ASM](experiments/Fixtures.sol#L17)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L16-L18",
+        "id": "acb053c793e8219c2d3619d12831a412ab18546e21330b5ec82353840c0c6fa9",
+        "check": "assembly",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "withdraw",
+            "source_mapping": {
+              "start": 1764,
+              "length": 300,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "CallbackVault",
+                "source_mapping": {
+                  "start": 1505,
+                  "length": 561,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    38,
+                    39,
+                    40,
+                    41,
+                    42,
+                    43,
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50,
+                    51
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "withdraw()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(ok,None) = msg.sender.call(abi.encodeWithSignature(onPay()))",
+            "source_mapping": {
+              "start": 1907,
+              "length": 64,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                47
+              ],
+              "starting_column": 9,
+              "ending_column": 73
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "withdraw",
+                "source_mapping": {
+                  "start": 1764,
+                  "length": 300,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    44,
+                    45,
+                    46,
+                    47,
+                    48,
+                    49,
+                    50
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "CallbackVault",
+                    "source_mapping": {
+                      "start": 1505,
+                      "length": 561,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        38,
+                        39,
+                        40,
+                        41,
+                        42,
+                        43,
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49,
+                        50,
+                        51
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "withdraw()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in CallbackVault.withdraw() (experiments/Fixtures.sol#44-50):\n\t- (ok,None) = msg.sender.call(abi.encodeWithSignature(onPay())) (experiments/Fixtures.sol#47)\n",
+        "markdown": "Low level call in [CallbackVault.withdraw()](experiments/Fixtures.sol#L44-L50):\n\t- [(ok,None) = msg.sender.call(abi.encodeWithSignature(onPay()))](experiments/Fixtures.sol#L47)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L44-L50",
+        "id": "21924620a81f06084b6821f4fc72595af2540506144308155d74f486db2427ab",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "delegate",
+            "source_mapping": {
+              "start": 571,
+              "length": 148,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                13,
+                14,
+                15
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Effects",
+                "source_mapping": {
+                  "start": 132,
+                  "length": 843,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14,
+                    15,
+                    16,
+                    17,
+                    18,
+                    19,
+                    20,
+                    21,
+                    22
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "delegate(address,bytes)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(ok,None) = implementation.delegatecall(data)",
+            "source_mapping": {
+              "start": 653,
+              "length": 46,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                14
+              ],
+              "starting_column": 9,
+              "ending_column": 55
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "delegate",
+                "source_mapping": {
+                  "start": 571,
+                  "length": 148,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    13,
+                    14,
+                    15
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Effects",
+                    "source_mapping": {
+                      "start": 132,
+                      "length": 843,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        5,
+                        6,
+                        7,
+                        8,
+                        9,
+                        10,
+                        11,
+                        12,
+                        13,
+                        14,
+                        15,
+                        16,
+                        17,
+                        18,
+                        19,
+                        20,
+                        21,
+                        22
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "delegate(address,bytes)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Effects.delegate(address,bytes) (experiments/Fixtures.sol#13-15):\n\t- (ok,None) = implementation.delegatecall(data) (experiments/Fixtures.sol#14)\n",
+        "markdown": "Low level call in [Effects.delegate(address,bytes)](experiments/Fixtures.sol#L13-L15):\n\t- [(ok,None) = implementation.delegatecall(data)](experiments/Fixtures.sol#L14)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L13-L15",
+        "id": "b5449b5b22f28ba532c8d5311c57899d279b5e05546860615784de2d2d7f9d7a",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "deliver",
+            "source_mapping": {
+              "start": 1128,
+              "length": 373,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "Relay",
+                "source_mapping": {
+                  "start": 977,
+                  "length": 526,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    24,
+                    25,
+                    26,
+                    27,
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35,
+                    36
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "deliver(bytes32,address,bytes,uint256)"
+            }
+          },
+          {
+            "type": "node",
+            "name": "(ok,None) = target.call(data)",
+            "source_mapping": {
+              "start": 1421,
+              "length": 30,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                33
+              ],
+              "starting_column": 9,
+              "ending_column": 39
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "deliver",
+                "source_mapping": {
+                  "start": 1128,
+                  "length": 373,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    28,
+                    29,
+                    30,
+                    31,
+                    32,
+                    33,
+                    34,
+                    35
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "Relay",
+                    "source_mapping": {
+                      "start": 977,
+                      "length": 526,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        24,
+                        25,
+                        26,
+                        27,
+                        28,
+                        29,
+                        30,
+                        31,
+                        32,
+                        33,
+                        34,
+                        35,
+                        36
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "deliver(bytes32,address,bytes,uint256)"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in Relay.deliver(bytes32,address,bytes,uint256) (experiments/Fixtures.sol#28-35):\n\t- (ok,None) = target.call(data) (experiments/Fixtures.sol#33)\n",
+        "markdown": "Low level call in [Relay.deliver(bytes32,address,bytes,uint256)](experiments/Fixtures.sol#L28-L35):\n\t- [(ok,None) = target.call(data)](experiments/Fixtures.sol#L33)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L28-L35",
+        "id": "c007b2bdd9bf81b8f5a389bb2e4c766b3c262f175c92fc42a7086c7dfe6347bf",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "function",
+            "name": "onPay",
+            "source_mapping": {
+              "start": 2265,
+              "length": 297,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                58,
+                59,
+                60,
+                61,
+                62,
+                63,
+                64,
+                65
+              ],
+              "starting_column": 5,
+              "ending_column": 6
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "CallbackClient",
+                "source_mapping": {
+                  "start": 2068,
+                  "length": 496,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              },
+              "signature": "onPay()"
+            }
+          },
+          {
+            "type": "node",
+            "name": "address(vault).call(abi.encodeWithSignature(withdraw()))",
+            "source_mapping": {
+              "start": 2487,
+              "length": 58,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                63
+              ],
+              "starting_column": 13,
+              "ending_column": 71
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "function",
+                "name": "onPay",
+                "source_mapping": {
+                  "start": 2265,
+                  "length": 297,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65
+                  ],
+                  "starting_column": 5,
+                  "ending_column": 6
+                },
+                "type_specific_fields": {
+                  "parent": {
+                    "type": "contract",
+                    "name": "CallbackClient",
+                    "source_mapping": {
+                      "start": 2068,
+                      "length": 496,
+                      "filename_relative": "experiments/Fixtures.sol",
+                      "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                      "filename_short": "experiments/Fixtures.sol",
+                      "is_dependency": false,
+                      "lines": [
+                        53,
+                        54,
+                        55,
+                        56,
+                        57,
+                        58,
+                        59,
+                        60,
+                        61,
+                        62,
+                        63,
+                        64,
+                        65,
+                        66
+                      ],
+                      "starting_column": 1,
+                      "ending_column": 2
+                    }
+                  },
+                  "signature": "onPay()"
+                }
+              }
+            }
+          }
+        ],
+        "description": "Low level call in CallbackClient.onPay() (experiments/Fixtures.sol#58-65):\n\t- address(vault).call(abi.encodeWithSignature(withdraw())) (experiments/Fixtures.sol#63)\n",
+        "markdown": "Low level call in [CallbackClient.onPay()](experiments/Fixtures.sol#L58-L65):\n\t- [address(vault).call(abi.encodeWithSignature(withdraw()))](experiments/Fixtures.sol#L63)\n",
+        "first_markdown_element": "experiments/Fixtures.sol#L58-L65",
+        "id": "f93b24ff97e33ca6f94e8df66d7ee94bebaed95573ffed37eb4c0ec79c05cf73",
+        "check": "low-level-calls",
+        "impact": "Informational",
+        "confidence": "High"
+      },
+      {
+        "elements": [
+          {
+            "type": "variable",
+            "name": "vault",
+            "source_mapping": {
+              "start": 2098,
+              "length": 26,
+              "filename_relative": "experiments/Fixtures.sol",
+              "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+              "filename_short": "experiments/Fixtures.sol",
+              "is_dependency": false,
+              "lines": [
+                54
+              ],
+              "starting_column": 5,
+              "ending_column": 31
+            },
+            "type_specific_fields": {
+              "parent": {
+                "type": "contract",
+                "name": "CallbackClient",
+                "source_mapping": {
+                  "start": 2068,
+                  "length": 496,
+                  "filename_relative": "experiments/Fixtures.sol",
+                  "filename_absolute": "D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Fixtures.sol",
+                  "filename_short": "experiments/Fixtures.sol",
+                  "is_dependency": false,
+                  "lines": [
+                    53,
+                    54,
+                    55,
+                    56,
+                    57,
+                    58,
+                    59,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66
+                  ],
+                  "starting_column": 1,
+                  "ending_column": 2
+                }
+              }
+            }
+          }
+        ],
+        "description": "CallbackClient.vault (experiments/Fixtures.sol#54) should be immutable \n",
+        "markdown": "[CallbackClient.vault](experiments/Fixtures.sol#L54) should be immutable \n",
+        "first_markdown_element": "experiments/Fixtures.sol#L54",
+        "id": "ab0048c1e47296bb9aff4c60cec5ade14ce157b75de721e8134919f9e6718f2e",
+        "check": "immutable-states",
+        "impact": "Optimization",
+        "confidence": "High"
+      }
+    ]
+  }
+}
