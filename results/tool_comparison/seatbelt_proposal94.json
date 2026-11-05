@@ -1,0 +1,29 @@
+{
+  "tool": "@uniswap/governance-seatbelt",
+  "input": {
+    "dao": "Uniswap",
+    "governor": "0x408ED6354d4973f66138C91495F2f2FCbd8724C3",
+    "proposal_id": 94
+  },
+  "repository": "E:\\BridgeTheGapLab\\governance-seatbelt",
+  "command": "bun run-checks.ts 94",
+  "rpc_mode": "archive_gateway_with_chunking_fallback",
+  "archive_upstream": "https://mainnet.gateway.tenderly.co",
+  "archive_chunk_size": 100000000,
+  "started_utc": "2026-09-10T06:00:26.109518+00:00",
+  "configured_environment": {
+    "mainnet_rpc": true,
+    "arbitrum_rpc": true,
+    "optimism_rpc": true,
+    "base_rpc": true,
+    "tenderly_credentials_present": false,
+    "etherscan_api_key_present": false
+  },
+  "repository_commit": "586ddc56e3fa16d37e4dd0c4c6b5be0945aeeaaa",
+  "package_json_sha256": "a0b4f1dd4d92aa4994f6c2b65181a0c5cf4945d9b1d2a561acc8fcd013fe8409",
+  "status": "failed",
+  "return_code": 1,
+  "stdout": "Running checks for Uniswap proposal 94 (Executed)...\n",
+  "stderr": " 7 | export const TENDERLY_PROJECT_SLUG = process.env.TENDERLY_PROJECT_SLUG ?? '';\n 8 | \n 9 | function requireEnv(name: string): string {\n10 |   const value = process.env[name];\n11 |   if (typeof value === 'string' && value.trim().length > 0) return value;\n12 |   throw new Error(`${name} is not defined`);\n                 ^\nerror: TENDERLY_ACCESS_TOKEN is not defined\n      at requireEnv (E:\\BridgeTheGapLab\\governance-seatbelt\\utils\\constants.ts:12:13)\n      at getTenderlyFetchOptions (E:\\BridgeTheGapLab\\governance-seatbelt\\utils\\clients\\tenderly-api.ts:18:32)\n      at sendSimulation (E:\\BridgeTheGapLab\\governance-seatbelt\\utils\\clients\\tenderly-api.ts:333:8)\n      at simulateExecuted (E:\\BridgeTheGapLab\\governance-seatbelt\\utils\\clients\\tenderly.ts:591:23)\n      at async simulate (E:\\BridgeTheGapLab\\governance-seatbelt\\utils\\clients\\tenderly.ts:100:48)\n      at async main (E:\\BridgeTheGapLab\\governance-seatbelt\\run-checks.ts:349:30)\n\n",
+  "archive_forwarded_requests": 11
+}

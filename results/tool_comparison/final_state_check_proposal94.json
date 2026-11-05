@@ -1,0 +1,88 @@
+{
+  "tool": "BTG terminal-only final-state governance check",
+  "status": "PASS",
+  "input": {
+    "proposal_id": 94,
+    "proposal_page_sha256": "6c2f039053740977845c53e08268671e94005e22f4651aabe0c28875eef06768",
+    "transaction_hashes": [
+      "0xe4f1b331e892f09532366b7a71494a8b92e9e39354048d7c8b41d7aa2c0aeae2",
+      "0x1cad049816e73b619601a0d072dd30eb995e53183df941505da25df59297ba7c",
+      "0x1d971309b406ddc34929dfcef6d9cd8f938665805189b0ce3b986b8b5465f7c8",
+      "0x7474d59b01d97625bbbf7bb2184b7f53888c869975d5497c912f14cb475b29c2",
+      "0xa8ea0989bed051b6eb26a9409929294ee14305ed20dd005229cfcf567e39e186",
+      "0xfee0e26d720982d61cd12447d18d9b100e53887e55e55d35f7d62620cf03b371"
+    ],
+    "property": "protocol_derived_fee_activation_consistency"
+  },
+  "history_source": "same saved proposal94_replay.json; archive-capable public RPC eth_call at each domain terminal block",
+  "observed_at_utc": "2026-09-10T12:56:23.256547+00:00",
+  "domains": [
+    {
+      "chain": "op-mainnet",
+      "terminal_transaction_hash": "0x1cad049816e73b619601a0d072dd30eb995e53183df941505da25df59297ba7c",
+      "terminal_block": 148591451,
+      "terminal_transaction_index": 3,
+      "v3_owner": {
+        "value": "0xec23Cf5A1db3dcC6595385D28B2a4D9B52503Be4",
+        "block": 148591451,
+        "attempt": 1
+      },
+      "v2_fee_to": {
+        "value": "0xb13285DF724ea75f3f1E9912010B7e491dCd5EE3",
+        "block": 148591451,
+        "attempt": 1
+      },
+      "expected_v3_owner": "0xec23Cf5A1db3dcC6595385D28B2a4D9B52503Be4",
+      "expected_v2_fee_to": "0xb13285DF724ea75f3f1E9912010B7e491dCd5EE3",
+      "oracle": {
+        "status": "PASS",
+        "reason": "both target fields match"
+      }
+    },
+    {
+      "chain": "base",
+      "terminal_transaction_hash": "0x7474d59b01d97625bbbf7bb2184b7f53888c869975d5497c912f14cb475b29c2",
+      "terminal_block": 42996217,
+      "terminal_transaction_index": 2,
+      "v3_owner": {
+        "value": "0xaBEA76658b205696d49B5F91b2a03536cB8A3bE1",
+        "block": 42996217,
+        "attempt": 1
+      },
+      "v2_fee_to": {
+        "value": "0x9bD25e67bF390437C8fAF480AC735a27BcF6168c",
+        "block": 42996217,
+        "attempt": 1
+      },
+      "expected_v3_owner": "0xaBEA76658b205696d49B5F91b2a03536cB8A3bE1",
+      "expected_v2_fee_to": "0x9bD25e67bF390437C8fAF480AC735a27BcF6168c",
+      "oracle": {
+        "status": "PASS",
+        "reason": "both target fields match"
+      }
+    },
+    {
+      "chain": "arbitrum",
+      "terminal_transaction_hash": "0xfee0e26d720982d61cd12447d18d9b100e53887e55e55d35f7d62620cf03b371",
+      "terminal_block": 438865986,
+      "terminal_transaction_index": 2,
+      "v3_owner": {
+        "value": "0xFF7aD5dA31fECdC678796c88B05926dB896b0699",
+        "block": 438865986,
+        "attempt": 2
+      },
+      "v2_fee_to": {
+        "value": "0x95E337C5B155385945D407f5396387D0c2a3A263",
+        "block": 438865986,
+        "attempt": 2
+      },
+      "expected_v3_owner": "0xFF7aD5dA31fECdC678796c88B05926dB896b0699",
+      "expected_v2_fee_to": "0x95E337C5B155385945D407f5396387D0c2a3A263",
+      "oracle": {
+        "status": "PASS",
+        "reason": "both target fields match"
+      }
+    }
+  ],
+  "interpretation": "terminal-only check returns PASS while the same six-transaction history contains prefix violations"
+}

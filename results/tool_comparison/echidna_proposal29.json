@@ -1,0 +1,76 @@
+{
+  "status": "complete",
+  "tool": "Echidna",
+  "tool_repository": "https://github.com/crytic/echidna",
+  "tool_version": "Echidna 2.3.3",
+  "engine_mode": "property-based transaction-sequence analysis",
+  "started_utc": "2026-09-14T02:53:11.666032+00:00",
+  "command": [
+    "E:\\BridgeTheGapLab\\echidna-2.3.3\\echidna.exe",
+    "D:\\0-Paper\\20260905BridgeTheGap_LaTeX_Package\\experiments\\Proposal29EchidnaReplay.sol",
+    "--contract",
+    "Proposal29EchidnaReplay",
+    "--all-contracts",
+    "--rpc-url",
+    "https://arbitrum-one.public.blastapi.io",
+    "--rpc-block",
+    "48972826",
+    "--format",
+    "text",
+    "--test-mode",
+    "property",
+    "--disable-slither",
+    "--test-limit",
+    "20",
+    "--seq-len",
+    "1",
+    "--timeout",
+    "15",
+    "--disable-onchain-sources"
+  ],
+  "return_code": 1,
+  "raw_output": "experiments/results/tool_comparison/echidna_proposal29/echidna_output.txt",
+  "input": {
+    "proposal_id": 29,
+    "target": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+    "caller": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+    "calldata": "0x13af4035000000000000000000000000ff7ad5da31fecdc678796c88b05926db896b0699",
+    "method": "V3Factory.setOwner(address)",
+    "property": "the repaired aliased owner must be able to execute the same governance calldata",
+    "archive_rpc": "https://arbitrum-one.public.blastapi.io",
+    "archive_block_for_code": 48972826,
+    "repair_boundary": {
+      "before_block": 48972826,
+      "after_block": 48972827
+    },
+    "owner_storage_slot": 3,
+    "pre_repair_owner": "0x1a9C8182C09F50C8318d769245beA52c32BE35BC",
+    "post_repair_owner": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+    "runtime_code_sha256": "fd5e0ec0633afeb92b2f6b6cac36e13a9732bd1914f8158a78f127d51d54a572",
+    "runtime_code_length": 24535,
+    "harness_sha256": "bfca9bcd3c80084a5087a2b80df5c46e20290ca751d0e7493ea3fafb6dc7baa6"
+  },
+  "results": {
+    "pre_repair": {
+      "echidna_property": "echidna_proposal29_pre_repair_prefix_satisfies_property",
+      "tool_result": "failed",
+      "normalized_btg_result": "VIOLATION",
+      "call_observation": "REVERT"
+    },
+    "post_repair": {
+      "echidna_property": "echidna_proposal29_post_repair_prefix_satisfies_property",
+      "tool_result": "passing",
+      "normalized_btg_result": "PASS",
+      "call_observation": "SUCCESS"
+    }
+  },
+  "same_input": {
+    "same_target": true,
+    "same_caller": true,
+    "same_calldata": true,
+    "same_owner_attribute": "V3Factory.owner() / storage slot 3",
+    "same_historical_code_hash": true,
+    "same_prefix_slice": true
+  },
+  "interpretation": "Echidna independently executes the fixed Proposal 29 calldata against the archived V3Factory code and the saved pre/post owner states. Its failed pre-repair property is the external witness for BTG's VIOLATION; its passing post-repair property is the external witness for BTG's PASS."
+}

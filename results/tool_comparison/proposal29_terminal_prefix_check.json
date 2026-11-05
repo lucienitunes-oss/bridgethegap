@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "tool": "Independent Proposal 29 terminal projection",
+  "implementation": "terminal-only predicate over the same saved three-boundary prefix; no BTG oracle import",
+  "property": "The Arbitrum bridge factory owner must be the aliased cross-chain owner required by the published bridge repair at every committed destination boundary.",
+  "proposal_id": 29,
+  "prefix_order": [
+    "l1_security_repair_dispatch",
+    "arbitrum_pre_repair_owner_state",
+    "arbitrum_post_repair_owner_state"
+  ],
+  "transaction_hashes": [
+    "0x990f88c0558b8a37ec784c6d6d70a650bbc3df817ff42272c4e296ff80523cd2",
+    "7d42d3755ada7791d93dec1649d2aabc4a9dbb3abde46c04ae89d8983be55ee4",
+    "7d42d3755ada7791d93dec1649d2aabc4a9dbb3abde46c04ae89d8983be55ee4"
+  ],
+  "state_input_sha256": "20ea5efe60fd2ec0a42e0bb243865b056da1da83ff22620a2ebfb20dff340f6d",
+  "btg_prefix_decisions": [
+    "PASS",
+    "VIOLATION",
+    "PASS"
+  ],
+  "terminal_check": {
+    "observed_boundary": 3,
+    "owner": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+    "expected_owner": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+    "decision": "PASS"
+  },
+  "comparison": {
+    "same_history": true,
+    "same_property": true,
+    "btg_violation_prefix": 2,
+    "terminal_result": "PASS",
+    "btg_prefix_result": [
+      "PASS",
+      "VIOLATION",
+      "PASS"
+    ],
+    "terminal_misses_prefix_violation": true
+  },
+  "permission_consequence": {
+    "status": "PASS",
+    "proposal_id": 94,
+    "operation": "V3Factory.setOwner",
+    "transaction_hash": "0xa8ea0989bed051b6eb26a9409929294ee14305ed20dd005229cfcf567e39e186",
+    "block": 438865985,
+    "transaction_index": 2,
+    "from": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+    "to": "0x1F98431c8aD98523631AE4a59f267346ea31F984",
+    "receipt_status": 1,
+    "owner_before": {
+      "value": "0x2BAD8182C09F50c8318d769245beA52C32Be46CD",
+      "block": 438865984,
+      "attempt": 1
+    },
+    "owner_after": {
+      "value": "0xFF7aD5dA31fECdC678796c88B05926dB896b0699",
+      "block": 438865985,
+      "attempt": 1
+    },
+    "reason": "later Proposal 94 setOwner executed from the repaired aliased owner",
+    "evidence_window": {
+      "from_block": 438865983,
+      "to_block": 438865987
+    }
+  },
+  "input_sha256": "20ea5efe60fd2ec0a42e0bb243865b056da1da83ff22620a2ebfb20dff340f6d",
+  "runner_sha256": "90b3d29e888482ccd20b4f05e52d78de187069dfff569342364d7fc57355107e"
+}

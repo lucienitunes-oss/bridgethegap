@@ -1,0 +1,122 @@
+{
+  "status": "complete",
+  "tool": "Souffle independent Datalog checker",
+  "external_binary": "E:\\BridgeTheGapLab\\souffle-clang\\bin\\souffle.exe",
+  "tool_version": "----------------------------------------------------------------------------\nVersion:  (UNKNOWN)\nWord size: 32 bits\nOptions enabled:\n----------------------------------------------------------------------------\nCopyright (c) 2016-25 The Souffle Developers.\nCopyright (c) 2013-16 Oracle and/or its affiliates.\nAll rights reserved.\n============================================================================",
+  "rules": "experiments/nomad_accepted_root.dl",
+  "rule_sha256": "edd59bc86d620cd3dc714cf76c036d07826cf64330e5b9a110bd745e9e67c1b4",
+  "input_sha256": "4aa21405f28eb1599948a2df1064e2f32ce7b1308424e56eb85754030e44ceab",
+  "common_input": {
+    "transaction_hashes": [
+      "0x7bccd64f4c4d5f6f545c2edf904857e6ddb460532fc0ac7eb5ac175cd21e56b1",
+      "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+      "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+      "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+    ],
+    "transaction_count": 4,
+    "same_prefix_order": true,
+    "property": "a processed cross-chain message must be backed by a non-zero accepted root"
+  },
+  "facts": [
+    {
+      "path": "experiments/results/tool_comparison/souffle_nomad_accepted_root/facts/boundary.facts",
+      "sha256": "33412113f9e1f707a18f065e7114b104c521d5edaf8874a443cec3103730751b"
+    },
+    {
+      "path": "experiments/results/tool_comparison/souffle_nomad_accepted_root/facts/observation.facts",
+      "sha256": "0332a25c641e2662e27f1a1b75c5f1531c74f1b03d17dc0b94b9f6ba9232b1bc"
+    },
+    {
+      "path": "experiments/results/tool_comparison/souffle_nomad_accepted_root/facts/prefix.facts",
+      "sha256": "c83dcb9c7a29f7c187ec941143f166189f1155efed4605cabea078efcd2a69e4"
+    }
+  ],
+  "decisions": [
+    {
+      "prefix_index": 1,
+      "external_decision": "VIOLATION"
+    },
+    {
+      "prefix_index": 2,
+      "external_decision": "VIOLATION"
+    },
+    {
+      "prefix_index": 3,
+      "external_decision": "VIOLATION"
+    },
+    {
+      "prefix_index": 4,
+      "external_decision": "VIOLATION"
+    }
+  ],
+  "summary": {
+    "pass": 0,
+    "violation": 4,
+    "unknown": 0
+  },
+  "output_manifest": [
+    {
+      "relation": "AttackEvidence",
+      "path": "experiments/results/tool_comparison/souffle_nomad_accepted_root/output/AttackEvidence.csv",
+      "rows": 3,
+      "sha256": "acfe4f5e5d1787e8e54f06c2a7645385237d0d7c564743a7100e94826355025c"
+    },
+    {
+      "relation": "Complete",
+      "path": "experiments/results/tool_comparison/souffle_nomad_accepted_root/output/Complete.csv",
+      "rows": 4,
+      "sha256": "16fbd7d1f18d2fedb247d73edc3bc6aa040f5ab99bd3b48c35b79e543d22179b"
+    },
+    {
+      "relation": "Decision",
+      "path": "experiments/results/tool_comparison/souffle_nomad_accepted_root/output/Decision.csv",
+      "rows": 4,
+      "sha256": "cc526c3e7f4aa5435022140c115f36cbec41bf6669949df6876678dc16928c6a"
+    },
+    {
+      "relation": "Pass",
+      "path": "experiments/results/tool_comparison/souffle_nomad_accepted_root/output/Pass.csv",
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relation": "RootConfirmed",
+      "path": "experiments/results/tool_comparison/souffle_nomad_accepted_root/output/RootConfirmed.csv",
+      "rows": 4,
+      "sha256": "16fbd7d1f18d2fedb247d73edc3bc6aa040f5ab99bd3b48c35b79e543d22179b"
+    },
+    {
+      "relation": "Unknown",
+      "path": "experiments/results/tool_comparison/souffle_nomad_accepted_root/output/Unknown.csv",
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relation": "Violation",
+      "path": "experiments/results/tool_comparison/souffle_nomad_accepted_root/output/Violation.csv",
+      "rows": 4,
+      "sha256": "16fbd7d1f18d2fedb247d73edc3bc6aa040f5ab99bd3b48c35b79e543d22179b"
+    }
+  ],
+  "same_input_comparison": {
+    "same_accepted_root_property": true,
+    "same_transaction_hashes_as_cast_state_input": true,
+    "same_transaction_hashes_as_btg": true,
+    "btg_results": [
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION"
+    ],
+    "souffle_results": [
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION"
+    ],
+    "agrees_with_cast_state_checker": true,
+    "agrees_with_btg": true,
+    "uses_btg_oracle": false
+  },
+  "generated_utc": "2026-09-14T08:24:28.393757+00:00"
+}

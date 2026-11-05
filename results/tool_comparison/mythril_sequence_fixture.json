@@ -1,0 +1,74 @@
+{
+  "tool": "Mythril",
+  "tool_version_command": [
+    "E:\\BridgeTheGapLab\\mythril-venv\\Scripts\\python.exe",
+    "-m",
+    "mythril",
+    "version"
+  ],
+  "input": {
+    "source": "experiments/Fixtures.sol",
+    "contract": "Effects",
+    "source_sha256": "a8db495e9ef7a0e179beab63169d5c49433d4e2b0497b9594480360082cf0707",
+    "scope": "compiled local fixture only; no public-chain state",
+    "runtime_bytecode_sha256": "aba7313c55aa2ba092cff35340ae38afaaef29774943a8128e1183733cade50c"
+  },
+  "started_utc": "2026-09-10T08:44:43.472158+00:00",
+  "status": "completed",
+  "compile": {
+    "command": "solc --combined-json bin-runtime --optimize experiments/Fixtures.sol",
+    "return_code": 0,
+    "stderr": "Warning: Transient storage as defined by EIP-1153 can break the composability of smart contracts: Since transient storage is cleared only at the end of the transaction and not at the end of the outermost call frame to the contract within a transaction, your contract may unintentionally misbehave when invoked multiple times in a complex transaction. To avoid this, be sure to clear all transient storage at the end of any call to your contract. The use of transient storage for reentrancy guards that are cleared at the end of the call is safe.\n  --> experiments/Fixtures.sol:17:20:\n   |\n17 |         assembly { tstore(0, v) result := tload(0) }\n   |                    ^^^^^^\n\nWarning: Return value of low-level calls not used.\n  --> experiments/Fixtures.sol:63:13:\n   |\n63 |             address(vault).call(abi.encodeWithSignature(\"withdraw()\"));\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n"
+  },
+  "command": "python -m mythril analyze -c <Effects runtime bytecode> --bin-runtime -o json --execution-timeout 60 --no-onchain-data --transaction-count 2",
+  "return_code": 1,
+  "stdout": "{\"error\": null, \"issues\": [{\"address\": 569, \"contract\": \"MAIN\", \"description\": \"The contract delegates execution to another contract with a user-supplied address.\\nThe smart contract delegates execution to a user-supplied address.This could allow an attacker to execute arbitrary code in the context of this contract account and manipulate the state of the contract account or execute actions on its behalf.\", \"function\": \"_function_0xd6d2b6ba\", \"max_gas_used\": 38434, \"min_gas_used\": 1471, \"severity\": \"High\", \"sourceMap\": 569, \"swc-id\": \"112\", \"title\": \"Delegatecall to user-supplied address\", \"tx_sequence\": {\"initialState\": {\"accounts\": {\"0x0\": {\"balance\": \"0x0\", \"code\": \"608060405234801561000f575f80fd5b506004361061009b575f3560e01c8063bcbc013811610063578063bcbc01381461011e578063d6d2b6ba14610131578063e242aeb914610144578063ec210a0214610163578063f5e71ac314610184575f80fd5b80630743d7fe1461009f578063303bdd2c146100d15780633fa4f245146100ee57806360fe47b1146100f657806398a287801461010b575b5f80fd5b6100be6100ad36600461027e565b60016020525f908152604090205481565b6040519081526020015b60405180910390f35b6002546100de9060ff1681565b60405190151581526020016100c8565b6100be5f5481565b61010961010436600461027e565b61018b565b005b6100be61011936600461027e565b6101d1565b61010961012c36600461027e565b6101dc565b61010961013f366004610295565b610213565b610109610152366004610320565b5f9182526001602052604090912055565b610109610171366004610340565b6002805460ff1916911515919091179055565b5f5c6100be565b60025460ff16156101cd5760405162461bcd60e51b8152602060048201526007602482015266189b1bd8dad95960ca1b60448201526064015b60405180910390fd5b5f55565b5f815f5d50505f5c90565b5f81905560405162461bcd60e51b8152602060048201526008602482015267726f6c6c6261636b60c01b60448201526064016101c4565b5f836001600160a01b0316838360405161022e929190610366565b5f60405180830381855af49150503d805f8114610266576040519150601f19603f3d011682016040523d82523d5f602084013e61026b565b606091505b5050905080610278575f80fd5b50505050565b5f6020828403121561028e575f80fd5b5035919050565b5f805f604084860312156102a7575f80fd5b83356001600160a01b03811681146102bd575f80fd5b9250602084013567ffffffffffffffff8111156102d8575f80fd5b8401601f810186136102e8575f80fd5b803567ffffffffffffffff8111156102fe575f80fd5b86602082840101111561030f575f80fd5b939660209190910195509293505050565b5f8060408385031215610331575f80fd5b50508035926020909101359150565b5f60208284031215610350575f80fd5b8135801515811461035f575f80fd5b9392505050565b818382375f910190815291905056fea264697066735822122057c6aeb405bd0ea42b2c64bd673450e6c926bee01782d4ef49c53e5106d4667e64736f6c634300081a0033\", \"nonce\": 0, \"storage\": \"{}\"}, \"0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef\": {\"balance\": \"0x0\", \"code\": \"\", \"nonce\": 0, \"storage\": \"{}\"}}}, \"steps\": [{\"address\": \"0x0\", \"calldata\": \"0xd6d2b6ba000000000000000000000000deadbeefdeadbeefdeadbeefdeadbeefdeadbeef00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000\", \"input\": \"0xd6d2b6ba000000000000000000000000deadbeefdeadbeefdeadbeefdeadbeefdeadbeef00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000\", \"name\": \"unknown\", \"origin\": \"0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef\", \"value\": \"0x0\"}]}}], \"success\": true}\n",
+  "stderr": "INFO: Could not find files for the given pattern(s).\n",
+  "report": {
+    "error": null,
+    "issues": [
+      {
+        "address": 569,
+        "contract": "MAIN",
+        "description": "The contract delegates execution to another contract with a user-supplied address.\nThe smart contract delegates execution to a user-supplied address.This could allow an attacker to execute arbitrary code in the context of this contract account and manipulate the state of the contract account or execute actions on its behalf.",
+        "function": "_function_0xd6d2b6ba",
+        "max_gas_used": 38434,
+        "min_gas_used": 1471,
+        "severity": "High",
+        "sourceMap": 569,
+        "swc-id": "112",
+        "title": "Delegatecall to user-supplied address",
+        "tx_sequence": {
+          "initialState": {
+            "accounts": {
+              "0x0": {
+                "balance": "0x0",
+                "code": "608060405234801561000f575f80fd5b506004361061009b575f3560e01c8063bcbc013811610063578063bcbc01381461011e578063d6d2b6ba14610131578063e242aeb914610144578063ec210a0214610163578063f5e71ac314610184575f80fd5b80630743d7fe1461009f578063303bdd2c146100d15780633fa4f245146100ee57806360fe47b1146100f657806398a287801461010b575b5f80fd5b6100be6100ad36600461027e565b60016020525f908152604090205481565b6040519081526020015b60405180910390f35b6002546100de9060ff1681565b60405190151581526020016100c8565b6100be5f5481565b61010961010436600461027e565b61018b565b005b6100be61011936600461027e565b6101d1565b61010961012c36600461027e565b6101dc565b61010961013f366004610295565b610213565b610109610152366004610320565b5f9182526001602052604090912055565b610109610171366004610340565b6002805460ff1916911515919091179055565b5f5c6100be565b60025460ff16156101cd5760405162461bcd60e51b8152602060048201526007602482015266189b1bd8dad95960ca1b60448201526064015b60405180910390fd5b5f55565b5f815f5d50505f5c90565b5f81905560405162461bcd60e51b8152602060048201526008602482015267726f6c6c6261636b60c01b60448201526064016101c4565b5f836001600160a01b0316838360405161022e929190610366565b5f60405180830381855af49150503d805f8114610266576040519150601f19603f3d011682016040523d82523d5f602084013e61026b565b606091505b5050905080610278575f80fd5b50505050565b5f6020828403121561028e575f80fd5b5035919050565b5f805f604084860312156102a7575f80fd5b83356001600160a01b03811681146102bd575f80fd5b9250602084013567ffffffffffffffff8111156102d8575f80fd5b8401601f810186136102e8575f80fd5b803567ffffffffffffffff8111156102fe575f80fd5b86602082840101111561030f575f80fd5b939660209190910195509293505050565b5f8060408385031215610331575f80fd5b50508035926020909101359150565b5f60208284031215610350575f80fd5b8135801515811461035f575f80fd5b9392505050565b818382375f910190815291905056fea264697066735822122057c6aeb405bd0ea42b2c64bd673450e6c926bee01782d4ef49c53e5106d4667e64736f6c634300081a0033",
+                "nonce": 0,
+                "storage": "{}"
+              },
+              "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef": {
+                "balance": "0x0",
+                "code": "",
+                "nonce": 0,
+                "storage": "{}"
+              }
+            }
+          },
+          "steps": [
+            {
+              "address": "0x0",
+              "calldata": "0xd6d2b6ba000000000000000000000000deadbeefdeadbeefdeadbeefdeadbeefdeadbeef00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000",
+              "input": "0xd6d2b6ba000000000000000000000000deadbeefdeadbeefdeadbeefdeadbeefdeadbeef00000000000000000000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000000000000000000000",
+              "name": "unknown",
+              "origin": "0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef",
+              "value": "0x0"
+            }
+          ]
+        }
+      }
+    ],
+    "success": true
+  },
+  "finding_count": 1
+}

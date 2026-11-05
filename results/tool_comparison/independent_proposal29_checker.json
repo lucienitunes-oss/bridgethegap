@@ -1,0 +1,72 @@
+{
+  "tool": "Independent Proposal 29 prefix checker",
+  "status": "complete",
+  "implementation": "standalone evidence predicate; no BTG oracle import",
+  "input": {
+    "proposal_id": 29,
+    "proposal_url": "https://vote.uniswapfoundation.org/proposals/29",
+    "property": "The Arbitrum bridge factory owner must be the aliased cross-chain owner required by the published bridge repair at every committed destination boundary.",
+    "prefix_order": [
+      "l1_security_repair_dispatch",
+      "arbitrum_pre_repair_owner_state",
+      "arbitrum_post_repair_owner_state",
+      "later_proposal_94_governance_use"
+    ],
+    "transaction_hashes": [
+      "0x990f88c0558b8a37ec784c6d6d70a650bbc3df817ff42272c4e296ff80523cd2",
+      "7d42d3755ada7791d93dec1649d2aabc4a9dbb3abde46c04ae89d8983be55ee4",
+      "7d42d3755ada7791d93dec1649d2aabc4a9dbb3abde46c04ae89d8983be55ee4",
+      "0xa8ea0989bed051b6eb26a9409929294ee14305ed20dd005229cfcf567e39e186"
+    ]
+  },
+  "prefix_decisions": [
+    {
+      "index": 1,
+      "boundary": "l1_security_repair_dispatch",
+      "transaction_hash": "0x990f88c0558b8a37ec784c6d6d70a650bbc3df817ff42272c4e296ff80523cd2",
+      "status": "PASS",
+      "reason": "the saved L1 repair transaction succeeded with the declared proposal executor"
+    },
+    {
+      "index": 2,
+      "boundary": "arbitrum_pre_repair_owner_state",
+      "transaction_hash": "7d42d3755ada7791d93dec1649d2aabc4a9dbb3abde46c04ae89d8983be55ee4",
+      "status": "VIOLATION",
+      "reason": "committed owner is the unaliased Timelock before the repair boundary"
+    },
+    {
+      "index": 3,
+      "boundary": "arbitrum_post_repair_owner_state",
+      "transaction_hash": "7d42d3755ada7791d93dec1649d2aabc4a9dbb3abde46c04ae89d8983be55ee4",
+      "status": "PASS",
+      "reason": "OwnerChanged records the required aliased owner after repair"
+    },
+    {
+      "index": 4,
+      "boundary": "later_proposal_94_governance_use",
+      "transaction_hash": "0xa8ea0989bed051b6eb26a9409929294ee14305ed20dd005229cfcf567e39e186",
+      "status": "PASS",
+      "reason": "a later Proposal 94 call is executed by the repaired owner"
+    }
+  ],
+  "summary": {
+    "pass": 3,
+    "violation": 1,
+    "unknown": 0
+  },
+  "comparison": {
+    "btg_prefix_decisions": [
+      "PASS",
+      "VIOLATION",
+      "PASS",
+      "PASS"
+    ],
+    "independent_prefix_decisions": [
+      "PASS",
+      "VIOLATION",
+      "PASS",
+      "PASS"
+    ],
+    "same_decisions": true
+  }
+}

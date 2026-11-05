@@ -1,0 +1,123 @@
+{
+  "status": "complete",
+  "tool": "Souffle separate Datalog implementation",
+  "rules": "experiments/nomad_accepted_root.dl",
+  "rule_sha256": "edd59bc86d620cd3dc714cf76c036d07826cf64330e5b9a110bd745e9e67c1b4",
+  "input_sha256": "a41d4f59b207d3818e16690d09d85ab5196f6e3fed1120ce92bd51f9e2e1bdbb",
+  "state_input_sha256": "572644455ea2e55f8d932c3c7bf56751e4fa5ea41270993fea10fa3cf6a2c9c5",
+  "facts": [
+    {
+      "path": "experiments/results/tool_comparison/souffle_nomad_transaction_sequence/facts/boundary.facts",
+      "sha256": "ce9eceeb46ce7188e2560b4a164612ee7ceac7f890cec10522a0865cde626d77"
+    },
+    {
+      "path": "experiments/results/tool_comparison/souffle_nomad_transaction_sequence/facts/observation.facts",
+      "sha256": "15fc4e73f41d0ee28229ff8bc3fdca6f36d0cd14e735f03cb4361615effb3a43"
+    },
+    {
+      "path": "experiments/results/tool_comparison/souffle_nomad_transaction_sequence/facts/prefix.facts",
+      "sha256": "2a937bbc4d0fa3e3264e93180d44fe4615ef9a43a76b1c2fcf638c84abc851cf"
+    }
+  ],
+  "output_manifest": [
+    {
+      "relation": "AttackEvidence",
+      "path": "experiments/results/tool_comparison/souffle_nomad_transaction_sequence/output/AttackEvidence.csv",
+      "rows": 3,
+      "sha256": "be5e90a9f3da4d02fe339d2f5e95f9a8ad6b6f5499d9c051ca602df557253d2a"
+    },
+    {
+      "relation": "Complete",
+      "path": "experiments/results/tool_comparison/souffle_nomad_transaction_sequence/output/Complete.csv",
+      "rows": 5,
+      "sha256": "f6b49467f595b1a44e442c198b3df4d221e88efcaabc26254f8e0ad4f79b6242"
+    },
+    {
+      "relation": "Decision",
+      "path": "experiments/results/tool_comparison/souffle_nomad_transaction_sequence/output/Decision.csv",
+      "rows": 5,
+      "sha256": "faabb91d18de3a4cb401eefeaeb22406c13c6eb3fd2807274221e6c6b8af950f"
+    },
+    {
+      "relation": "Pass",
+      "path": "experiments/results/tool_comparison/souffle_nomad_transaction_sequence/output/Pass.csv",
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relation": "RootConfirmed",
+      "path": "experiments/results/tool_comparison/souffle_nomad_transaction_sequence/output/RootConfirmed.csv",
+      "rows": 5,
+      "sha256": "f6b49467f595b1a44e442c198b3df4d221e88efcaabc26254f8e0ad4f79b6242"
+    },
+    {
+      "relation": "Unknown",
+      "path": "experiments/results/tool_comparison/souffle_nomad_transaction_sequence/output/Unknown.csv",
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "relation": "Violation",
+      "path": "experiments/results/tool_comparison/souffle_nomad_transaction_sequence/output/Violation.csv",
+      "rows": 5,
+      "sha256": "f6b49467f595b1a44e442c198b3df4d221e88efcaabc26254f8e0ad4f79b6242"
+    }
+  ],
+  "decisions": [
+    {
+      "prefix_index": 1,
+      "external_decision": "VIOLATION"
+    },
+    {
+      "prefix_index": 2,
+      "external_decision": "VIOLATION"
+    },
+    {
+      "prefix_index": 3,
+      "external_decision": "VIOLATION"
+    },
+    {
+      "prefix_index": 4,
+      "external_decision": "VIOLATION"
+    },
+    {
+      "prefix_index": 5,
+      "external_decision": "VIOLATION"
+    }
+  ],
+  "summary": {
+    "pass": 0,
+    "violation": 5,
+    "unknown": 0
+  },
+  "same_input": {
+    "transaction_hashes": [
+      "0x99662dacfb4b963479b159fc43c2b4d048562104fe154a4d0c2519ada72e50bf",
+      "0x7bccd64f4c4d5f6f545c2edf904857e6ddb460532fc0ac7eb5ac175cd21e56b1",
+      "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+      "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+      "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+    ],
+    "same_prefix_order": true,
+    "same_state_input": true,
+    "btg_results": [
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION"
+    ],
+    "souffle_results": [
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION",
+      "VIOLATION"
+    ],
+    "terminal_result": "VIOLATION",
+    "terminal_input_sha256": "572644455ea2e55f8d932c3c7bf56751e4fa5ea41270993fea10fa3cf6a2c9c5",
+    "agrees_with_btg": true,
+    "uses_btg_oracle": false
+  },
+  "tool_version": "----------------------------------------------------------------------------\nVersion:  (UNKNOWN)\nWord size: 32 bits\nOptions enabled:\n----------------------------------------------------------------------------\nCopyright (c) 2016-25 The Souffle Developers.\nCopyright (c) 2013-16 Oracle and/or its affiliates.\nAll rights reserved.\n============================================================================"
+}

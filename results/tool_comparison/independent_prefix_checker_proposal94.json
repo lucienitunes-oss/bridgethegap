@@ -1,0 +1,151 @@
+{
+  "tool": "Independent archive prefix checker",
+  "status": "complete",
+  "implementation": "standalone state/predicate evaluator; no BTG oracle import",
+  "input": {
+    "proposal_id": 94,
+    "proposal_page_sha256": "6c2f039053740977845c53e08268671e94005e22f4651aabe0c28875eef06768",
+    "transaction_hashes": [
+      "0xe4f1b331e892f09532366b7a71494a8b92e9e39354048d7c8b41d7aa2c0aeae2",
+      "0x1cad049816e73b619601a0d072dd30eb995e53183df941505da25df59297ba7c",
+      "0x1d971309b406ddc34929dfcef6d9cd8f938665805189b0ce3b986b8b5465f7c8",
+      "0x7474d59b01d97625bbbf7bb2184b7f53888c869975d5497c912f14cb475b29c2",
+      "0xa8ea0989bed051b6eb26a9409929294ee14305ed20dd005229cfcf567e39e186",
+      "0xfee0e26d720982d61cd12447d18d9b100e53887e55e55d35f7d62620cf03b371"
+    ],
+    "property": "protocol_derived_fee_activation_consistency"
+  },
+  "prefix_decisions": [
+    {
+      "index": 1,
+      "chain": "op-mainnet",
+      "operation": "V3Factory.setOwner (messenger envelope)",
+      "transaction_hash": "0xe4f1b331e892f09532366b7a71494a8b92e9e39354048d7c8b41d7aa2c0aeae2",
+      "block": 148591451,
+      "observed": {
+        "v3_owner": "0xec23Cf5A1db3dcC6595385D28B2a4D9B52503Be4",
+        "v2_fee_to": "0x0000000000000000000000000000000000000000"
+      },
+      "expected": {
+        "v3_owner": "0xec23Cf5A1db3dcC6595385D28B2a4D9B52503Be4",
+        "v2_fee_to": "0xb13285DF724ea75f3f1E9912010B7e491dCd5EE3"
+      },
+      "status": "VIOLATION",
+      "reason": "one or more target attributes differ"
+    },
+    {
+      "index": 2,
+      "chain": "op-mainnet",
+      "operation": "V2Factory.setFeeTo (messenger envelope)",
+      "transaction_hash": "0x1cad049816e73b619601a0d072dd30eb995e53183df941505da25df59297ba7c",
+      "block": 148591451,
+      "observed": {
+        "v3_owner": "0xec23Cf5A1db3dcC6595385D28B2a4D9B52503Be4",
+        "v2_fee_to": "0xb13285DF724ea75f3f1E9912010B7e491dCd5EE3"
+      },
+      "expected": {
+        "v3_owner": "0xec23Cf5A1db3dcC6595385D28B2a4D9B52503Be4",
+        "v2_fee_to": "0xb13285DF724ea75f3f1E9912010B7e491dCd5EE3"
+      },
+      "status": "PASS",
+      "reason": "both target attributes match"
+    },
+    {
+      "index": 3,
+      "chain": "base",
+      "operation": "V3Factory.setOwner (messenger envelope)",
+      "transaction_hash": "0x1d971309b406ddc34929dfcef6d9cd8f938665805189b0ce3b986b8b5465f7c8",
+      "block": 42996217,
+      "observed": {
+        "v3_owner": "0xaBEA76658b205696d49B5F91b2a03536cB8A3bE1",
+        "v2_fee_to": "0x0000000000000000000000000000000000000000"
+      },
+      "expected": {
+        "v3_owner": "0xaBEA76658b205696d49B5F91b2a03536cB8A3bE1",
+        "v2_fee_to": "0x9bD25e67bF390437C8fAF480AC735a27BcF6168c"
+      },
+      "status": "VIOLATION",
+      "reason": "one or more target attributes differ"
+    },
+    {
+      "index": 4,
+      "chain": "base",
+      "operation": "V2Factory.setFeeTo (messenger envelope)",
+      "transaction_hash": "0x7474d59b01d97625bbbf7bb2184b7f53888c869975d5497c912f14cb475b29c2",
+      "block": 42996217,
+      "observed": {
+        "v3_owner": "0xaBEA76658b205696d49B5F91b2a03536cB8A3bE1",
+        "v2_fee_to": "0x9bD25e67bF390437C8fAF480AC735a27BcF6168c"
+      },
+      "expected": {
+        "v3_owner": "0xaBEA76658b205696d49B5F91b2a03536cB8A3bE1",
+        "v2_fee_to": "0x9bD25e67bF390437C8fAF480AC735a27BcF6168c"
+      },
+      "status": "PASS",
+      "reason": "both target attributes match"
+    },
+    {
+      "index": 5,
+      "chain": "arbitrum",
+      "operation": "V3Factory.setOwner",
+      "transaction_hash": "0xa8ea0989bed051b6eb26a9409929294ee14305ed20dd005229cfcf567e39e186",
+      "block": 438865985,
+      "observed": {
+        "v3_owner": "0xFF7aD5dA31fECdC678796c88B05926dB896b0699",
+        "v2_fee_to": "0x0000000000000000000000000000000000000000"
+      },
+      "expected": {
+        "v3_owner": "0xFF7aD5dA31fECdC678796c88B05926dB896b0699",
+        "v2_fee_to": "0x95E337C5B155385945D407f5396387D0c2a3A263"
+      },
+      "status": "VIOLATION",
+      "reason": "one or more target attributes differ"
+    },
+    {
+      "index": 6,
+      "chain": "arbitrum",
+      "operation": "V2Factory.setFeeTo",
+      "transaction_hash": "0xfee0e26d720982d61cd12447d18d9b100e53887e55e55d35f7d62620cf03b371",
+      "block": 438865986,
+      "observed": {
+        "v3_owner": "0xFF7aD5dA31fECdC678796c88B05926dB896b0699",
+        "v2_fee_to": "0x95E337C5B155385945D407f5396387D0c2a3A263"
+      },
+      "expected": {
+        "v3_owner": "0xFF7aD5dA31fECdC678796c88B05926dB896b0699",
+        "v2_fee_to": "0x95E337C5B155385945D407f5396387D0c2a3A263"
+      },
+      "status": "PASS",
+      "reason": "both target attributes match"
+    }
+  ],
+  "terminal_decisions": [
+    {
+      "chain": "arbitrum",
+      "transaction_hash": "0xfee0e26d720982d61cd12447d18d9b100e53887e55e55d35f7d62620cf03b371",
+      "block": 438865986,
+      "status": "PASS",
+      "reason": "both target attributes match"
+    },
+    {
+      "chain": "base",
+      "transaction_hash": "0x7474d59b01d97625bbbf7bb2184b7f53888c869975d5497c912f14cb475b29c2",
+      "block": 42996217,
+      "status": "PASS",
+      "reason": "both target attributes match"
+    },
+    {
+      "chain": "op-mainnet",
+      "transaction_hash": "0x1cad049816e73b619601a0d072dd30eb995e53183df941505da25df59297ba7c",
+      "block": 148591451,
+      "status": "PASS",
+      "reason": "both target attributes match"
+    }
+  ],
+  "summary": {
+    "pass": 3,
+    "violation": 3,
+    "unknown": 0,
+    "terminal_status": "PASS"
+  }
+}

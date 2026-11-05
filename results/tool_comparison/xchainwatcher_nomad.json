@@ -1,0 +1,3720 @@
+{
+  "status": "complete",
+  "tool": "XChainWatcher",
+  "tool_repository": "https://github.com/AndreAugusto11/XChainWatcher",
+  "tool_commit": "4cc1ff173c18f80d275d7af6cbd318cdd3906e77",
+  "engine": "Souffle 2.5 built from source for the isolated Windows environment",
+  "engine_binary": "E:\\BridgeTheGapLab\\souffle-clang\\bin\\souffle.exe",
+  "command": [
+    "E:\\BridgeTheGapLab\\souffle-clang\\bin\\souffle.exe",
+    "--preprocessor",
+    "E:/BridgeTheGapLab/mcpp-old/mcpp-2.7.2/bin/mcpp.exe",
+    "-p",
+    "E:\\BridgeTheGapLab\\XChainWatcher\\runs\\btg_nomad_20260912\\datalog-logs.console",
+    "-F",
+    "E:\\BridgeTheGapLab\\XChainWatcher\\cross-chain-rules-validator\\datalog\\nomad-bridge\\facts",
+    "-D",
+    "E:\\BridgeTheGapLab\\XChainWatcher\\runs\\btg_nomad_20260912\\results",
+    "E:\\BridgeTheGapLab\\XChainWatcher\\cross-chain-rules-validator\\datalog\\acceptance-rules.dl"
+  ],
+  "execution_status": "complete",
+  "reused_existing_run_after_external_execution": true,
+  "working_directory": "E:\\BridgeTheGapLab\\XChainWatcher",
+  "facts_directory": "E:\\BridgeTheGapLab\\XChainWatcher\\cross-chain-rules-validator\\datalog\\nomad-bridge\\facts",
+  "rules_file": "E:\\BridgeTheGapLab\\XChainWatcher\\cross-chain-rules-validator\\datalog\\acceptance-rules.dl",
+  "rules_sha256": "e81fe04caa3092a5789fd31b91ff5ac5a6bd45da75e38b201767d6708a3cf711",
+  "fact_manifest": [
+    {
+      "file": "additional_alternative_chains.facts",
+      "bytes": 890,
+      "sha256": "cac8bb03a05b16e0c231ad50024e739fef9beb07fcbeee0ffb7da59af6f9f848"
+    },
+    {
+      "file": "additional_erc20_transfer.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "additional_sc_deposit.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "additional_sc_token_deposited.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "additional_sc_token_withdrew.facts",
+      "bytes": 162879,
+      "sha256": "0d9880bc7051fe20110009a6849ef68cd37fbe0560f71c525895b7b8b5d37654"
+    },
+    {
+      "file": "additional_sc_withdrawal.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "additional_tc_token_deposited.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "additional_tc_token_withdrew.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "additional_tc_withdrawal.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "additional_transaction.facts",
+      "bytes": 349587,
+      "sha256": "34499dd18879ae97b4a22488bdad2e6ffae46c458715ae5447a0ff86fc8055a6"
+    },
+    {
+      "file": "alternative_chains.facts",
+      "bytes": 3984417,
+      "sha256": "b4b7a30532c82991074ba5be721db429b0edf0d397b1f08b3b1efe44f47083c1"
+    },
+    {
+      "file": "bridge_controlled_address.facts",
+      "bytes": 532,
+      "sha256": "04d712e06b51138597fe409e1e4e0e28ee5f036b1ff882a10e0fb9fd78b81193"
+    },
+    {
+      "file": "cctx_finality.facts",
+      "bytes": 31,
+      "sha256": "1fee83d12317a70daf60d4b6be811bda9006248b81d7c6fd3160e610659f95fc"
+    },
+    {
+      "file": "erc20_transfer.facts",
+      "bytes": 10741424,
+      "sha256": "8d4aac403a87dbff6ab7a4ef00b146a7efcb1666efc4c642ea4c5a0c518df24f"
+    },
+    {
+      "file": "sc_deposit.facts",
+      "bytes": 1248064,
+      "sha256": "aefc0a3e479bfaa5d27048a0fd4b14f24bba93aa3178d1df62c7d66b534c90ba"
+    },
+    {
+      "file": "sc_token_deposited.facts",
+      "bytes": 2672580,
+      "sha256": "4de070974ede388188b10ee8f94c17e7cd68a067d667bbfb2219aab6ee67b0e3"
+    },
+    {
+      "file": "sc_token_withdrew.facts",
+      "bytes": 860445,
+      "sha256": "c5a7da8daeccdd134938ccb548eaa0b5050ac44ad031ea4d7c96b9abde618f21"
+    },
+    {
+      "file": "sc_withdrawal.facts",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "tc_token_deposited.facts",
+      "bytes": 2023500,
+      "sha256": "73e48cbec1e93a339714dcf22dcaf9c551d0afbb0a3015efef460b0beea23b41"
+    },
+    {
+      "file": "tc_token_withdrew.facts",
+      "bytes": 1226505,
+      "sha256": "767442e666098e36cf44deb06a63782bc27f955150ae1d9d563a83821797cc22"
+    },
+    {
+      "file": "tc_withdrawal.facts",
+      "bytes": 81566,
+      "sha256": "4a717e788abcc732b26a9190e8341ec08eb0858c5da9c74c641c3985ab594578"
+    },
+    {
+      "file": "token_mapping.facts",
+      "bytes": 1199,
+      "sha256": "b4a261160ba81467e54e1092321fa3cc0668e57b82d7834771c036bf781627a9"
+    },
+    {
+      "file": "transaction.facts",
+      "bytes": 7529292,
+      "sha256": "59f3eb1b6fdbfe77c3d47f4f907c54154e301730c1e2678c3655ca9750dda317"
+    },
+    {
+      "file": "wrapped_native_token.facts",
+      "bytes": 107,
+      "sha256": "76520726e692524930916722a95f3724f650fff71043c58ae2a0302db88fdd51"
+    }
+  ],
+  "output_directory": "D:\\0-Paper\\20260905BridgeTheGap_LaTeX_Package\\experiments\\results\\tool_comparison\\xchainwatcher_nomad_results",
+  "output_manifest": [
+    {
+      "file": "CCTX_Deposit.csv",
+      "bytes": 4199307,
+      "sha256": "7e4626cc7758ccb83cb0cee5cfa21ea8bfd99ec48f78aa166e8f2945ded6b75e"
+    },
+    {
+      "file": "CCTX_Deposit_FinalityBreak.csv",
+      "bytes": 1839,
+      "sha256": "30421f191b9e8c31bae6d4c0a0cb01a8f856f2ec3608ff889d690afdffbb55fc"
+    },
+    {
+      "file": "CCTX_Withdrawal.csv",
+      "bytes": 1648522,
+      "sha256": "de99b074911e78a9f845d99295eb8aff1f8c7648f2426cd500018f85e18be6cc"
+    },
+    {
+      "file": "CCTX_Withdrawal_FinalityBreak.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "RevertedTransactions.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "SC_DepositsWithoutMatch.csv",
+      "bytes": 1745,
+      "sha256": "07a16c6af18a0acab45691d5eabd389793d729766edeb6e2644182672843f90b"
+    },
+    {
+      "file": "SC_RandomTransferEthToBridge.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "SC_ValidERC20TokenDeposit.csv",
+      "bytes": 1408985,
+      "sha256": "0f1b5d3befba0954559d117d9272b5bf2030d0cbfb66e8076fe269c467e691e8"
+    },
+    {
+      "file": "SC_ValidERC20TokenDeposit_Anomalies.csv",
+      "bytes": 2613,
+      "sha256": "d26baf826dd18e4b4bfc7da41806b6b6fc3136c4a498c6800bac45450992dfb6"
+    },
+    {
+      "file": "SC_ValidERC20TokenWithdrawal.csv",
+      "bytes": 938182,
+      "sha256": "0d41a99721cc7cc8dfcac3de972b9fb9a5aec2802af32925de4b9a75f29d1331"
+    },
+    {
+      "file": "SC_ValidERC20TokenWithdrawal_Anomalies.csv",
+      "bytes": 134,
+      "sha256": "2c9307fee797497b38171bd5b47fd58e9a9f2c63b761876dcb3623e856c8e04f"
+    },
+    {
+      "file": "SC_ValidNativeTokenDeposit.csv",
+      "bytes": 2427415,
+      "sha256": "d2ad21293f136937863e08a5d48dd94deb45c076be79cb4301d60d6cdaedee04"
+    },
+    {
+      "file": "SC_ValidNativeTokenDeposit_Anomalies.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "SC_WithdrawalsMatchWithAdditionalData.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "SC_WithdrawalsWithoutMatch.csv",
+      "bytes": 74010,
+      "sha256": "20c950679e8d65926349d3ed1f3c4d7bcf3bfccbb350c07d975a685e2ca805b5"
+    },
+    {
+      "file": "SC_WithdrawalsWithoutMatchWithAdditionalData.csv",
+      "bytes": 74010,
+      "sha256": "20c950679e8d65926349d3ed1f3c4d7bcf3bfccbb350c07d975a685e2ca805b5"
+    },
+    {
+      "file": "SC_WithdrewTokensToBridge.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "SingleEventDeposit.csv",
+      "bytes": 1010,
+      "sha256": "1f699c17f4d53436726f9394d4a49b58b76518d4f97982b6c7277afc35c36440"
+    },
+    {
+      "file": "SingleTokenDeposits.csv",
+      "bytes": 5961,
+      "sha256": "bdcdc26c40b264b38ec0f6cb689d2aefae50c43d8b63714566c5b06370e0c20a"
+    },
+    {
+      "file": "SingleTokenWithdrawal.csv",
+      "bytes": 317,
+      "sha256": "8fb5e336098133e4982e33b412d741fffd80e2b9bd898c7cf86d1c5aca863843"
+    },
+    {
+      "file": "TC_DepositsWithoutMatch.csv",
+      "bytes": 2604,
+      "sha256": "e1cc399bb95d395957e3deafb48300f4dd9c845145719c56367ec731395b9490"
+    },
+    {
+      "file": "TC_ValidERC20TokenDeposit.csv",
+      "bytes": 2240423,
+      "sha256": "d98ac867a5d6326f9d7278ee4cc6a231cd72197b59362c17c7598cccf0b9f9f9"
+    },
+    {
+      "file": "TC_ValidERC20TokenDeposit_Anomalies.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "TC_ValidERC20TokenWithdrawal.csv",
+      "bytes": 1624620,
+      "sha256": "a4fcc3f4765b5440c76e9257d47cf53b78e9e98a851fea0b05865d2b69fc4a55"
+    },
+    {
+      "file": "TC_ValidERC20TokenWithdrawal_Anomalies.csv",
+      "bytes": 670,
+      "sha256": "7afb219b7c4c6b6f807fc603e88e5212da1289515a8f6539ab51f7dec7a7b84c"
+    },
+    {
+      "file": "TC_ValidNativeTokenWithdrawal.csv",
+      "bytes": 157553,
+      "sha256": "565d430319d34dc9ce354eb03e3e94c4a3e4200d5a263f0d662991cbbad80883"
+    },
+    {
+      "file": "TC_ValidNativeTokenWithdrawal_Anomalies.csv",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "TC_WithdrawalsMatchWithAdditionalData.csv",
+      "bytes": 36196,
+      "sha256": "592a1d12fe8d25419bcc310675561dd6dc868e239fcc9693dd3588999dcfca20"
+    },
+    {
+      "file": "TC_WithdrawalsWithoutMatch.csv",
+      "bytes": 232363,
+      "sha256": "33c17157d4026f3309af74d061a6e36661c7bbbfad89ce87f8300702a396b62a"
+    },
+    {
+      "file": "TC_WithdrawalsWithoutMatchWithAdditionalData.csv",
+      "bytes": 204681,
+      "sha256": "0ebaeb4a0246953298db014e00dd2d29dc3e6299f6f8feba37704e04de64a2f0"
+    }
+  ],
+  "selected_attack_hashes": [
+    "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+    "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+    "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+  ],
+  "common_prefix_manifest": "experiments/results/real_replay/nomad_prefix_manifest.json",
+  "common_prefix_transaction_count": 4,
+  "selected_output_rows": {
+    "SC_ValidERC20TokenWithdrawal.csv": [
+      "1659389551\t0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28\t5078\t0xb5c55f76f90cc528b2609109ca14d8d84593590e\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t6648936\t10000000000",
+      "1659389551\t0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17\t5078\t0xf57113d8f6ff35747737f026fe0b37d4d7f42777\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t6648936\t10000000000",
+      "1659389551\t0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9\t5078\t0x000000000000660def84e69995117c0176ba446e\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t6648936\t10000000000"
+    ],
+    "SC_WithdrawalsWithoutMatch.csv": [
+      "6648936\t1659389551\t0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0xb5c55f76f90cc528b2609109ca14d8d84593590e\t10000000000",
+      "6648936\t1659389551\t0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0xf57113d8f6ff35747737f026fe0b37d4d7f42777\t10000000000",
+      "6648936\t1659389551\t0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0x000000000000660def84e69995117c0176ba446e\t10000000000"
+    ],
+    "SC_WithdrawalsWithoutMatchWithAdditionalData.csv": [
+      "6648936\t1659389551\t0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0xb5c55f76f90cc528b2609109ca14d8d84593590e\t10000000000",
+      "6648936\t1659389551\t0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0xf57113d8f6ff35747737f026fe0b37d4d7f42777\t10000000000",
+      "6648936\t1659389551\t0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9\t5078\t0x2260fac5e5542a773aa44fbcfedf7c193bc2c599\t0x000000000000660def84e69995117c0176ba446e\t10000000000"
+    ]
+  },
+  "raw_attack_transactions_and_logs": {
+    "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17": {
+      "transaction": {
+        "priority_fee": null,
+        "raw_input": "0x37c8f01a01f57113d8f6ff35747737f026fe0b37d4d7f42777000100055d94309e5a0090b165fa4181519701637b6daeba00012444928bc4b2c1201f45d16265616dd4d3dfd3ede74e0dcebc1aa685e151332857efce2d024613d6006574680c5888a69b4e698a4b090df6cf5bd7b2d47325ad30a3006574680c552260fac5e5542a773aa44fbcfedf7c193bc2c59903d4f57113d8f6ff35747737f026fe0b37d4d7f427771b6502540be400e6e85ded018819209cfb948d074cb65de145734b5b0852e4a5db25cac2b8c39a0f2260fac5e5542a773aa44fbcfedf7c193bc2c59900004444a9059cbbd4bb2b8038a1640196fbe3e38816f3e67cba72d940c502540be400bb2b8038a1640196fbe3e38816f3e67cba72d9400000a444022c0d9f37493ac523a3550f516311d4f57113d8f6ff35747737f026fe0b37d4d7f42777c18020c02aaa39b223fe8d0a0e5c4f27ead9083c756cc2000024442e1a7d4dc93ac523a3550f516311b5c55f76f90cc528b2609109ca14d8d84593590e093ac523a3550f5163110000",
+        "is_pending_update": false,
+        "result": "success",
+        "hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+        "max_fee_per_gas": null,
+        "revert_reason": null,
+        "confirmation_duration": [
+          0,
+          12000.0
+        ],
+        "transaction_burnt_fee": null,
+        "type": 0,
+        "token_transfers_overflow": false,
+        "confirmations": 10714471,
+        "position": 0,
+        "max_priority_fee_per_gas": null,
+        "transaction_tag": null,
+        "created_contract": null,
+        "value": "4660",
+        "from": {
+          "ens_domain_name": null,
+          "hash": "0x56D8B635A7C88Fd1104D23d632AF40c1C3Aac4e3",
+          "implementations": [],
+          "is_contract": false,
+          "is_scam": false,
+          "is_verified": false,
+          "metadata": {
+            "tags": [
+              {
+                "meta": {},
+                "name": "Nomad Bridge Exploiter 1",
+                "ordinal": 10,
+                "slug": "nomad-bridge-exploiter-1",
+                "tagType": "name"
+              },
+              {
+                "meta": {},
+                "name": "Exploit",
+                "ordinal": 0,
+                "slug": "exploit",
+                "tagType": "generic"
+              },
+              {
+                "meta": {
+                  "alertStatus": "info",
+                  "data": "This address has been reported to be involved with an exploit involving Nomad Token Bridge. Proceed with caution."
+                },
+                "name": "note_0",
+                "ordinal": 0,
+                "slug": "note0",
+                "tagType": "note"
+              }
+            ]
+          },
+          "name": null,
+          "private_tags": [],
+          "proxy_type": null,
+          "public_tags": [],
+          "reputation": "ok",
+          "watchlist_names": []
+        },
+        "gas_used": "263706",
+        "status": "ok",
+        "to": {
+          "ens_domain_name": null,
+          "hash": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777",
+          "implementations": [],
+          "is_contract": true,
+          "is_scam": false,
+          "is_verified": false,
+          "metadata": null,
+          "name": null,
+          "private_tags": [],
+          "proxy_type": null,
+          "public_tags": [],
+          "reputation": "ok",
+          "watchlist_names": []
+        },
+        "authorization_list": [],
+        "method": "0x37c8f01a",
+        "fee": {
+          "type": "actual",
+          "value": "22743851383318530"
+        },
+        "gas_limit": "376687",
+        "gas_price": "86247000005",
+        "decoded_input": null,
+        "fhe_operations_count": 0,
+        "token_transfers": [
+          {
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 0,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": null,
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+              "circulating_market_cap": "8912637953.655382",
+              "circulating_supply": null,
+              "decimals": "8",
+              "exchange_rate": "76692",
+              "holders_count": "200927",
+              "icon_url": "https://assets.coingecko.com/coins/images/7598/small/WBTCLOGO.png?1764496367",
+              "name": "Wrapped Bitcoin",
+              "reputation": "ok",
+              "symbol": "WBTC",
+              "total_supply": "11613218273272",
+              "type": "ERC-20",
+              "volume_24h": "63502181.14907779"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "8",
+              "value": "10000000000"
+            },
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+            "type": "token_transfer"
+          },
+          {
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": null,
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 3,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipDescription": "Uniswap V2 pool to exchange between WBTC and WETH.",
+                      "tooltipUrl": "https://v2.info.uniswap.org/pair/0xbb2b8038a1640196fbe3e38816f3e67cba72d940"
+                    },
+                    "name": "Uniswap V2: WBTC",
+                    "ordinal": 10,
+                    "slug": "uniswap-v2-wbtc",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "UniswapV2Pair",
+                    "ordinal": 0,
+                    "slug": "uniswapv2pair",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appActionButtonText": "Uniswap",
+                      "appID": "uniswap",
+                      "bgColor": "#FF007A",
+                      "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+                      "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+                      "textColor": "#FFFFFF",
+                      "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+                      "tooltipTitle": "Uniswap",
+                      "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+                    },
+                    "name": "Uniswap V2",
+                    "ordinal": 0,
+                    "slug": "uniswap-v2",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UniswapV2Pair",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+              "circulating_market_cap": "8912637953.655382",
+              "circulating_supply": null,
+              "decimals": "8",
+              "exchange_rate": "76692",
+              "holders_count": "200927",
+              "icon_url": "https://assets.coingecko.com/coins/images/7598/small/WBTCLOGO.png?1764496367",
+              "name": "Wrapped Bitcoin",
+              "reputation": "ok",
+              "symbol": "WBTC",
+              "total_supply": "11613218273272",
+              "type": "ERC-20",
+              "volume_24h": "63502181.14907779"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "8",
+              "value": "10000000000"
+            },
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+            "type": "token_transfer"
+          },
+          {
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipDescription": "Uniswap V2 pool to exchange between WBTC and WETH.",
+                      "tooltipUrl": "https://v2.info.uniswap.org/pair/0xbb2b8038a1640196fbe3e38816f3e67cba72d940"
+                    },
+                    "name": "Uniswap V2: WBTC",
+                    "ordinal": 10,
+                    "slug": "uniswap-v2-wbtc",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "UniswapV2Pair",
+                    "ordinal": 0,
+                    "slug": "uniswapv2pair",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appActionButtonText": "Uniswap",
+                      "appID": "uniswap",
+                      "bgColor": "#FF007A",
+                      "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+                      "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+                      "textColor": "#FFFFFF",
+                      "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+                      "tooltipTitle": "Uniswap",
+                      "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+                    },
+                    "name": "Uniswap V2",
+                    "ordinal": 0,
+                    "slug": "uniswap-v2",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UniswapV2Pair",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 4,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": null,
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "circulating_market_cap": "5065144169.452291",
+              "circulating_supply": null,
+              "decimals": "18",
+              "exchange_rate": "2477.3",
+              "holders_count": "3348049",
+              "icon_url": "https://assets.coingecko.com/coins/images/2518/small/weth.png?1696503332",
+              "name": "WETH",
+              "reputation": "ok",
+              "symbol": "WETH",
+              "total_supply": "2049264903006477831229434",
+              "type": "ERC-20",
+              "volume_24h": "206439529.07053694"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "18",
+              "value": "1084116533510535209745"
+            },
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+            "type": "token_transfer"
+          },
+          {
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": null,
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 7,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x0000000000000000000000000000000000000000",
+              "implementations": [],
+              "is_contract": false,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "Null: 0x000...000",
+                    "ordinal": 10,
+                    "slug": "null-0x000000",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "main_entity": "Genesis"
+                    },
+                    "name": "Null Address",
+                    "ordinal": 10,
+                    "slug": "null-address",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "DEPOSIT ADDRESS",
+                    "ordinal": 0,
+                    "slug": "deposit-address",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Metamask User",
+                    "ordinal": 0,
+                    "slug": "metamask-user",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Imtoken User",
+                    "ordinal": 0,
+                    "slug": "imtoken-user",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Coinbase",
+                    "ordinal": 0,
+                    "slug": "coinbase",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "info": [
+                        "Blocked By USDT"
+                      ],
+                      "tooltipDescription": "Address blocked by a custodial stablecoin provider"
+                    },
+                    "name": "BLOCKED",
+                    "ordinal": 0,
+                    "slug": "blocked",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Genesis",
+                    "ordinal": 0,
+                    "slug": "genesis",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Miner",
+                    "ordinal": 0,
+                    "slug": "miner",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Burn",
+                    "ordinal": 0,
+                    "slug": "burn",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "This address is commonly used by projects to burn tokens (reducing total supply) or mint tokens (increasing total supply)."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Null",
+                    "ordinal": 0,
+                    "slug": "null",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "circulating_market_cap": "5065144169.452291",
+              "circulating_supply": null,
+              "decimals": "18",
+              "exchange_rate": "2477.3",
+              "holders_count": "3348049",
+              "icon_url": "https://assets.coingecko.com/coins/images/2518/small/weth.png?1696503332",
+              "name": "WETH",
+              "reputation": "ok",
+              "symbol": "WETH",
+              "total_supply": "2049264903006477831229434",
+              "type": "ERC-20",
+              "volume_24h": "206439529.07053694"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "18",
+              "value": "1084116533510535209745"
+            },
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17",
+            "type": "token_burning"
+          }
+        ],
+        "base_fee_per_gas": "17785434340",
+        "timestamp": "2022-08-01T21:32:31.000000Z",
+        "nonce": 24,
+        "historic_exchange_rate": "1689.27",
+        "transaction_types": [
+          "coin_transfer",
+          "contract_call",
+          "token_transfer"
+        ],
+        "exchange_rate": "2510.74",
+        "block_number": 15259101,
+        "has_error_in_internal_transactions": false
+      },
+      "logs": {
+        "items": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped BTC",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0x27502c297b7d3221115b309c6793d82367429f60ad4e32465d92cf5c4a6bb66b@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmU12hockJzZaSK6pvzH1K1im4X9ababHx388mw6uEh986/Bce2ei6Xi58TfHx1tkQFvcmgwRnu2mTFeuVvUh3wJdouZD3wdi2pBWBL1Kn89TCvmoW58yuhe179WiLMKTk67yg4pz\",\"token_symbol\":\"WBTC\",\"token_name\":\"Wrapped Bitcoin\",\"decimals\":8}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "A wrapped version of bitcoin as an ERC20",
+                      "tooltipUrl": "https://wbtc.network/"
+                    },
+                    "name": "Wrapped BTC: WBTC Token",
+                    "ordinal": 10,
+                    "slug": "wrapped-btc-wbtc-token",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped BTC",
+                    "ordinal": 0,
+                    "slug": "wrapped-btc",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "Wrapped BTC",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x00000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Transfer(address indexed from, address indexed to, uint256 value)",
+              "method_id": "ddf252ad",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "from",
+                  "type": "address",
+                  "value": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3"
+                },
+                {
+                  "indexed": true,
+                  "name": "to",
+                  "type": "address",
+                  "value": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777"
+                },
+                {
+                  "indexed": false,
+                  "name": "value",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 0,
+            "smart_contract": null,
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x00000000000000000000000088a69b4e698a4b090df6cf5bd7b2d47325ad30a3",
+              "0x000000000000000000000000f57113d8f6ff35747737f026fe0b37d4d7f42777",
+              null
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Receive(uint64 indexed originAndNonce, address indexed token, address indexed recipient, address liquidityProvider, uint256 amount)",
+              "method_id": "9f9a97db",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "originAndNonce",
+                  "type": "uint64",
+                  "value": "7090180309144048598"
+                },
+                {
+                  "indexed": true,
+                  "name": "token",
+                  "type": "address",
+                  "value": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+                },
+                {
+                  "indexed": true,
+                  "name": "recipient",
+                  "type": "address",
+                  "value": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777"
+                },
+                {
+                  "indexed": false,
+                  "name": "liquidityProvider",
+                  "type": "address",
+                  "value": "0x0000000000000000000000000000000000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 1,
+            "smart_contract": null,
+            "topics": [
+              "0x9f9a97db84f39202ca3b409b63f7ccf7d3fd810e176573c7483088b6f181bbbb",
+              "0x0000000000000000000000000000000000000000000000006265616d000013d6",
+              "0x0000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "0x000000000000000000000000f57113d8f6ff35747737f026fe0b37d4d7f42777"
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x5D94309E5a0090b165FA4181519701637B6DAEBA",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x",
+            "decoded": {
+              "method_call": "Process(bytes32 indexed messageHash, bool indexed success, bytes indexed returnData)",
+              "method_id": "d42de95a",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "messageHash",
+                  "type": "bytes32",
+                  "value": "0xd5e9f245ec07f00ab709d28aa7506f8f0989bf2c86cad9c2b22ab86119dacef8"
+                },
+                {
+                  "indexed": true,
+                  "name": "success",
+                  "type": "bool",
+                  "value": "true"
+                },
+                {
+                  "indexed": true,
+                  "name": "returnData",
+                  "type": "bytes",
+                  "value": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+                }
+              ]
+            },
+            "index": 2,
+            "smart_contract": null,
+            "topics": [
+              "0xd42de95a9b26f1be134c8ecce389dc4fcfa18753d01661b7b361233569e8fe48",
+              "0xd5e9f245ec07f00ab709d28aa7506f8f0989bf2c86cad9c2b22ab86119dacef8",
+              "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped BTC",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0x27502c297b7d3221115b309c6793d82367429f60ad4e32465d92cf5c4a6bb66b@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmU12hockJzZaSK6pvzH1K1im4X9ababHx388mw6uEh986/Bce2ei6Xi58TfHx1tkQFvcmgwRnu2mTFeuVvUh3wJdouZD3wdi2pBWBL1Kn89TCvmoW58yuhe179WiLMKTk67yg4pz\",\"token_symbol\":\"WBTC\",\"token_name\":\"Wrapped Bitcoin\",\"decimals\":8}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "A wrapped version of bitcoin as an ERC20",
+                      "tooltipUrl": "https://wbtc.network/"
+                    },
+                    "name": "Wrapped BTC: WBTC Token",
+                    "ordinal": 10,
+                    "slug": "wrapped-btc-wbtc-token",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped BTC",
+                    "ordinal": 0,
+                    "slug": "wrapped-btc",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "Wrapped BTC",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x00000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Transfer(address indexed from, address indexed to, uint256 value)",
+              "method_id": "ddf252ad",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "from",
+                  "type": "address",
+                  "value": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777"
+                },
+                {
+                  "indexed": true,
+                  "name": "to",
+                  "type": "address",
+                  "value": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940"
+                },
+                {
+                  "indexed": false,
+                  "name": "value",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 3,
+            "smart_contract": null,
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x000000000000000000000000f57113d8f6ff35747737f026fe0b37d4d7f42777",
+              "0x000000000000000000000000bb2b8038a1640196fbe3e38816f3e67cba72d940",
+              null
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped Ether",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0xe27ff4957dc5c9bb33feafde33089e0c03fb4999f3e8d01f4720334161a17224@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmRyTdB5Cc7zH7G4YwWs7jh98zNGLQN1NfJ8KTWTXikhcP/WETH\",\"token_symbol\":\"WETH\",\"token_name\":\"WETH\",\"decimals\":18}",
+                      "tooltipDescription": "wETH is wrapped ETH which confroms to the ERC20 standard",
+                      "tooltipUrl": "https://weth.io/",
+                      "verifiedDomains": [
+                        "traderjoexyz.com",
+                        "app.mav.xyz",
+                        "core.app",
+                        "shibaswap.com",
+                        "app.dodoex.io",
+                        "app.uniswap.org",
+                        "explorer.reservoir.tools",
+                        "pancakeswap.finance",
+                        "swapr.eth.limo"
+                      ]
+                    },
+                    "name": "WETH Token (v2)",
+                    "ordinal": 10,
+                    "slug": "weth-token-v2",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped Token",
+                    "ordinal": 0,
+                    "slug": "wrapped-token",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "main_entity": "Wrapped",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://weth.io/"
+                    },
+                    "name": "Wrapped Ether",
+                    "ordinal": 0,
+                    "slug": "wrapped-ether",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "WETH9",
+                    "ordinal": 0,
+                    "slug": "weth9",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "WETH9",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x00000000000000000000000000000000000000000000003ac523a3550f516311",
+            "decoded": {
+              "method_call": "Transfer(address indexed src, address indexed dst, uint256 wad)",
+              "method_id": "ddf252ad",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "src",
+                  "type": "address",
+                  "value": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940"
+                },
+                {
+                  "indexed": true,
+                  "name": "dst",
+                  "type": "address",
+                  "value": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777"
+                },
+                {
+                  "indexed": false,
+                  "name": "wad",
+                  "type": "uint256",
+                  "value": "1084116533510535209745"
+                }
+              ]
+            },
+            "index": 4,
+            "smart_contract": null,
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x000000000000000000000000bb2b8038a1640196fbe3e38816f3e67cba72d940",
+              "0x000000000000000000000000f57113d8f6ff35747737f026fe0b37d4d7f42777",
+              null
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipDescription": "Uniswap V2 pool to exchange between WBTC and WETH.",
+                      "tooltipUrl": "https://v2.info.uniswap.org/pair/0xbb2b8038a1640196fbe3e38816f3e67cba72d940"
+                    },
+                    "name": "Uniswap V2: WBTC",
+                    "ordinal": 10,
+                    "slug": "uniswap-v2-wbtc",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "UniswapV2Pair",
+                    "ordinal": 0,
+                    "slug": "uniswapv2pair",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appActionButtonText": "Uniswap",
+                      "appID": "uniswap",
+                      "bgColor": "#FF007A",
+                      "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+                      "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+                      "textColor": "#FFFFFF",
+                      "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+                      "tooltipTitle": "Uniswap",
+                      "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+                    },
+                    "name": "Uniswap V2",
+                    "ordinal": 0,
+                    "slug": "uniswap-v2",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UniswapV2Pair",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x0000000000000000000000000000000000000000000000000000000a0921265b0000000000000000000000000000000000000000000000c3218b7c00e18c2b5e",
+            "decoded": {
+              "method_call": "Sync(uint112 reserve0, uint112 reserve1)",
+              "method_id": "1c411e9a",
+              "parameters": [
+                {
+                  "indexed": false,
+                  "name": "reserve0",
+                  "type": "uint112",
+                  "value": "43102840411"
+                },
+                {
+                  "indexed": false,
+                  "name": "reserve1",
+                  "type": "uint112",
+                  "value": "3599532256341602872158"
+                }
+              ]
+            },
+            "index": 5,
+            "smart_contract": null,
+            "topics": [
+              "0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1",
+              null,
+              null,
+              null
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipDescription": "Uniswap V2 pool to exchange between WBTC and WETH.",
+                      "tooltipUrl": "https://v2.info.uniswap.org/pair/0xbb2b8038a1640196fbe3e38816f3e67cba72d940"
+                    },
+                    "name": "Uniswap V2: WBTC",
+                    "ordinal": 10,
+                    "slug": "uniswap-v2-wbtc",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "UniswapV2Pair",
+                    "ordinal": 0,
+                    "slug": "uniswapv2pair",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appActionButtonText": "Uniswap",
+                      "appID": "uniswap",
+                      "bgColor": "#FF007A",
+                      "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+                      "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+                      "textColor": "#FFFFFF",
+                      "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+                      "tooltipTitle": "Uniswap",
+                      "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+                    },
+                    "name": "Uniswap V2",
+                    "ordinal": 0,
+                    "slug": "uniswap-v2",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UniswapV2Pair",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x00000000000000000000000000000000000000000000000000000002540be4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000003ac523a3550f516311",
+            "decoded": {
+              "method_call": "Swap(address indexed sender, uint256 amount0In, uint256 amount1In, uint256 amount0Out, uint256 amount1Out, address indexed to)",
+              "method_id": "d78ad95f",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "sender",
+                  "type": "address",
+                  "value": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount0In",
+                  "type": "uint256",
+                  "value": "10000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount1In",
+                  "type": "uint256",
+                  "value": "0"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount0Out",
+                  "type": "uint256",
+                  "value": "0"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount1Out",
+                  "type": "uint256",
+                  "value": "1084116533510535209745"
+                },
+                {
+                  "indexed": true,
+                  "name": "to",
+                  "type": "address",
+                  "value": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777"
+                }
+              ]
+            },
+            "index": 6,
+            "smart_contract": null,
+            "topics": [
+              "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822",
+              "0x000000000000000000000000f57113d8f6ff35747737f026fe0b37d4d7f42777",
+              "0x000000000000000000000000f57113d8f6ff35747737f026fe0b37d4d7f42777",
+              null
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped Ether",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0xe27ff4957dc5c9bb33feafde33089e0c03fb4999f3e8d01f4720334161a17224@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmRyTdB5Cc7zH7G4YwWs7jh98zNGLQN1NfJ8KTWTXikhcP/WETH\",\"token_symbol\":\"WETH\",\"token_name\":\"WETH\",\"decimals\":18}",
+                      "tooltipDescription": "wETH is wrapped ETH which confroms to the ERC20 standard",
+                      "tooltipUrl": "https://weth.io/",
+                      "verifiedDomains": [
+                        "traderjoexyz.com",
+                        "app.mav.xyz",
+                        "core.app",
+                        "shibaswap.com",
+                        "app.dodoex.io",
+                        "app.uniswap.org",
+                        "explorer.reservoir.tools",
+                        "pancakeswap.finance",
+                        "swapr.eth.limo"
+                      ]
+                    },
+                    "name": "WETH Token (v2)",
+                    "ordinal": 10,
+                    "slug": "weth-token-v2",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped Token",
+                    "ordinal": 0,
+                    "slug": "wrapped-token",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "main_entity": "Wrapped",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://weth.io/"
+                    },
+                    "name": "Wrapped Ether",
+                    "ordinal": 0,
+                    "slug": "wrapped-ether",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "WETH9",
+                    "ordinal": 0,
+                    "slug": "weth9",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "WETH9",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x00000000000000000000000000000000000000000000003ac523a3550f516311",
+            "decoded": {
+              "method_call": "Withdrawal(address indexed src, uint256 wad)",
+              "method_id": "7fcf532c",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "src",
+                  "type": "address",
+                  "value": "0xf57113D8f6Ff35747737f026fE0B37D4D7f42777"
+                },
+                {
+                  "indexed": false,
+                  "name": "wad",
+                  "type": "uint256",
+                  "value": "1084116533510535209745"
+                }
+              ]
+            },
+            "index": 7,
+            "smart_contract": null,
+            "topics": [
+              "0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65",
+              "0x000000000000000000000000f57113d8f6ff35747737f026fe0b37d4d7f42777",
+              null,
+              null
+            ],
+            "transaction_hash": "0x61497a1a8a8659a06358e130ea590e1eed8956edbd99dbb2048cfb46850a8f17"
+          }
+        ],
+        "next_page_params": null
+      }
+    },
+    "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9": {
+      "transaction": {
+        "priority_fee": "1282000000000000",
+        "raw_input": "0xb875322d000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000360000000000000000000000000000000000000000000000000000000000000040000000000000000000000000000000000000000000000000000000000000003e80000000000000000000000000000000000000000000000008ac7230489e80000000000000000000000000000000000000000000000000000000f6b6b38252de400000000000000000000000000000000000000000000000000000000000004400000000000000000000000000000000000000000000000000000000000000240000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000001400000000000000000000000000000000000000000000000000000000000000007000000000000000000000000a8c83b1b30291a3a1a118058b5445cc83041cd9d0000000000000000000000004dc9e781fef18fa4dc5217a5ee1156f668b5af55000000000000000000000000a06c3c08a19e51b33309eddfb356c33ead8517a3000000000000000000000000524cfae2daab901234c842f3a17235902b0f01f90000000000000000000000000f9f18d18c8227a276375940b39ca086fbde160400000000000000000000000006ac16ff8caa7c7a4d66f506a4c74d4da9e8569e0000000000000000000000005d94309e5a0090b165fa4181519701637b6daeba00000000000000000000000000000000000000000000000000000000000000070000000000000000000000000000000000000000000000001d0e1adf3f1b6be100000000000000000000000000000000000000000000000015a387302873523d0000000000000000000000000000000000000000000000000cf810056cddfead00000000000000000000000000000000000000000000000028941193ace06e710000000000000000000000000000000000000000000000001060046b1f3141990000000000000000000000000000000000000000000000054f8663c9b3196fe300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000080000000000000000000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000000000000000000000600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000010000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c5990000000000000000000000000000000000000000000000000000000000000280000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000a000000000000000000000000000000000000000000000000000000000000000e000000000000000000000000000000000000000000000000000000000000000010000000000000000000000005d94309e5a0090b165fa4181519701637b6daeba00000000000000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000124928bc4b2000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000d16265616d000000000000000000000000d3dfd3ede74e0dcebc1aa685e151332857efce2d000013d60065746800000000000000000000000088a69b4e698a4b090df6cf5bd7b2d47325ad30a3006574680000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59903000000000000000000000000000000000000660def84e69995117c0176ba446e00000000000000000000000000000000000000000000000000000002540be400e6e85ded018819209cfb948d074cb65de145734b5b0852e4a5db25cac2b8c39a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "is_pending_update": false,
+        "result": "success",
+        "hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+        "max_fee_per_gas": "22785434340",
+        "revert_reason": null,
+        "confirmation_duration": [
+          0,
+          12000.0
+        ],
+        "transaction_burnt_fee": "4560185364776000",
+        "type": 2,
+        "token_transfers_overflow": false,
+        "confirmations": 10714475,
+        "position": 1,
+        "max_priority_fee_per_gas": "5000000000",
+        "transaction_tag": null,
+        "created_contract": null,
+        "value": "0",
+        "from": {
+          "ens_domain_name": null,
+          "hash": "0x847E74d8CD0d4Bc2716a6382736Ae2870Db94148",
+          "implementations": [],
+          "is_contract": false,
+          "is_scam": false,
+          "is_verified": false,
+          "metadata": null,
+          "name": null,
+          "private_tags": [],
+          "proxy_type": null,
+          "public_tags": [],
+          "reputation": "ok",
+          "watchlist_names": []
+        },
+        "gas_used": "256400",
+        "status": "ok",
+        "to": {
+          "ens_domain_name": null,
+          "hash": "0x000000000000660deF84E69995117c0176bA446E",
+          "implementations": [],
+          "is_contract": true,
+          "is_scam": false,
+          "is_verified": false,
+          "metadata": {
+            "tags": [
+              {
+                "meta": {},
+                "name": "MEV Bot: 0x000...46E",
+                "ordinal": 10,
+                "slug": "mev-bot-0x00046e",
+                "tagType": "name"
+              },
+              {
+                "meta": {},
+                "name": "MEV Bot",
+                "ordinal": 0,
+                "slug": "mev-bot",
+                "tagType": "protocol"
+              }
+            ]
+          },
+          "name": null,
+          "private_tags": [],
+          "proxy_type": null,
+          "public_tags": [],
+          "reputation": "ok",
+          "watchlist_names": []
+        },
+        "authorization_list": [],
+        "method": "0xb875322d",
+        "fee": {
+          "type": "actual",
+          "value": "5842185364776000"
+        },
+        "gas_limit": "392516",
+        "gas_price": "22785434340",
+        "decoded_input": null,
+        "fhe_operations_count": 0,
+        "token_transfers": [
+          {
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 8,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x000000000000660deF84E69995117c0176bA446E",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "MEV Bot: 0x000...46E",
+                    "ordinal": 10,
+                    "slug": "mev-bot-0x00046e",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "MEV Bot",
+                    "ordinal": 0,
+                    "slug": "mev-bot",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+              "circulating_market_cap": "8912637953.655382",
+              "circulating_supply": null,
+              "decimals": "8",
+              "exchange_rate": "76692",
+              "holders_count": "200927",
+              "icon_url": "https://assets.coingecko.com/coins/images/7598/small/WBTCLOGO.png?1764496367",
+              "name": "Wrapped Bitcoin",
+              "reputation": "ok",
+              "symbol": "WBTC",
+              "total_supply": "11613218273272",
+              "type": "ERC-20",
+              "volume_24h": "63502181.14907779"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "8",
+              "value": "10000000000"
+            },
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+            "type": "token_transfer"
+          },
+          {
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x000000000000660deF84E69995117c0176bA446E",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "MEV Bot: 0x000...46E",
+                    "ordinal": 10,
+                    "slug": "mev-bot-0x00046e",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "MEV Bot",
+                    "ordinal": 0,
+                    "slug": "mev-bot",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 11,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipDescription": "Uniswap V2 pool to exchange between WBTC and WETH.",
+                      "tooltipUrl": "https://v2.info.uniswap.org/pair/0xbb2b8038a1640196fbe3e38816f3e67cba72d940"
+                    },
+                    "name": "Uniswap V2: WBTC",
+                    "ordinal": 10,
+                    "slug": "uniswap-v2-wbtc",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "UniswapV2Pair",
+                    "ordinal": 0,
+                    "slug": "uniswapv2pair",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appActionButtonText": "Uniswap",
+                      "appID": "uniswap",
+                      "bgColor": "#FF007A",
+                      "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+                      "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+                      "textColor": "#FFFFFF",
+                      "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+                      "tooltipTitle": "Uniswap",
+                      "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+                    },
+                    "name": "Uniswap V2",
+                    "ordinal": 0,
+                    "slug": "uniswap-v2",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UniswapV2Pair",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+              "circulating_market_cap": "8912637953.655382",
+              "circulating_supply": null,
+              "decimals": "8",
+              "exchange_rate": "76692",
+              "holders_count": "200927",
+              "icon_url": "https://assets.coingecko.com/coins/images/7598/small/WBTCLOGO.png?1764496367",
+              "name": "Wrapped Bitcoin",
+              "reputation": "ok",
+              "symbol": "WBTC",
+              "total_supply": "11613218273272",
+              "type": "ERC-20",
+              "volume_24h": "63502181.14907779"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "8",
+              "value": "10000000000"
+            },
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+            "type": "token_transfer"
+          },
+          {
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipDescription": "Uniswap V2 pool to exchange between WBTC and WETH.",
+                      "tooltipUrl": "https://v2.info.uniswap.org/pair/0xbb2b8038a1640196fbe3e38816f3e67cba72d940"
+                    },
+                    "name": "Uniswap V2: WBTC",
+                    "ordinal": 10,
+                    "slug": "uniswap-v2-wbtc",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "UniswapV2Pair",
+                    "ordinal": 0,
+                    "slug": "uniswapv2pair",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appActionButtonText": "Uniswap",
+                      "appID": "uniswap",
+                      "bgColor": "#FF007A",
+                      "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+                      "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+                      "textColor": "#FFFFFF",
+                      "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+                      "tooltipTitle": "Uniswap",
+                      "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+                    },
+                    "name": "Uniswap V2",
+                    "ordinal": 0,
+                    "slug": "uniswap-v2",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UniswapV2Pair",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 12,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x000000000000660deF84E69995117c0176bA446E",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "MEV Bot: 0x000...46E",
+                    "ordinal": 10,
+                    "slug": "mev-bot-0x00046e",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "MEV Bot",
+                    "ordinal": 0,
+                    "slug": "mev-bot",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "circulating_market_cap": "5065144169.452291",
+              "circulating_supply": null,
+              "decimals": "18",
+              "exchange_rate": "2477.3",
+              "holders_count": "3348050",
+              "icon_url": "https://assets.coingecko.com/coins/images/2518/small/weth.png?1696503332",
+              "name": "WETH",
+              "reputation": "ok",
+              "symbol": "WETH",
+              "total_supply": "2049266549597521298555236",
+              "type": "ERC-20",
+              "volume_24h": "206439529.07053694"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "18",
+              "value": "676190238129551626861"
+            },
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+            "type": "token_transfer"
+          },
+          {
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x000000000000660deF84E69995117c0176bA446E",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "MEV Bot: 0x000...46E",
+                    "ordinal": 10,
+                    "slug": "mev-bot-0x00046e",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "MEV Bot",
+                    "ordinal": 0,
+                    "slug": "mev-bot",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 15,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0x0000000000000000000000000000000000000000",
+              "implementations": [],
+              "is_contract": false,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "Null: 0x000...000",
+                    "ordinal": 10,
+                    "slug": "null-0x000000",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "main_entity": "Genesis"
+                    },
+                    "name": "Null Address",
+                    "ordinal": 10,
+                    "slug": "null-address",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "DEPOSIT ADDRESS",
+                    "ordinal": 0,
+                    "slug": "deposit-address",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Metamask User",
+                    "ordinal": 0,
+                    "slug": "metamask-user",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Imtoken User",
+                    "ordinal": 0,
+                    "slug": "imtoken-user",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Coinbase",
+                    "ordinal": 0,
+                    "slug": "coinbase",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "info": [
+                        "Blocked By USDT"
+                      ],
+                      "tooltipDescription": "Address blocked by a custodial stablecoin provider"
+                    },
+                    "name": "BLOCKED",
+                    "ordinal": 0,
+                    "slug": "blocked",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Genesis",
+                    "ordinal": 0,
+                    "slug": "genesis",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Miner",
+                    "ordinal": 0,
+                    "slug": "miner",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Burn",
+                    "ordinal": 0,
+                    "slug": "burn",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "This address is commonly used by projects to burn tokens (reducing total supply) or mint tokens (increasing total supply)."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Null",
+                    "ordinal": 0,
+                    "slug": "null",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "circulating_market_cap": "5065144169.452291",
+              "circulating_supply": null,
+              "decimals": "18",
+              "exchange_rate": "2477.3",
+              "holders_count": "3348050",
+              "icon_url": "https://assets.coingecko.com/coins/images/2518/small/weth.png?1696503332",
+              "name": "WETH",
+              "reputation": "ok",
+              "symbol": "WETH",
+              "total_supply": "2049266549597521298555236",
+              "type": "ERC-20",
+              "volume_24h": "206439529.07053694"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "18",
+              "value": "676190238129551626861"
+            },
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9",
+            "type": "token_burning"
+          }
+        ],
+        "base_fee_per_gas": "17785434340",
+        "timestamp": "2022-08-01T21:32:31.000000Z",
+        "nonce": 288,
+        "historic_exchange_rate": "1689.27",
+        "transaction_types": [
+          "contract_call",
+          "token_transfer"
+        ],
+        "exchange_rate": "2510.74",
+        "block_number": 15259101,
+        "has_error_in_internal_transactions": false
+      },
+      "logs": {
+        "items": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped BTC",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0x27502c297b7d3221115b309c6793d82367429f60ad4e32465d92cf5c4a6bb66b@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmU12hockJzZaSK6pvzH1K1im4X9ababHx388mw6uEh986/Bce2ei6Xi58TfHx1tkQFvcmgwRnu2mTFeuVvUh3wJdouZD3wdi2pBWBL1Kn89TCvmoW58yuhe179WiLMKTk67yg4pz\",\"token_symbol\":\"WBTC\",\"token_name\":\"Wrapped Bitcoin\",\"decimals\":8}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "A wrapped version of bitcoin as an ERC20",
+                      "tooltipUrl": "https://wbtc.network/"
+                    },
+                    "name": "Wrapped BTC: WBTC Token",
+                    "ordinal": 10,
+                    "slug": "wrapped-btc-wbtc-token",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped BTC",
+                    "ordinal": 0,
+                    "slug": "wrapped-btc",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "Wrapped BTC",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x00000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Transfer(address indexed from, address indexed to, uint256 value)",
+              "method_id": "ddf252ad",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "from",
+                  "type": "address",
+                  "value": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3"
+                },
+                {
+                  "indexed": true,
+                  "name": "to",
+                  "type": "address",
+                  "value": "0x000000000000660deF84E69995117c0176bA446E"
+                },
+                {
+                  "indexed": false,
+                  "name": "value",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 8,
+            "smart_contract": null,
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x00000000000000000000000088a69b4e698a4b090df6cf5bd7b2d47325ad30a3",
+              "0x000000000000000000000000000000000000660def84e69995117c0176ba446e",
+              null
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Receive(uint64 indexed originAndNonce, address indexed token, address indexed recipient, address liquidityProvider, uint256 amount)",
+              "method_id": "9f9a97db",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "originAndNonce",
+                  "type": "uint64",
+                  "value": "7090180309144048598"
+                },
+                {
+                  "indexed": true,
+                  "name": "token",
+                  "type": "address",
+                  "value": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+                },
+                {
+                  "indexed": true,
+                  "name": "recipient",
+                  "type": "address",
+                  "value": "0x000000000000660deF84E69995117c0176bA446E"
+                },
+                {
+                  "indexed": false,
+                  "name": "liquidityProvider",
+                  "type": "address",
+                  "value": "0x0000000000000000000000000000000000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 9,
+            "smart_contract": null,
+            "topics": [
+              "0x9f9a97db84f39202ca3b409b63f7ccf7d3fd810e176573c7483088b6f181bbbb",
+              "0x0000000000000000000000000000000000000000000000006265616d000013d6",
+              "0x0000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "0x000000000000000000000000000000000000660def84e69995117c0176ba446e"
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x5D94309E5a0090b165FA4181519701637B6DAEBA",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x",
+            "decoded": {
+              "method_call": "Process(bytes32 indexed messageHash, bool indexed success, bytes indexed returnData)",
+              "method_id": "d42de95a",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "messageHash",
+                  "type": "bytes32",
+                  "value": "0x72ff4b84a6512abe5f0d0088f7ed625a1c83b6b16945fa14585991d9854669ab"
+                },
+                {
+                  "indexed": true,
+                  "name": "success",
+                  "type": "bool",
+                  "value": "true"
+                },
+                {
+                  "indexed": true,
+                  "name": "returnData",
+                  "type": "bytes",
+                  "value": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+                }
+              ]
+            },
+            "index": 10,
+            "smart_contract": null,
+            "topics": [
+              "0xd42de95a9b26f1be134c8ecce389dc4fcfa18753d01661b7b361233569e8fe48",
+              "0x72ff4b84a6512abe5f0d0088f7ed625a1c83b6b16945fa14585991d9854669ab",
+              "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped BTC",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0x27502c297b7d3221115b309c6793d82367429f60ad4e32465d92cf5c4a6bb66b@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmU12hockJzZaSK6pvzH1K1im4X9ababHx388mw6uEh986/Bce2ei6Xi58TfHx1tkQFvcmgwRnu2mTFeuVvUh3wJdouZD3wdi2pBWBL1Kn89TCvmoW58yuhe179WiLMKTk67yg4pz\",\"token_symbol\":\"WBTC\",\"token_name\":\"Wrapped Bitcoin\",\"decimals\":8}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "A wrapped version of bitcoin as an ERC20",
+                      "tooltipUrl": "https://wbtc.network/"
+                    },
+                    "name": "Wrapped BTC: WBTC Token",
+                    "ordinal": 10,
+                    "slug": "wrapped-btc-wbtc-token",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped BTC",
+                    "ordinal": 0,
+                    "slug": "wrapped-btc",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "Wrapped BTC",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x00000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Transfer(address indexed from, address indexed to, uint256 value)",
+              "method_id": "ddf252ad",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "from",
+                  "type": "address",
+                  "value": "0x000000000000660deF84E69995117c0176bA446E"
+                },
+                {
+                  "indexed": true,
+                  "name": "to",
+                  "type": "address",
+                  "value": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940"
+                },
+                {
+                  "indexed": false,
+                  "name": "value",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 11,
+            "smart_contract": null,
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x000000000000000000000000000000000000660def84e69995117c0176ba446e",
+              "0x000000000000000000000000bb2b8038a1640196fbe3e38816f3e67cba72d940",
+              null
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped Ether",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0xe27ff4957dc5c9bb33feafde33089e0c03fb4999f3e8d01f4720334161a17224@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmRyTdB5Cc7zH7G4YwWs7jh98zNGLQN1NfJ8KTWTXikhcP/WETH\",\"token_symbol\":\"WETH\",\"token_name\":\"WETH\",\"decimals\":18}",
+                      "tooltipDescription": "wETH is wrapped ETH which confroms to the ERC20 standard",
+                      "tooltipUrl": "https://weth.io/",
+                      "verifiedDomains": [
+                        "traderjoexyz.com",
+                        "app.mav.xyz",
+                        "core.app",
+                        "shibaswap.com",
+                        "app.dodoex.io",
+                        "app.uniswap.org",
+                        "explorer.reservoir.tools",
+                        "pancakeswap.finance",
+                        "swapr.eth.limo"
+                      ]
+                    },
+                    "name": "WETH Token (v2)",
+                    "ordinal": 10,
+                    "slug": "weth-token-v2",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped Token",
+                    "ordinal": 0,
+                    "slug": "wrapped-token",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "main_entity": "Wrapped",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://weth.io/"
+                    },
+                    "name": "Wrapped Ether",
+                    "ordinal": 0,
+                    "slug": "wrapped-ether",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "WETH9",
+                    "ordinal": 0,
+                    "slug": "weth9",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "WETH9",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000024a8064ef82ab8d26d",
+            "decoded": {
+              "method_call": "Transfer(address indexed src, address indexed dst, uint256 wad)",
+              "method_id": "ddf252ad",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "src",
+                  "type": "address",
+                  "value": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940"
+                },
+                {
+                  "indexed": true,
+                  "name": "dst",
+                  "type": "address",
+                  "value": "0x000000000000660deF84E69995117c0176bA446E"
+                },
+                {
+                  "indexed": false,
+                  "name": "wad",
+                  "type": "uint256",
+                  "value": "676190238129551626861"
+                }
+              ]
+            },
+            "index": 12,
+            "smart_contract": null,
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x000000000000000000000000bb2b8038a1640196fbe3e38816f3e67cba72d940",
+              "0x000000000000000000000000000000000000660def84e69995117c0176ba446e",
+              null
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipDescription": "Uniswap V2 pool to exchange between WBTC and WETH.",
+                      "tooltipUrl": "https://v2.info.uniswap.org/pair/0xbb2b8038a1640196fbe3e38816f3e67cba72d940"
+                    },
+                    "name": "Uniswap V2: WBTC",
+                    "ordinal": 10,
+                    "slug": "uniswap-v2-wbtc",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "UniswapV2Pair",
+                    "ordinal": 0,
+                    "slug": "uniswapv2pair",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appActionButtonText": "Uniswap",
+                      "appID": "uniswap",
+                      "bgColor": "#FF007A",
+                      "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+                      "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+                      "textColor": "#FFFFFF",
+                      "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+                      "tooltipTitle": "Uniswap",
+                      "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+                    },
+                    "name": "Uniswap V2",
+                    "ordinal": 0,
+                    "slug": "uniswap-v2",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UniswapV2Pair",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x0000000000000000000000000000000000000000000000000000000c5d2d0a5b00000000000000000000000000000000000000000000009e79852d08b6d358f1",
+            "decoded": {
+              "method_call": "Sync(uint112 reserve0, uint112 reserve1)",
+              "method_id": "1c411e9a",
+              "parameters": [
+                {
+                  "indexed": false,
+                  "name": "reserve0",
+                  "type": "uint112",
+                  "value": "53102840411"
+                },
+                {
+                  "indexed": false,
+                  "name": "reserve1",
+                  "type": "uint112",
+                  "value": "2923342018212051245297"
+                }
+              ]
+            },
+            "index": 13,
+            "smart_contract": null,
+            "topics": [
+              "0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1",
+              null,
+              null,
+              null
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0xBb2b8038a1640196FbE3e38816F3e67Cba72D940",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipDescription": "Uniswap V2 pool to exchange between WBTC and WETH.",
+                      "tooltipUrl": "https://v2.info.uniswap.org/pair/0xbb2b8038a1640196fbe3e38816f3e67cba72d940"
+                    },
+                    "name": "Uniswap V2: WBTC",
+                    "ordinal": 10,
+                    "slug": "uniswap-v2-wbtc",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Liquidity Pool",
+                    "ordinal": 0,
+                    "slug": "liquidity-pool",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "UniswapV2Pair",
+                    "ordinal": 0,
+                    "slug": "uniswapv2pair",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "appActionButtonText": "Uniswap",
+                      "appID": "uniswap",
+                      "bgColor": "#FF007A",
+                      "tagIcon": "https://blockscout-content.s3.amazonaws.com/uniswap.png",
+                      "tagUrl": "https://uniswap.org/?utm_source=Blockscout",
+                      "textColor": "#FFFFFF",
+                      "tooltipDescription": "Trade crypto and NFTs safely on the top DeFi platform. Swapping made simple. Buy and sell crypto on Ethereum, Base, Arbitrum, Polygon, and more.",
+                      "tooltipTitle": "Uniswap",
+                      "tooltipUrl": "https://uniswap.org/?utm_source=Blockscout"
+                    },
+                    "name": "Uniswap V2",
+                    "ordinal": 0,
+                    "slug": "uniswap-v2",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UniswapV2Pair",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x00000000000000000000000000000000000000000000000000000002540be40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000024a8064ef82ab8d26d",
+            "decoded": {
+              "method_call": "Swap(address indexed sender, uint256 amount0In, uint256 amount1In, uint256 amount0Out, uint256 amount1Out, address indexed to)",
+              "method_id": "d78ad95f",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "sender",
+                  "type": "address",
+                  "value": "0x000000000000660deF84E69995117c0176bA446E"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount0In",
+                  "type": "uint256",
+                  "value": "10000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount1In",
+                  "type": "uint256",
+                  "value": "0"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount0Out",
+                  "type": "uint256",
+                  "value": "0"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount1Out",
+                  "type": "uint256",
+                  "value": "676190238129551626861"
+                },
+                {
+                  "indexed": true,
+                  "name": "to",
+                  "type": "address",
+                  "value": "0x000000000000660deF84E69995117c0176bA446E"
+                }
+              ]
+            },
+            "index": 14,
+            "smart_contract": null,
+            "topics": [
+              "0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822",
+              "0x000000000000000000000000000000000000660def84e69995117c0176ba446e",
+              "0x000000000000000000000000000000000000660def84e69995117c0176ba446e",
+              null
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped Ether",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0xe27ff4957dc5c9bb33feafde33089e0c03fb4999f3e8d01f4720334161a17224@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmRyTdB5Cc7zH7G4YwWs7jh98zNGLQN1NfJ8KTWTXikhcP/WETH\",\"token_symbol\":\"WETH\",\"token_name\":\"WETH\",\"decimals\":18}",
+                      "tooltipDescription": "wETH is wrapped ETH which confroms to the ERC20 standard",
+                      "tooltipUrl": "https://weth.io/",
+                      "verifiedDomains": [
+                        "traderjoexyz.com",
+                        "app.mav.xyz",
+                        "core.app",
+                        "shibaswap.com",
+                        "app.dodoex.io",
+                        "app.uniswap.org",
+                        "explorer.reservoir.tools",
+                        "pancakeswap.finance",
+                        "swapr.eth.limo"
+                      ]
+                    },
+                    "name": "WETH Token (v2)",
+                    "ordinal": 10,
+                    "slug": "weth-token-v2",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped Token",
+                    "ordinal": 0,
+                    "slug": "wrapped-token",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "main_entity": "Wrapped",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI",
+                      "tooltipUrl": "https://weth.io/"
+                    },
+                    "name": "Wrapped Ether",
+                    "ordinal": 0,
+                    "slug": "wrapped-ether",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "textColor": "#C163D4",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "Provided by OLI"
+                    },
+                    "name": "WETH9",
+                    "ordinal": 0,
+                    "slug": "weth9",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "WETH9",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000024a8064ef82ab8d26d",
+            "decoded": {
+              "method_call": "Withdrawal(address indexed src, uint256 wad)",
+              "method_id": "7fcf532c",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "src",
+                  "type": "address",
+                  "value": "0x000000000000660deF84E69995117c0176bA446E"
+                },
+                {
+                  "indexed": false,
+                  "name": "wad",
+                  "type": "uint256",
+                  "value": "676190238129551626861"
+                }
+              ]
+            },
+            "index": 15,
+            "smart_contract": null,
+            "topics": [
+              "0x7fcf532c15f0a6db0bd6d0e038bea71d30d808c7d98cb3bf7268a95bf5081b65",
+              "0x000000000000000000000000000000000000660def84e69995117c0176ba446e",
+              null,
+              null
+            ],
+            "transaction_hash": "0x40163166dfeaab8ee80e7b0acc62768cef84b7047b42b09827b29a8d77f383a9"
+          }
+        ],
+        "next_page_params": null
+      }
+    },
+    "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28": {
+      "transaction": {
+        "priority_fee": null,
+        "raw_input": "0x928bc4b2000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000000000000000d16265616d000000000000000000000000d3dfd3ede74e0dcebc1aa685e151332857efce2d000013d60065746800000000000000000000000088a69b4e698a4b090df6cf5bd7b2d47325ad30a3006574680000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59903000000000000000000000000b5c55f76f90cc528b2609109ca14d8d84593590e00000000000000000000000000000000000000000000000000000002540be400e6e85ded018819209cfb948d074cb65de145734b5b0852e4a5db25cac2b8c39a000000000000000000000000000000",
+        "is_pending_update": false,
+        "result": "success",
+        "hash": "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28",
+        "max_fee_per_gas": null,
+        "revert_reason": null,
+        "confirmation_duration": [
+          0,
+          12000.0
+        ],
+        "transaction_burnt_fee": null,
+        "type": 0,
+        "token_transfers_overflow": false,
+        "confirmations": 10714479,
+        "position": 3,
+        "max_priority_fee_per_gas": null,
+        "transaction_tag": null,
+        "created_contract": null,
+        "value": "0",
+        "from": {
+          "ens_domain_name": null,
+          "hash": "0xB5C55f76f90Cc528B2609109Ca14d8d84593590E",
+          "implementations": [],
+          "is_contract": false,
+          "is_scam": false,
+          "is_verified": false,
+          "metadata": {
+            "tags": [
+              {
+                "meta": {},
+                "name": "Nomad Bridge Exploiter 3",
+                "ordinal": 10,
+                "slug": "nomad-bridge-exploiter-3",
+                "tagType": "name"
+              },
+              {
+                "meta": {
+                  "info": [
+                    "Nomad Bridge Exploit"
+                  ]
+                },
+                "name": "Exploit",
+                "ordinal": 0,
+                "slug": "exploit",
+                "tagType": "generic"
+              },
+              {
+                "meta": {
+                  "alertStatus": "info",
+                  "data": "This address has been reported to be involved with an exploit involving Nomad Token Bridge. Proceed with caution."
+                },
+                "name": "note_0",
+                "ordinal": 0,
+                "slug": "note0",
+                "tagType": "note"
+              }
+            ]
+          },
+          "name": null,
+          "private_tags": [],
+          "proxy_type": null,
+          "public_tags": [],
+          "reputation": "ok",
+          "watchlist_names": []
+        },
+        "gas_used": "170294",
+        "status": "ok",
+        "to": {
+          "ens_domain_name": null,
+          "hash": "0x5D94309E5a0090b165FA4181519701637B6DAEBA",
+          "implementations": [],
+          "is_contract": true,
+          "is_scam": false,
+          "is_verified": true,
+          "metadata": null,
+          "name": "UpgradeBeaconProxy",
+          "private_tags": [],
+          "proxy_type": null,
+          "public_tags": [],
+          "reputation": "ok",
+          "watchlist_names": []
+        },
+        "authorization_list": [],
+        "method": "process",
+        "fee": {
+          "type": "actual",
+          "value": "2875519668777520622"
+        },
+        "gas_limit": "207712",
+        "gas_price": "16885619392213",
+        "decoded_input": {
+          "method_call": "process(bytes _message)",
+          "method_id": "928bc4b2",
+          "parameters": [
+            {
+              "name": "_message",
+              "type": "bytes",
+              "value": "0x6265616d000000000000000000000000d3dfd3ede74e0dcebc1aa685e151332857efce2d000013d60065746800000000000000000000000088a69b4e698a4b090df6cf5bd7b2d47325ad30a3006574680000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c59903000000000000000000000000b5c55f76f90cc528b2609109ca14d8d84593590e00000000000000000000000000000000000000000000000000000002540be400e6e85ded018819209cfb948d074cb65de145734b5b0852e4a5db25cac2b8c39a"
+            }
+          ]
+        },
+        "fhe_operations_count": 0,
+        "token_transfers": [
+          {
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "from": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "log_index": 23,
+            "method": null,
+            "timestamp": null,
+            "to": {
+              "ens_domain_name": null,
+              "hash": "0xB5C55f76f90Cc528B2609109Ca14d8d84593590E",
+              "implementations": [],
+              "is_contract": false,
+              "is_scam": false,
+              "is_verified": false,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {},
+                    "name": "Nomad Bridge Exploiter 3",
+                    "ordinal": 10,
+                    "slug": "nomad-bridge-exploiter-3",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {
+                      "info": [
+                        "Nomad Bridge Exploit"
+                      ]
+                    },
+                    "name": "Exploit",
+                    "ordinal": 0,
+                    "slug": "exploit",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "This address has been reported to be involved with an exploit involving Nomad Token Bridge. Proceed with caution."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  }
+                ]
+              },
+              "name": null,
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "token": {
+              "address_hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+              "circulating_market_cap": "8912637953.655382",
+              "circulating_supply": null,
+              "decimals": "8",
+              "exchange_rate": "76692",
+              "holders_count": "200927",
+              "icon_url": "https://assets.coingecko.com/coins/images/7598/small/WBTCLOGO.png?1764496367",
+              "name": "Wrapped Bitcoin",
+              "reputation": "ok",
+              "symbol": "WBTC",
+              "total_supply": "11613218273272",
+              "type": "ERC-20",
+              "volume_24h": "63502181.14907779"
+            },
+            "token_type": "ERC-20",
+            "total": {
+              "decimals": "8",
+              "value": "10000000000"
+            },
+            "transaction_hash": "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28",
+            "type": "token_transfer"
+          }
+        ],
+        "base_fee_per_gas": "17785434340",
+        "timestamp": "2022-08-01T21:32:31.000000Z",
+        "nonce": 25,
+        "historic_exchange_rate": "1689.27",
+        "transaction_types": [
+          "contract_call",
+          "token_transfer"
+        ],
+        "exchange_rate": "2513.55",
+        "block_number": 15259101,
+        "has_error_in_internal_transactions": false
+      },
+      "logs": {
+        "items": [
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "projectName": "Wrapped BTC",
+                      "tagIcon ": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tagUrl": "https://app.klerosscout.eth.limo/#/?registry=Single_Tags&itemdetails=0x27502c297b7d3221115b309c6793d82367429f60ad4e32465d92cf5c4a6bb66b@0x66260c69d03837016d88c9877e61e08ef74c59f2",
+                      "textColor": "#C163D4",
+                      "tokenAttributes": "{\"logo_url\":\"https://cdn.kleros.link/ipfs/QmU12hockJzZaSK6pvzH1K1im4X9ababHx388mw6uEh986/Bce2ei6Xi58TfHx1tkQFvcmgwRnu2mTFeuVvUh3wJdouZD3wdi2pBWBL1Kn89TCvmoW58yuhe179WiLMKTk67yg4pz\",\"token_symbol\":\"WBTC\",\"token_name\":\"Wrapped Bitcoin\",\"decimals\":8}",
+                      "tooltipAttribution": "https://www.openlabelsinitiative.org?utm_source=blockscout",
+                      "tooltipAttributionIcon": "https://blockscout-icons.s3.us-east-1.amazonaws.com/OLI_tag_logo.svg",
+                      "tooltipDescription": "A wrapped version of bitcoin as an ERC20",
+                      "tooltipUrl": "https://wbtc.network/"
+                    },
+                    "name": "Wrapped BTC: WBTC Token",
+                    "ordinal": 10,
+                    "slug": "wrapped-btc-wbtc-token",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Token Contract",
+                    "ordinal": 0,
+                    "slug": "token-contract",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Wrapped BTC",
+                    "ordinal": 0,
+                    "slug": "wrapped-btc",
+                    "tagType": "protocol"
+                  },
+                  {
+                    "meta": {
+                      "data": "ok"
+                    },
+                    "name": "Credible token",
+                    "ordinal": 0,
+                    "slug": "credible-token",
+                    "tagType": "token_reputation"
+                  }
+                ]
+              },
+              "name": "Wrapped BTC",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x00000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Transfer(address indexed from, address indexed to, uint256 value)",
+              "method_id": "ddf252ad",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "from",
+                  "type": "address",
+                  "value": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3"
+                },
+                {
+                  "indexed": true,
+                  "name": "to",
+                  "type": "address",
+                  "value": "0xB5C55f76f90Cc528B2609109Ca14d8d84593590E"
+                },
+                {
+                  "indexed": false,
+                  "name": "value",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 23,
+            "smart_contract": null,
+            "topics": [
+              "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+              "0x00000000000000000000000088a69b4e698a4b090df6cf5bd7b2d47325ad30a3",
+              "0x000000000000000000000000b5c55f76f90cc528b2609109ca14d8d84593590e",
+              null
+            ],
+            "transaction_hash": "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": {
+                "tags": [
+                  {
+                    "meta": {
+                      "tooltipUrl": "https://www.nomad.xyz/"
+                    },
+                    "name": "Nomad: ERC20 Bridge",
+                    "ordinal": 10,
+                    "slug": "nomad-erc20-bridge",
+                    "tagType": "name"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Bridge",
+                    "ordinal": 0,
+                    "slug": "bridge",
+                    "tagType": "generic"
+                  },
+                  {
+                    "meta": {
+                      "alertStatus": "info",
+                      "data": "The Nomad token bridge contract has recently been exploited. Users that would like to return the funds may send it to  this address based on Nomad's official announcement."
+                    },
+                    "name": "note_0",
+                    "ordinal": 0,
+                    "slug": "note0",
+                    "tagType": "note"
+                  },
+                  {
+                    "meta": {},
+                    "name": "Nomad",
+                    "ordinal": 0,
+                    "slug": "nomad",
+                    "tagType": "protocol"
+                  }
+                ]
+              },
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002540be400",
+            "decoded": {
+              "method_call": "Receive(uint64 indexed originAndNonce, address indexed token, address indexed recipient, address liquidityProvider, uint256 amount)",
+              "method_id": "9f9a97db",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "originAndNonce",
+                  "type": "uint64",
+                  "value": "7090180309144048598"
+                },
+                {
+                  "indexed": true,
+                  "name": "token",
+                  "type": "address",
+                  "value": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+                },
+                {
+                  "indexed": true,
+                  "name": "recipient",
+                  "type": "address",
+                  "value": "0xB5C55f76f90Cc528B2609109Ca14d8d84593590E"
+                },
+                {
+                  "indexed": false,
+                  "name": "liquidityProvider",
+                  "type": "address",
+                  "value": "0x0000000000000000000000000000000000000000"
+                },
+                {
+                  "indexed": false,
+                  "name": "amount",
+                  "type": "uint256",
+                  "value": "10000000000"
+                }
+              ]
+            },
+            "index": 24,
+            "smart_contract": null,
+            "topics": [
+              "0x9f9a97db84f39202ca3b409b63f7ccf7d3fd810e176573c7483088b6f181bbbb",
+              "0x0000000000000000000000000000000000000000000000006265616d000013d6",
+              "0x0000000000000000000000002260fac5e5542a773aa44fbcfedf7c193bc2c599",
+              "0x000000000000000000000000b5c55f76f90cc528b2609109ca14d8d84593590e"
+            ],
+            "transaction_hash": "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+          },
+          {
+            "address": {
+              "ens_domain_name": null,
+              "hash": "0x5D94309E5a0090b165FA4181519701637B6DAEBA",
+              "implementations": [],
+              "is_contract": true,
+              "is_scam": false,
+              "is_verified": true,
+              "metadata": null,
+              "name": "UpgradeBeaconProxy",
+              "private_tags": [],
+              "proxy_type": null,
+              "public_tags": [],
+              "reputation": "ok",
+              "watchlist_names": []
+            },
+            "block_hash": "0xd1c048c9727ce053d9fe317234cb1a334f207264a9b765933bcda2bf1c0f03e6",
+            "block_number": 15259101,
+            "block_timestamp": "2022-08-01T21:32:31.000000Z",
+            "data": "0x",
+            "decoded": {
+              "method_call": "Process(bytes32 indexed messageHash, bool indexed success, bytes indexed returnData)",
+              "method_id": "d42de95a",
+              "parameters": [
+                {
+                  "indexed": true,
+                  "name": "messageHash",
+                  "type": "bytes32",
+                  "value": "0x9ee4369a65075ed05b6a5df3713e3eb9c465db710c42ce5a836cfaa217e1e24b"
+                },
+                {
+                  "indexed": true,
+                  "name": "success",
+                  "type": "bool",
+                  "value": "true"
+                },
+                {
+                  "indexed": true,
+                  "name": "returnData",
+                  "type": "bytes",
+                  "value": "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+                }
+              ]
+            },
+            "index": 25,
+            "smart_contract": null,
+            "topics": [
+              "0xd42de95a9b26f1be134c8ecce389dc4fcfa18753d01661b7b361233569e8fe48",
+              "0x9ee4369a65075ed05b6a5df3713e3eb9c465db710c42ce5a836cfaa217e1e24b",
+              "0x0000000000000000000000000000000000000000000000000000000000000001",
+              "0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470"
+            ],
+            "transaction_hash": "0xb1fe26cc8892f58eb468f5208baaf38bac422b5752cca0b9c8a871855d63ae28"
+          }
+        ],
+        "next_page_params": null
+      }
+    }
+  },
+  "official_incident_basis": [
+    "https://medium.com/nomad-xyz-blog/nomad-bridge-hack-root-cause-analysis-875ad2e5aacd",
+    "https://docs.nomad.xyz/the-nomad-protocol/security/root-of-trust/fraud"
+  ],
+  "data_provenance": [
+    "https://github.com/nomad-xyz/hack-data",
+    "https://eth.blockscout.com/"
+  ],
+  "interpretation": {
+    "property": "a processed cross-chain message must be backed by a non-zero accepted root",
+    "attack_prefix": "zero-root initialization followed by three successful process/Receive transactions",
+    "security_consequence": "the three receipts transfer 100 WBTC each from the Nomad bridge path to attacker-controlled recipients",
+    "btg_comparison_input": "the same ordered four-transaction prefix manifest; XChainWatcher evaluates the three withdrawal-bearing suffix transactions"
+  }
+}
