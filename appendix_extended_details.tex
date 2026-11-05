@@ -1,0 +1,148 @@
+\section{Extended Validation Details}
+\label{app:extended-details}
+
+\subsection{EVM Regression Details}
+The Solidity fixture contains a state-effect target, a minimal relay, a
+callback vault, and its callback client. All cases start from fresh local
+Cancun EVM instances and are repeated three times. The following checks make
+the representation and execution assumptions used by the evidence layer
+observable.
+
+\paragraph{Access lists.}
+An EIP-2930 access list changes access accounting and transaction cost; it does
+not prohibit reading an omitted storage slot~\cite{eip2930}. Two type-1
+transactions to the same getter both succeed and return 42, with the empty
+and populated-list receipts using \EmptyListGas{} and \PopulatedListGas{} gas.
+
+\paragraph{Storage context and rollback.}
+The dynamic-storage case derives a mapping slot from the key and mapping
+position and verifies the raw value while slot zero remains unchanged. The
+delegatecall case observes value 91 in caller storage and zero in the
+implementation storage, connecting the effect to the delegatecall context
+and ERC-1967 conventions~\cite{erc1967}. The transient-storage case observes
+19 within one call and zero in a later call, while the rollback case writes
+500 and reverts with the persistent value unchanged; the latter follows the
+transaction-scoped semantics of EIP-1153~\cite{eip1153}.
+
+\paragraph{Relay and callback behavior.}
+An unauthorized relay caller fails without consuming the message, an
+authorized caller succeeds, a blocked delivery remains pending until retry,
+a duplicate fails, and an expired delivery leaves the destination unchanged.
+In the vulnerable vault, a callback produces two logical payouts before the
+credit is cleared; the corrected ordering produces one. These cases bind
+caller, origin, retry key, deadline, receipt status, callback order, and
+destination state to the observed effects.
+
+\begin{table}[t]
+\centering\small
+\caption{Constructed Solidity regressions, each repeated three times. All
+expected outcomes were observed.}
+\label{tab:evm}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.36\columnwidth}>{\raggedright\arraybackslash}p{0.57\columnwidth}@{}}
+\toprule
+Case & Observed outcome\\
+\midrule
+Access list & Both reads succeed; gas differs\\
+Dynamic slot & Derived mapping slot becomes 77\\
+Delegatecall & Caller 91; implementation 0\\
+Transient storage & Within-call 19; later call 0\\
+Revert rollback & Failed receipt; stored value 0\\
+Relay authorization & Wrong sender fails; governor succeeds\\
+Relay retry & Failure preserves pending status; retry succeeds\\
+Duplicate delivery & First succeeds; duplicate fails\\
+Expiration & Late delivery fails without update\\
+Decimal units & 0.75 represented as 750,000 at six decimals\\
+Callback reentrancy & Logical payouts 2 versus 1 after correction\\
+Prefix order & Equal final states; one unsafe prefix\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Slither analyzes the same four fixture contracts and reports 14 findings across
+nine detector categories~\cite{feist2019slither,slitherrepo}. Its findings are
+source-level warnings; BTG uses the same fixture to check ordered effects
+against a joint property.
+
+\begin{table}[t]
+\centering\small
+\caption{Slither 0.11.3 output on the fixture source.}
+\label{tab:slither}
+\begin{tabular}{@{}lr@{}}\toprule
+Detector category & Findings\\\midrule
+Controlled delegatecall & 1\\
+Reentrancy without ETH transfer & 1\\
+Benign reentrancy & 1\\
+Unchecked low-level return & 1\\
+Missing zero-address checks & 2\\
+Timestamp use & 1\\
+Assembly & 2\\
+Low-level calls & 4\\
+Immutable-state suggestion & 1\\
+\bottomrule\end{tabular}
+\end{table}
+
+\subsection{Dependency-Graph Benchmark}
+\label{app:dependency-overhead}
+We measure materialized dependency construction separately from exploration.
+The construction experiment has \DependencyConstructionFixtures{} fixtures:
+32, 128, or 512 actions; zero, $n$, or $4n$ distinct pair predicates over
+separate write slots; and a same-slot storage clique. Each configuration has
+three fixed seeds. Seven warmed constructions per seed are timed; a separate
+\texttt{tracemalloc} run records Python allocation peak. The measurement is
+construction allocation, not whole-process resident memory.
+
+With 512 actions and 2,048 pair predicates, construction takes
+\DependencySparseMS{} ms with \DependencySparseMiB{} MiB peak allocation.
+The 512-action storage clique contains 130,816 edges and takes
+\DependencyDenseMS{} ms with \DependencyDenseMiB{} MiB peak. Thus edge
+density, rather than action count alone, determines materialization cost.
+
+The end-to-end experiment contains \DependencyExplorationFixtures{} fixtures
+with 4, 6, or 8 actions, four predicate densities, and two seeds. It compares
+on-demand dependency scans with cached adjacency using the same sleep-set DFS
+and checks both relations against exhaustive enumeration. Across 328,512
+exhaustive orders, the reduced runs retain 82,630 orders with zero relation or
+joint-outcome mismatches. At zero property edges one order remains; when all
+28 pairs are coupled all 40,320 orders remain. The raw per-seed runs and
+generated tables are retained in the artifact.
+
+\input{experiments/results/dependency_overhead_table.tex}
+
+\subsection{Scale and Independent Cross-Check}
+The scale study extends the deterministic overwrite generator from three--six
+to three--eight labeled actions, producing 192 models and 1,479,360 complete
+orders. Every method receives the identical model, initial state, and
+predicate; only the observation boundary or dependency relation changes.
+Property-aware POR retains 35,874 orders with zero disagreements against
+exhaustive prefix checking. At eight actions this is a 98.43\% reduction;
+the matched ablations report 106 disagreements for final-only checking, 192
+for a fixed order, and 52 for storage-only POR.
+\input{experiments/results/scale_ablation_table.tex}
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.94\textwidth]{figures/verified_schedules.pdf}
+\caption{Scale-study results generated from the saved schedule records. Left:
+total complete orders for 32 constructed models at each action count; right:
+unsafe models missed relative to exhaustive prefix checking.}
+\label{fig:schedules}
+\end{figure*}
+
+The independent monitor exhausts zero to four labeled overwrite actions, three
+binary-valued slots, all eight binary initial states, and the predicates
+$x\geq y$ and $y\geq z$. This is
+$8\sum_{n=0}^{4}6^n=12{,}440$ configurations and 259,832 exhaustive orders.
+It compares joint pairs of terminal state and violated-predicate bitmask,
+including the empty prefix. Property-aware reduction retains 177,592 orders
+with zero outcome-set mismatches; storage-only reduction differs in 2,836
+configurations. The complete aggregate and per-size output is
+\path{experiments/results/crosscheck.json}.
+
+\subsection{Extended Deployment and Coverage Protocol}
+Protocol adapters preserve the immediate caller, logical origin, route,
+bridge version, payload bytes, message identity, block hashes, deployed code
+hashes, and relevant state. Unsupported selectors, upgrade patterns, missing
+snapshots, and ambiguous intent are reported before a security decision.
+Properties are tagged as official requirements, case-study policies, or
+illustrative assumptions. Historical cases, injected faults, and synthetic
+regressions remain separate evidence classes. The artifact guide below lists
+the exact commands, manifests, source hashes, and raw outputs.

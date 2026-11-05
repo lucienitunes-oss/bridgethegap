@@ -1,0 +1,81 @@
+// Independent Nomad accepted-root checker.
+// This file contains no BTG imports or BTG implementation calls.
+
+.decl Prefix(prefix:number, tx:symbol, transaction_block:number, state_block:number)
+.input Prefix(IO=file, filename="prefix.facts", delimiter="\t")
+
+.decl Boundary(prefix:number, kind:symbol)
+.input Boundary(IO=file, filename="boundary.facts", delimiter="\t")
+
+.decl Observation(prefix:number, tx:symbol, field:symbol, value:symbol)
+.input Observation(IO=file, filename="observation.facts", delimiter="\t")
+
+.decl RootConfirmed(prefix:number)
+RootConfirmed(p) :-
+    Observation(p, _, "confirm_at_zero", "1"),
+    Observation(p, _, "acceptable_zero", "true").
+
+.decl AttackEvidence(prefix:number)
+AttackEvidence(p) :-
+    Observation(p, _, "message_status", "0x0000000000000000000000000000000000000000000000000000000000000000"),
+    Observation(p, _, "acceptable_message", "true").
+
+.decl InvalidAttribute(prefix:number)
+InvalidAttribute(p) :- Observation(p, _, "confirm_at_zero", v), v != "0", v != "1".
+InvalidAttribute(p) :- Observation(p, _, "acceptable_zero", v), v != "true", v != "false".
+InvalidAttribute(p) :- Observation(p, _, "acceptable_message", v), v != "true", v != "false".
+InvalidAttribute(p) :- Observation(p, _, "message_status", v),
+    v != "0x0000000000000000000000000000000000000000000000000000000000000000",
+    v != "0x0000000000000000000000000000000000000000000000000000000000000002".
+
+.decl ValidAttribute(prefix:number, field:symbol)
+ValidAttribute(p, "confirm_at_zero") :- Observation(p, _, "confirm_at_zero", "0").
+ValidAttribute(p, "confirm_at_zero") :- Observation(p, _, "confirm_at_zero", "1").
+ValidAttribute(p, "acceptable_zero") :- Observation(p, _, "acceptable_zero", "true").
+ValidAttribute(p, "acceptable_zero") :- Observation(p, _, "acceptable_zero", "false").
+ValidAttribute(p, "acceptable_message") :- Observation(p, _, "acceptable_message", "true").
+ValidAttribute(p, "acceptable_message") :- Observation(p, _, "acceptable_message", "false").
+ValidAttribute(p, "message_status") :- Observation(p, _, "message_status", "0x0000000000000000000000000000000000000000000000000000000000000000").
+ValidAttribute(p, "message_status") :- Observation(p, _, "message_status", "0x0000000000000000000000000000000000000000000000000000000000000002").
+
+.decl Complete(prefix:number)
+Complete(p) :-
+    Boundary(p, "state"),
+    Observation(p, _, "confirm_at_zero", _), ValidAttribute(p, "confirm_at_zero"),
+    Observation(p, _, "acceptable_zero", _), ValidAttribute(p, "acceptable_zero"),
+    Observation(p, _, "mapping_storage", _),
+    !InvalidAttribute(p).
+Complete(p) :-
+    Boundary(p, "attack"),
+    Observation(p, _, "confirm_at_zero", _), ValidAttribute(p, "confirm_at_zero"),
+    Observation(p, _, "acceptable_zero", _), ValidAttribute(p, "acceptable_zero"),
+    Observation(p, _, "mapping_storage", _),
+    Observation(p, _, "message_status", m),
+    ValidAttribute(p, "message_status"),
+    Observation(p, _, "acceptable_message", _), ValidAttribute(p, "acceptable_message"),
+    !InvalidAttribute(p).
+
+.decl Violation(prefix:number)
+// A decision is emitted only after the boundary has a complete observation.
+// This makes VIOLATION, PASS, and UNKNOWN mutually exclusive.
+Violation(p) :- Complete(p), Boundary(p, "state"), RootConfirmed(p).
+Violation(p) :- Complete(p), Boundary(p, "attack"), RootConfirmed(p), AttackEvidence(p).
+
+.decl Pass(prefix:number)
+Pass(p) :- Complete(p), !Violation(p).
+
+.decl Unknown(prefix:number)
+Unknown(p) :- Prefix(p, _, _, _), !Complete(p).
+
+.decl Decision(prefix:number, result:symbol)
+Decision(p, "VIOLATION") :- Violation(p).
+Decision(p, "PASS") :- Pass(p).
+Decision(p, "UNKNOWN") :- Unknown(p).
+
+.output RootConfirmed(IO=file, filename="RootConfirmed.csv", delimiter=",")
+.output AttackEvidence(IO=file, filename="AttackEvidence.csv", delimiter=",")
+.output Complete(IO=file, filename="Complete.csv", delimiter=",")
+.output Violation(IO=file, filename="Violation.csv", delimiter=",")
+.output Pass(IO=file, filename="Pass.csv", delimiter=",")
+.output Unknown(IO=file, filename="Unknown.csv", delimiter=",")
+.output Decision(IO=file, filename="Decision.csv", delimiter=",")
