@@ -1,0 +1,32 @@
+[2026-09-14 10:53:11.68] Compiling `D:\0-Paper\20260905BridgeTheGap_LaTeX_Package\experiments\Proposal29EchidnaReplay.sol`... Done! (0.8397072s)
+Analyzing contract: D:/0-Paper/20260905BridgeTheGap_LaTeX_Package/experiments/Proposal29EchidnaReplay.sol:Proposal29EchidnaReplay
+[2026-09-14 10:53:14.37] [Worker 1] Test echidna_proposal29_pre_repair_prefix_satisfies_property falsified!
+  Call sequence:
+
+[2026-09-14 10:53:14.38] [Worker 1] New coverage: 50 instr, 1 contracts, 1 seqs in corpus
+[2026-09-14 10:53:14.39] [Worker 1] Test limit reached. Stopping.
+[2026-09-14 10:53:14.40] [Worker 2] Test echidna_proposal29_pre_repair_prefix_satisfies_property falsified!
+  Call sequence:
+
+[2026-09-14 10:53:14.42] [Worker 2] Test limit reached. Stopping.
+[2026-09-14 10:53:14.54] [Worker 0] Test echidna_proposal29_pre_repair_prefix_satisfies_property falsified!
+  Call sequence:
+
+[2026-09-14 10:53:14.55] [Worker 3] Test echidna_proposal29_pre_repair_prefix_satisfies_property falsified!
+  Call sequence:
+
+[2026-09-14 10:53:14.56] [Worker 0] Test limit reached. Stopping.
+[2026-09-14 10:53:14.58] [Worker 3] Test limit reached. Stopping.
+[2026-09-14 10:53:14.58] [status] tests: 1/2, fuzzing: 22/20, values: [], cov: 50, corpus: 1, gas/s: 213222
+echidna_proposal29_pre_repair_prefix_satisfies_property: failed!?  
+  Reason: ReturnFalse
+  No transactions were needed to reach the failure.
+echidna_proposal29_post_repair_prefix_satisfies_property: passing
+
+Unique instructions: 50
+Unique codehashes: 1
+Corpus size: 1
+Seed: 329475914453210053
+Total calls: 22
+
+WARNING: Slither was explicitly disabled. Echidna uses Slither (https://github.com/crytic/slither) to perform source analysis, which makes fuzzing more effective. You should enable it.
