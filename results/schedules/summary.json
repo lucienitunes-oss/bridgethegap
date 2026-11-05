@@ -1,0 +1,39 @@
+{
+  "scope": "constructed finite always-enabled overwrite models, 3-6 actions",
+  "fixtures": 128,
+  "randomized_fixtures": 120,
+  "boundary_fixtures": 8,
+  "runner_sha256": "8227bca5b1f0ab8275a0294539c3a87c4dcb28777b6df709a1859455214107bc",
+  "methods": {
+    "exhaustive_prefix": {
+      "orders": 27840,
+      "missed_models": 0,
+      "violation_models": 120
+    },
+    "exhaustive_final": {
+      "orders": 27840,
+      "missed_models": 79,
+      "violation_models": 41
+    },
+    "fixed_order_prefix": {
+      "orders": 128,
+      "missed_models": 82,
+      "violation_models": 38
+    },
+    "storage_only_por": {
+      "orders": 1460,
+      "missed_models": 45,
+      "violation_models": 75
+    },
+    "property_aware_por": {
+      "orders": 4472,
+      "missed_models": 0,
+      "violation_models": 120
+    },
+    "persistent_property_por": {
+      "orders": 4472,
+      "missed_models": 0,
+      "violation_models": 120
+    }
+  }
+}
