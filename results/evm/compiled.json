@@ -1,0 +1,406 @@
+{
+  "contracts": {
+    "Fixtures.sol": {
+      "CallbackClient": {
+        "abi": [
+          {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "v",
+                "type": "address"
+              }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+          },
+          {
+            "inputs": [],
+            "name": "onPay",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [],
+            "name": "start",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [],
+            "name": "vault",
+            "outputs": [
+              {
+                "internalType": "contract CallbackVault",
+                "name": "",
+                "type": "address"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+          }
+        ],
+        "evm": {
+          "bytecode": {
+            "object": "6080604052348015600e575f80fd5b50604051610269380380610269833981016040819052602b91604e565b5f80546001600160a01b0319166001600160a01b03929092169190911790556079565b5f60208284031215605d575f80fd5b81516001600160a01b03811681146072575f80fd5b9392505050565b6101e3806100865f395ff3fe608060405234801561000f575f80fd5b506004361061003f575f3560e01c806318866f6e14610043578063be9a65551461004d578063fbfa77cf14610055575b5f80fd5b61004b610083565b005b61004b610140565b5f54610067906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b5f546001600160a01b03163314610098575f80fd5b5f54600160a01b900460ff1661013e575f805460ff60a01b198116600160a01b1790915560408051600481526024810182526020810180516001600160e01b0316633ccfd60b60e01b17905290516001600160a01b03909216916100fc9190610197565b5f604051808303815f865af19150503d805f8114610135576040519150601f19603f3d011682016040523d82523d5f602084013e61013a565b606091505b5050505b565b5f805460408051633ccfd60b60e01b815290516001600160a01b0390921692633ccfd60b9260048084019382900301818387803b15801561017f575f80fd5b505af1158015610191573d5f803e3d5ffd5b50505050565b5f82518060208501845e5f92019182525091905056fea2646970667358221220c91dae41c075fa8cd357e3739df4efd72e3883fba5e75f8eea3fb5c5617babf864736f6c634300081a0033"
+          }
+        }
+      },
+      "CallbackVault": {
+        "abi": [
+          {
+            "inputs": [
+              {
+                "internalType": "bool",
+                "name": "fixed_",
+                "type": "bool"
+              }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+              }
+            ],
+            "name": "credit",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+          },
+          {
+            "inputs": [],
+            "name": "fixedOrder",
+            "outputs": [
+              {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "who",
+                "type": "address"
+              }
+            ],
+            "name": "seed",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [],
+            "name": "totalPaid",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+          },
+          {
+            "inputs": [],
+            "name": "withdraw",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          }
+        ],
+        "evm": {
+          "bytecode": {
+            "object": "60a0604052348015600e575f80fd5b5060405161033b38038061033b833981016040819052602b916034565b15156080526058565b5f602082840312156043575f80fd5b815180151581146051575f80fd5b9392505050565b6080516102be61007d5f395f818160cd0152818161011901526101e701526102be5ff3fe608060405234801561000f575f80fd5b5060043610610055575f3560e01c8063063c67b7146100595780633ccfd60b14610085578063d5d44d801461008d578063e7b0f666146100bf578063e90b74f5146100c8575b5f80fd5b610083610067366004610220565b6001600160a01b03165f90815260208190526040902060019055565b005b6100836100ff565b6100ac61009b366004610220565b5f6020819052908152604090205481565b6040519081526020015b60405180910390f35b6100ac60015481565b6100ef7f000000000000000000000000000000000000000000000000000000000000000081565b60405190151581526020016100b6565b335f9081526020819052604090205480610117575f80fd5b7f00000000000000000000000000000000000000000000000000000000000000001561014d57335f908152602081905260408120555b60408051600481526024810182526020810180516001600160e01b0316630c4337b760e11b17905290515f913391610185919061024d565b5f604051808303815f865af19150503d805f81146101be576040519150601f19603f3d011682016040523d82523d5f602084013e6101c3565b606091505b50509050806101d0575f80fd5b8160015f8282546101e19190610263565b909155507f0000000000000000000000000000000000000000000000000000000000000000905061021c57335f908152602081905260408120555b5050565b5f60208284031215610230575f80fd5b81356001600160a01b0381168114610246575f80fd5b9392505050565b5f82518060208501845e5f920191825250919050565b8082018082111561028257634e487b7160e01b5f52601160045260245ffd5b9291505056fea26469706673582212207f05012e52893531620a22629421076155233fc341a56dc0374e7c0622dfd52c64736f6c634300081a0033"
+          }
+        }
+      },
+      "Effects": {
+        "abi": [
+          {
+            "inputs": [
+              {
+                "internalType": "bool",
+                "name": "flag",
+                "type": "bool"
+              }
+            ],
+            "name": "blockCalls",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [],
+            "name": "blocked",
+            "outputs": [
+              {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "address",
+                "name": "implementation",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+              }
+            ],
+            "name": "delegate",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "name": "dynamicSlots",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "v",
+                "type": "uint256"
+              }
+            ],
+            "name": "set",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "key",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "v",
+                "type": "uint256"
+              }
+            ],
+            "name": "setDynamic",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "v",
+                "type": "uint256"
+              }
+            ],
+            "name": "setThenRevert",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [],
+            "name": "transientRead",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "result",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "uint256",
+                "name": "v",
+                "type": "uint256"
+              }
+            ],
+            "name": "transientRoundTrip",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "result",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [],
+            "name": "value",
+            "outputs": [
+              {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+          }
+        ],
+        "evm": {
+          "bytecode": {
+            "object": "6080604052348015600e575f80fd5b506103ab8061001c5f395ff3fe608060405234801561000f575f80fd5b506004361061009b575f3560e01c8063bcbc013811610063578063bcbc01381461011e578063d6d2b6ba14610131578063e242aeb914610144578063ec210a0214610163578063f5e71ac314610184575f80fd5b80630743d7fe1461009f578063303bdd2c146100d15780633fa4f245146100ee57806360fe47b1146100f657806398a287801461010b575b5f80fd5b6100be6100ad36600461027e565b60016020525f908152604090205481565b6040519081526020015b60405180910390f35b6002546100de9060ff1681565b60405190151581526020016100c8565b6100be5f5481565b61010961010436600461027e565b61018b565b005b6100be61011936600461027e565b6101d1565b61010961012c36600461027e565b6101dc565b61010961013f366004610295565b610213565b610109610152366004610320565b5f9182526001602052604090912055565b610109610171366004610340565b6002805460ff1916911515919091179055565b5f5c6100be565b60025460ff16156101cd5760405162461bcd60e51b8152602060048201526007602482015266189b1bd8dad95960ca1b60448201526064015b60405180910390fd5b5f55565b5f815f5d50505f5c90565b5f81905560405162461bcd60e51b8152602060048201526008602482015267726f6c6c6261636b60c01b60448201526064016101c4565b5f836001600160a01b0316838360405161022e929190610366565b5f60405180830381855af49150503d805f8114610266576040519150601f19603f3d011682016040523d82523d5f602084013e61026b565b606091505b5050905080610278575f80fd5b50505050565b5f6020828403121561028e575f80fd5b5035919050565b5f805f604084860312156102a7575f80fd5b83356001600160a01b03811681146102bd575f80fd5b9250602084013567ffffffffffffffff8111156102d8575f80fd5b8401601f810186136102e8575f80fd5b803567ffffffffffffffff8111156102fe575f80fd5b86602082840101111561030f575f80fd5b939660209190910195509293505050565b5f8060408385031215610331575f80fd5b50508035926020909101359150565b5f60208284031215610350575f80fd5b8135801515811461035f575f80fd5b9392505050565b818382375f910190815291905056fea2646970667358221220c30d527db29f7c2110ffde68aad4c68dabcdac567a7ef44f319a2761f1244e7f64736f6c634300081a0033"
+          }
+        }
+      },
+      "Relay": {
+        "abi": [
+          {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "bytes32",
+                "name": "id",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "address",
+                "name": "target",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes",
+                "name": "data",
+                "type": "bytes"
+              },
+              {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+              }
+            ],
+            "name": "deliver",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+          },
+          {
+            "inputs": [
+              {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+              }
+            ],
+            "name": "executed",
+            "outputs": [
+              {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+          },
+          {
+            "inputs": [],
+            "name": "governor",
+            "outputs": [
+              {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+              }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+          }
+        ],
+        "evm": {
+          "bytecode": {
+            "object": "60a0604052348015600e575f80fd5b50336080526080516103716100305f395f81816048015260d901526103715ff3fe608060405234801561000f575f80fd5b506004361061003f575f3560e01c80630c340a2414610043578063a9fcfb3314610087578063f074c80e146100b9575b5f80fd5b61006a7f000000000000000000000000000000000000000000000000000000000000000081565b6040516001600160a01b0390911681526020015b60405180910390f35b6100a961009536600461027e565b5f6020819052908152604090205460ff1681565b604051901515815260200161007e565b6100cc6100c7366004610295565b6100ce565b005b336001600160a01b037f0000000000000000000000000000000000000000000000000000000000000000161461013c5760405162461bcd60e51b815260206004820152600e60248201526d30baba3432b73a34b1b0ba34b7b760911b60448201526064015b60405180910390fd5b804211156101765760405162461bcd60e51b8152602060048201526007602482015266195e1c1a5c995960ca1b6044820152606401610133565b5f8581526020819052604090205460ff16156101c05760405162461bcd60e51b81526020600482015260096024820152686475706c696361746560b81b6044820152606401610133565b5f85815260208190526040808220805460ff19166001179055516001600160a01b038616906101f2908690869061032c565b5f604051808303815f865af19150503d805f811461022b576040519150601f19603f3d011682016040523d82523d5f602084013e610230565b606091505b50509050806102765760405162461bcd60e51b815260206004820152601260248201527119195cdd1a5b985d1a5bdb881c995d995c9d60721b6044820152606401610133565b505050505050565b5f6020828403121561028e575f80fd5b5035919050565b5f805f805f608086880312156102a9575f80fd5b8535945060208601356001600160a01b03811681146102c6575f80fd5b9350604086013567ffffffffffffffff8111156102e1575f80fd5b8601601f810188136102f1575f80fd5b803567ffffffffffffffff811115610307575f80fd5b886020828401011115610318575f80fd5b959894975060200195606001359392505050565b818382375f910190815291905056fea2646970667358221220c542224beaa8a089fc87754bb562814411da5aab597c1c420b6259e2754a93eb64736f6c634300081a0033"
+          }
+        }
+      }
+    }
+  },
+  "errors": [
+    {
+      "component": "general",
+      "errorCode": "2394",
+      "formattedMessage": "Warning: Transient storage as defined by EIP-1153 can break the composability of smart contracts: Since transient storage is cleared only at the end of the transaction and not at the end of the outermost call frame to the contract within a transaction, your contract may unintentionally misbehave when invoked multiple times in a complex transaction. To avoid this, be sure to clear all transient storage at the end of any call to your contract. The use of transient storage for reentrancy guards that are cleared at the end of the call is safe.\n  --> Fixtures.sol:17:20:\n   |\n17 |         assembly { tstore(0, v) result := tload(0) }\n   |                    ^^^^^^\n\n",
+      "message": "Transient storage as defined by EIP-1153 can break the composability of smart contracts: Since transient storage is cleared only at the end of the transaction and not at the end of the outermost call frame to the contract within a transaction, your contract may unintentionally misbehave when invoked multiple times in a complex transaction. To avoid this, be sure to clear all transient storage at the end of any call to your contract. The use of transient storage for reentrancy guards that are cleared at the end of the call is safe.",
+      "severity": "warning",
+      "sourceLocation": {
+        "end": 824,
+        "file": "Fixtures.sol",
+        "start": 818
+      },
+      "type": "Warning"
+    },
+    {
+      "component": "general",
+      "errorCode": "9302",
+      "formattedMessage": "Warning: Return value of low-level calls not used.\n  --> Fixtures.sol:63:13:\n   |\n63 |             address(vault).call(abi.encodeWithSignature(\"withdraw()\"));\n   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n",
+      "message": "Return value of low-level calls not used.",
+      "severity": "warning",
+      "sourceLocation": {
+        "end": 2545,
+        "file": "Fixtures.sol",
+        "start": 2487
+      },
+      "type": "Warning"
+    }
+  ],
+  "sources": {
+    "Fixtures.sol": {
+      "id": 0
+    }
+  }
+}

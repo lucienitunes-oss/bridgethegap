@@ -1,0 +1,22 @@
+{
+  "cases": 12,
+  "compiler": "0.8.26",
+  "compiler_sha256": "537fd8d8d4a0433a971bf456fc06f7b021cdcee27b252f74da49e0d8559aeb67",
+  "evm_version": "cancun",
+  "execution": "local in-process EVM; constructed fixtures; no OS guest or public chain",
+  "fixture_sha256": "a8db495e9ef7a0e179beab63169d5c49433d4e2b0497b9594480360082cf0707",
+  "optimizer_runs": 200,
+  "packages": {
+    "eth-tester": "0.13.0b1",
+    "py-evm": "0.12.1b1",
+    "py-solc-x": "2.0.4",
+    "web3": "7.13.0"
+  },
+  "passed": 36,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.10.8",
+  "repetitions": 3,
+  "runner_sha256": "b932c3a6b58e15ec6508e76d07615da8b53a5882bc1c2c664842e39fda2ae74f",
+  "transactions": 150,
+  "vm": "CancunVM"
+}

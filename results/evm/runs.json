@@ -1,0 +1,518 @@
+[
+  {
+    "case": "access_list",
+    "observed": {
+      "both_returned": 42,
+      "empty_list_gas": 23391,
+      "gas_limit": 2000000,
+      "populated_list_gas": 25691
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.13962959998752922
+  },
+  {
+    "case": "dynamic_slot",
+    "observed": {
+      "after": "000000000000000000000000000000000000000000000000000000000000004d",
+      "before": "0000000000000000000000000000000000000000000000000000000000000000",
+      "derived_slot": "0x930179a18d6ec30c0cbd2eefea5746c12d4bd1009870e1d5cc410703e5cec089",
+      "key": 123456789
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.05575140001019463
+  },
+  {
+    "case": "delegatecall",
+    "observed": {
+      "caller_storage": 91,
+      "implementation_storage": 0
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.07962850003968924
+  },
+  {
+    "case": "transient_storage",
+    "observed": {
+      "following_transaction": 0,
+      "within_call": 19
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.05795600003330037
+  },
+  {
+    "case": "revert_rollback",
+    "observed": {
+      "post_value": 0,
+      "status": 0
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.055177400005050004
+  },
+  {
+    "case": "relay_authentication",
+    "observed": {
+      "authorized_status": 1,
+      "unauthorized_status": 0
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.10311909997835755
+  },
+  {
+    "case": "relay_retry",
+    "observed": {
+      "failed_delivery_status": 0,
+      "pending_after_failure": true,
+      "retry_status": 1
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.1475994000211358
+  },
+  {
+    "case": "duplicate",
+    "observed": {
+      "duplicate_status": 0,
+      "first_status": 1
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.10119729995494708
+  },
+  {
+    "case": "expiration",
+    "observed": {
+      "deadline": 1788746559,
+      "delivery_time": 1788746560,
+      "status": 0
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.08010299998568371
+  },
+  {
+    "case": "decimal_units",
+    "observed": {
+      "correct_18_decimal_value": 750000000000000000,
+      "correct_6_decimal_value": 750000,
+      "legacy_example_normalizes_to": 7500
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.055894299992360175
+  },
+  {
+    "case": "callback_reentrancy",
+    "observed": {
+      "fixed_payout_units": 1,
+      "vulnerable_payout_units": 2
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.21451899997191504
+  },
+  {
+    "case": "prefix_order",
+    "observed": {
+      "final_state_only_misses_violation": true,
+      "traces": [
+        {
+          "order": [
+            0,
+            1
+          ],
+          "prefixes": [
+            {
+              "safe": true,
+              "state": [
+                1,
+                0
+              ]
+            },
+            {
+              "safe": true,
+              "state": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "order": [
+            1,
+            0
+          ],
+          "prefixes": [
+            {
+              "safe": false,
+              "state": [
+                0,
+                1
+              ]
+            },
+            {
+              "safe": true,
+              "state": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "passed": true,
+    "repetition": 0,
+    "wall_seconds": 0.2587366999941878
+  },
+  {
+    "case": "access_list",
+    "observed": {
+      "both_returned": 42,
+      "empty_list_gas": 23391,
+      "gas_limit": 2000000,
+      "populated_list_gas": 25691
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.12109690002398565
+  },
+  {
+    "case": "dynamic_slot",
+    "observed": {
+      "after": "000000000000000000000000000000000000000000000000000000000000004d",
+      "before": "0000000000000000000000000000000000000000000000000000000000000000",
+      "derived_slot": "0x63cab95bea31dfc485a9f605e4329d68d9673b88ae83eaa47b66d97de4f3043",
+      "key": 123456790
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.05843500001356006
+  },
+  {
+    "case": "delegatecall",
+    "observed": {
+      "caller_storage": 91,
+      "implementation_storage": 0
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.08911100000841543
+  },
+  {
+    "case": "transient_storage",
+    "observed": {
+      "following_transaction": 0,
+      "within_call": 19
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.0613024000194855
+  },
+  {
+    "case": "revert_rollback",
+    "observed": {
+      "post_value": 0,
+      "status": 0
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.054969699995126575
+  },
+  {
+    "case": "relay_authentication",
+    "observed": {
+      "authorized_status": 1,
+      "unauthorized_status": 0
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.1033432999975048
+  },
+  {
+    "case": "relay_retry",
+    "observed": {
+      "failed_delivery_status": 0,
+      "pending_after_failure": true,
+      "retry_status": 1
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.14999739994527772
+  },
+  {
+    "case": "duplicate",
+    "observed": {
+      "duplicate_status": 0,
+      "first_status": 1
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.09984139999141917
+  },
+  {
+    "case": "expiration",
+    "observed": {
+      "deadline": 1788746560,
+      "delivery_time": 1788746561,
+      "status": 0
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.07900759996846318
+  },
+  {
+    "case": "decimal_units",
+    "observed": {
+      "correct_18_decimal_value": 750000000000000000,
+      "correct_6_decimal_value": 750000,
+      "legacy_example_normalizes_to": 7500
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.05487609998090193
+  },
+  {
+    "case": "callback_reentrancy",
+    "observed": {
+      "fixed_payout_units": 1,
+      "vulnerable_payout_units": 2
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.21514919999754056
+  },
+  {
+    "case": "prefix_order",
+    "observed": {
+      "final_state_only_misses_violation": true,
+      "traces": [
+        {
+          "order": [
+            0,
+            1
+          ],
+          "prefixes": [
+            {
+              "safe": true,
+              "state": [
+                1,
+                0
+              ]
+            },
+            {
+              "safe": true,
+              "state": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "order": [
+            1,
+            0
+          ],
+          "prefixes": [
+            {
+              "safe": false,
+              "state": [
+                0,
+                1
+              ]
+            },
+            {
+              "safe": true,
+              "state": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "passed": true,
+    "repetition": 1,
+    "wall_seconds": 0.26430729997809976
+  },
+  {
+    "case": "access_list",
+    "observed": {
+      "both_returned": 42,
+      "empty_list_gas": 23391,
+      "gas_limit": 2000000,
+      "populated_list_gas": 25691
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.11978190002264455
+  },
+  {
+    "case": "dynamic_slot",
+    "observed": {
+      "after": "000000000000000000000000000000000000000000000000000000000000004d",
+      "before": "0000000000000000000000000000000000000000000000000000000000000000",
+      "derived_slot": "0xd9f7bfa9e5013345740de9e756ba84eb059b5ba47f54aa871461e16d47eeedd9",
+      "key": 123456791
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.05679850000888109
+  },
+  {
+    "case": "delegatecall",
+    "observed": {
+      "caller_storage": 91,
+      "implementation_storage": 0
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.08166359999449924
+  },
+  {
+    "case": "transient_storage",
+    "observed": {
+      "following_transaction": 0,
+      "within_call": 19
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.05957189999753609
+  },
+  {
+    "case": "revert_rollback",
+    "observed": {
+      "post_value": 0,
+      "status": 0
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.054996500024572015
+  },
+  {
+    "case": "relay_authentication",
+    "observed": {
+      "authorized_status": 1,
+      "unauthorized_status": 0
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.10176539997337386
+  },
+  {
+    "case": "relay_retry",
+    "observed": {
+      "failed_delivery_status": 0,
+      "pending_after_failure": true,
+      "retry_status": 1
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.14731850003590807
+  },
+  {
+    "case": "duplicate",
+    "observed": {
+      "duplicate_status": 0,
+      "first_status": 1
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.10171690001152456
+  },
+  {
+    "case": "expiration",
+    "observed": {
+      "deadline": 1788746561,
+      "delivery_time": 1788746562,
+      "status": 0
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.07939610001631081
+  },
+  {
+    "case": "decimal_units",
+    "observed": {
+      "correct_18_decimal_value": 750000000000000000,
+      "correct_6_decimal_value": 750000,
+      "legacy_example_normalizes_to": 7500
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.05617200001142919
+  },
+  {
+    "case": "callback_reentrancy",
+    "observed": {
+      "fixed_payout_units": 1,
+      "vulnerable_payout_units": 2
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.2128427000134252
+  },
+  {
+    "case": "prefix_order",
+    "observed": {
+      "final_state_only_misses_violation": true,
+      "traces": [
+        {
+          "order": [
+            0,
+            1
+          ],
+          "prefixes": [
+            {
+              "safe": true,
+              "state": [
+                1,
+                0
+              ]
+            },
+            {
+              "safe": true,
+              "state": [
+                1,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "order": [
+            1,
+            0
+          ],
+          "prefixes": [
+            {
+              "safe": false,
+              "state": [
+                0,
+                1
+              ]
+            },
+            {
+              "safe": true,
+              "state": [
+                1,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "passed": true,
+    "repetition": 2,
+    "wall_seconds": 0.2664373000152409
+  }
+]
