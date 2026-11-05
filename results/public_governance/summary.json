@@ -1,0 +1,36 @@
+{
+  "proposal_count": 191,
+  "keyword_candidate_count": 129,
+  "state_counts": {
+    "closed": 191
+  },
+  "candidate_state_counts": {
+    "closed": 129
+  },
+  "by_year": {
+    "2021": {
+      "proposals": 34,
+      "keyword_candidates": 9
+    },
+    "2022": {
+      "proposals": 33,
+      "keyword_candidates": 25
+    },
+    "2023": {
+      "proposals": 40,
+      "keyword_candidates": 27
+    },
+    "2024": {
+      "proposals": 49,
+      "keyword_candidates": 38
+    },
+    "2025": {
+      "proposals": 27,
+      "keyword_candidates": 22
+    },
+    "2026": {
+      "proposals": 8,
+      "keyword_candidates": 8
+    }
+  }
+}

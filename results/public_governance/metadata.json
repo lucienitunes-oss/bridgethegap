@@ -1,0 +1,27 @@
+{
+  "source": "https://hub.snapshot.org/graphql",
+  "space": "uniswapgovernance.eth",
+  "created_gte": 1609459200,
+  "retrieved_at_utc": "2026-09-09T04:29:02.604305+00:00",
+  "query_sha256": "99960190955b900cf522eef3efaf31d0886600dee2d37f72d6629842cb81e68a",
+  "raw_response_sha256": "3c9f0996a2d8654072090047e6d9b77961f723f249b0bdf86c7b38b616d46a92",
+  "proposal_count": 191,
+  "keyword_candidate_count": 129,
+  "keyword_rule": "case-insensitive substring match over title and body",
+  "keywords": [
+    "cross-chain",
+    "cross chain",
+    "bridge",
+    "message",
+    "arbitrum",
+    "optimism",
+    "base",
+    "polygon",
+    "celo",
+    "layer 2",
+    "l2",
+    "rollup",
+    "multichain"
+  ],
+  "warning": "Candidate records are descriptive sampling-frame entries, not security labels."
+}
